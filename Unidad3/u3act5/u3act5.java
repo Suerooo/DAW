@@ -10,10 +10,10 @@ public class u3act5 {
         //Variables
         int veces, total=0, num, media;
 
-        //Bucle para pedir 10 numeros
+        //Bucle para pedir 10 números
         for (veces=0;veces!=10;veces++) {
 
-            //Pide uno de los numeros
+            //Pide uno de los números
             Scanner sc = new Scanner(System.in); 
             System.out.print("Introduce un numero: "); 
             num = sc.nextInt();
@@ -24,7 +24,7 @@ public class u3act5 {
         
         //Calculo de la media y print para mostrar lo
         media=total/10;
-        System.out.println("Media de todos los numeros: "+media);
+        System.out.println("Media de todos los números: "+media);
         
     }
 }
