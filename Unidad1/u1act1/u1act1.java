@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class u1act1 {
 
     public static void main(String[] args) {
-        System.out.println("SEX");
         Scanner sc = new Scanner(System.in);
         System.out.print("Cual es tu edad: ");
         int edad = sc.nextInt();
