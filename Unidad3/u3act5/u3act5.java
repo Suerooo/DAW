@@ -1,0 +1,30 @@
+package u3act5;
+
+import java.util.Scanner;
+
+public class u3act5 {
+    public static void main(String[] args) {
+        /*Pedir diez números enteros
+        por teclado y mostrar la media.*/
+
+        //Variables
+        int veces, total=0, num, media;
+
+        //Bucle para pedir 10 numeros
+        for (veces=0;veces!=10;veces++) {
+
+            //Pide uno de los numeros
+            Scanner sc = new Scanner(System.in); 
+            System.out.print("Introduce un numero: "); 
+            num = sc.nextInt();
+
+            //Lo añade al total
+            total+=num;
+        }
+        
+        //Calculo de la media y print para mostrar lo
+        media=total/10;
+        System.out.println("Media de todos los numeros: "+media);
+        
+    }
+}

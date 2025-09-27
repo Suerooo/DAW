@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package u3act2;
 
 import java.util.Scanner;
 
-/**
- *
- * @author 49399328C
- */
 public class U3act2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         /*
         Implementar una aplicación para calcular datos
@@ -31,7 +21,7 @@ public class U3act2 {
         //Loop en el que pregunta la edad hasta que sea un numero negativo
         while (edad>=0) {
         Scanner sc = new Scanner(System.in); 
-        System.out.print("Edad del alumno: "); 
+        System.out.print("Edad del alumno(introduce numero negativo para terminar): "); 
         edad = sc.nextInt();
         
         //Para evitar que la ultima edad (la negativa) cambia los resultados
