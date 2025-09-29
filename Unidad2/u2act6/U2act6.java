@@ -36,7 +36,7 @@ public class U2act6 {
         seg = sc.nextInt();
         
         if (hora>=25 || min>=60 || seg>=60) {
-            System.out.println("Error: horas/minutos/segundos invalidos");
+            System.out.println("Error: horas/minutos/segundos inválidos");
             System.exit(1);
         }
         
@@ -56,7 +56,7 @@ public class U2act6 {
             seg = 0;
         }
         
-        System.out.println("Dentro de un segundo seran las: " + hora + ":" + min + ":" + seg);
+        System.out.println("Dentro de un segundo serán las: " + hora + ":" + min + ":" + seg);
         
     }
     
