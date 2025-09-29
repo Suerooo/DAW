@@ -30,6 +30,9 @@ public class U2act2 {
         
         String orden = a>b ? (a+">"+b) : (b+">"+a);
         System.out.println(orden);
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

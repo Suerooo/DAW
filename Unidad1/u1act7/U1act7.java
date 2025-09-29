@@ -36,7 +36,10 @@ public class U1act7 {
         double mediad = ((pri+seg+ter)/3);
         int media = (int)mediad;
         
-        System.out.println("Notas: \n Boletin: " + media + "\n Expediente academico: " + mediad);
+        System.out.println("Notas: \n Boletín: " + media + "\n Expediente académico: " + mediad);
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

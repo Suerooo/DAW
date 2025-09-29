@@ -31,13 +31,16 @@ public class Z5_Multiplos {
         mul10 = numero%10;
         
         if (mul5==0)
-            System.out.println("El numero es multiplo de 5");
+            System.out.println("El numero es múltiplo de 5");
         
         if (mul10==0)
-            System.out.println("El numero es multiplo de 10");
+            System.out.println("El numero es múltiplo de 10");
         
         if (mul5!=0 && mul10!=0)
-            System.out.println("El numero no es multiplo ni de 10 ni de 5");
+            System.out.println("El numero no es múltiplo ni de 10 ni de 5");
+
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

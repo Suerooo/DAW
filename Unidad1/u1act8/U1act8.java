@@ -21,18 +21,19 @@ public class U1act8 {
         la altura de un triángulo y muestre por pantalla su área.
         */
         
-        Scanner a = new Scanner(System.in); 
+        Scanner sc = new Scanner(System.in); 
         System.out.print("Cual es la base de tu triangulo: "); 
-        double bas = a.nextDouble(); 
+        double bas = sc.nextDouble(); 
         
-        Scanner b = new Scanner(System.in); 
         System.out.print("Cual es la altura de tu triangulo: "); 
-        double alt = b.nextDouble();
+        double alt = sc.nextDouble();
         
         double area = ( (bas*alt)/2 );
         
         System.out.println("El area de tu triangulo es: " + area);
         
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

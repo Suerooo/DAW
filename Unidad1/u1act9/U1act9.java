@@ -29,7 +29,7 @@ public class U1act9 {
         */
         
         Scanner sc = new Scanner(System.in); 
-        System.out.print("Cuantas hormigas ha captruado: "); 
+        System.out.print("Cuantas hormigas ha capturado: "); 
         int hor = sc.nextInt(); 
         
         System.out.print("Cuantas arañas ha capturado: "); 
@@ -38,14 +38,16 @@ public class U1act9 {
         System.out.print("Cuantas cochinillas ha capturado: "); 
         int coh = sc.nextInt();
         
-        int phor = hor*6;
-        int para = ara*8;
-        int pcoh = coh*14;
+        int patasHormiga = hor*6;
+        int patasAraña = ara*8;
+        int patasCochinilla = coh*14;
         
-        int patas = phor + para + pcoh;
+        int patas = patasAraña + patasCochinilla + patasHormiga;
         
         System.out.println("El numero total de patas es: " + patas);
- 
+
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

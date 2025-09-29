@@ -27,13 +27,15 @@ public class U1act6 {
         double base = sc.nextDouble(); 
         
         System.out.print("Y cual es el porcentaje del IVA: "); 
-        int ivai = sc.nextInt();
+        int iva = sc.nextInt();
         
-        double iva = ivai;
-        double ivap =(base*(iva/100));
-        double total=(base+ivap);
+        double ivaPorcentaje =(base*(iva/100));
+        double total=(base+ivaPorcentaje);
         
-        System.out.println("Importe: \n IVA: " + ivap + " euros\n Total: " + total + " euros"  );
+        System.out.println("Importe: \n IVA: " + ivaPorcentaje + " euros\n Total: " + total + " euros"  );
+
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

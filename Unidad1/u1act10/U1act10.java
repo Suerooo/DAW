@@ -26,8 +26,8 @@ public class U1act10 {
         o superior a 100 €, se aplicará automáticamente un bono descuento del 5%.
         */
         
-        double pinf = 15.50;
-        double padu = 20;
+        double precioInfantil = 15.50;
+        double precioAdulto = 20;
         
         Scanner sc = new Scanner(System.in); 
         System.out.print("Cantidad de entradas infantiles: "); 
@@ -36,7 +36,7 @@ public class U1act10 {
         System.out.print("Cantidad de entradas de adultos: "); 
         int adu = sc.nextInt();
         
-        double imp = ( (pinf*inf) + (padu*adu) );
+        double imp = ( (precioInfantil*inf) + (precioAdulto*adu) );
         double des = imp * 0.05;
         
         if (imp >= 100)
@@ -44,7 +44,8 @@ public class U1act10 {
         
         System.out.println("Importe total: " + imp + " euros");
         
-        
+        //Cierra la variable sc
+        sc.close();
 
     }
     

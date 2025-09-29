@@ -27,15 +27,18 @@ public class z2_AreaPerimetro {
         System.out.print("Cuantos metros mide la base del rectangulo: "); 
         base = sc.nextDouble();
         
-        System.out.print("Cuantos metros mide la altura del rectangulo: "); 
+        System.out.print("Cuantos metros mide la altura del rectángulo: "); 
         altura = sc.nextDouble();
         
         area = base*altura;
         perimetro = (2*base) + (2*altura);
         
-        System.out.println("Medidas rectangulo: ");
+        System.out.println("Medidas rectángulo: ");
         System.out.println("    Area: " + area + " metros.");
-        System.out.println("    Perimetro " + perimetro + " metros");
+        System.out.println("    Perímetro " + perimetro + " metros");
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

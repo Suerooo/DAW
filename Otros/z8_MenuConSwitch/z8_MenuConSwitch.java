@@ -34,5 +34,8 @@ public class z8_MenuConSwitch {
                 System.out.println("Numero invalido");
                 break;
         }
+        
+        //Cierra la variable sc
+            sc.close();
     }
 }

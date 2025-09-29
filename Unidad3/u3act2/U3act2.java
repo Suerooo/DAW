@@ -25,16 +25,19 @@ public class U3act2 {
         edad = sc.nextInt();
         
         //Para evitar que la ultima edad (la negativa) cambia los resultados
-            if (edad>=0){
-                //Numero de alumnos
-                ++alumnos;
-                //Calcular la suma de las edades
-                total = total + edad;
-                // Calcular la media de las edades
-                media = total/alumnos;
-                //Cuantos son mayores de edad 
-                if (edad>=18) ++mayores;
+        if (edad>=0){
+            //Numero de alumnos
+            ++alumnos;
+            //Calcular la suma de las edades
+            total = total + edad;
+            // Calcular la media de las edades
+            media = total/alumnos;
+            //Cuantos son mayores de edad 
+            if (edad>=18) ++mayores;
             }
+            
+        //Cierra la variable sc
+         sc.close();
         }
         
         System.out.println("Resultados: ");
@@ -42,6 +45,7 @@ public class U3act2 {
         System.out.println(" Media de todas las edades: " + media);
         System.out.println(" Numero total de alumnos: " + alumnos);
         System.out.println(" Numero total de alumnos mayores de edad: " + mayores);
+        
         
     }
     

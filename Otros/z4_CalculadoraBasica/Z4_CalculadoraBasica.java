@@ -39,8 +39,11 @@ public class Z4_CalculadoraBasica {
         System.out.println("Resultados: ");
         System.out.println("    Suma: " + suma);
         System.out.println("    Resta: " + resta);
-        System.out.println("    Multiplicacion: " + multi);
+        System.out.println("    Multiplicación: " + multi);
         System.out.println("    Division: " + divi);
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

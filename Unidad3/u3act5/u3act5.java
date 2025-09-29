@@ -20,6 +20,9 @@ public class u3act5 {
 
             //Lo añade al total
             total+=num;
+
+            //Cierra la variable sc
+            sc.close();
         }
         
         //Calculo de la media y print para mostrar lo

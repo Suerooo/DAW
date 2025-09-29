@@ -38,6 +38,9 @@ public class z1_ConversionDeGrados {
             double fah = (cel*9/5)+32;
             System.out.println(cel + " grados celsius son " + fah + " grados fahrenheit");
         }
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

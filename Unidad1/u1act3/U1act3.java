@@ -24,22 +24,25 @@ public class U1act3 {
         
         Scanner sc = new Scanner(System.in);
         System.out.print("Cuantos kilos de manzanas ha vendido el primer semestre: ");
-        double manz1 = sc.nextDouble();
+        double manzana1 = sc.nextDouble();
         
         System.out.print("Cuantos kilos de peras ha vendido el primer semestre: ");
         double pera1 = sc.nextDouble();
         
         System.out.print("Cuantos kilos de manzanas ha vendido el segundo semestre: ");
-        double manz2 = sc.nextDouble();
+        double manzana2 = sc.nextDouble();
         
         System.out.print("Cuantos kilos de peras ha vendido el segundo semestre: ");
         double pera2 = sc.nextDouble();
         
-        double manz = (manz1+manz2);
+        double manzana = (manzana1+manzana2);
         double pera = (pera1+pera2);
         
-        double importe = ((manz*2.35) + (pera*1.95));
+        double importe = ((manzana*2.35) + (pera*1.95));
         System.out.println("Usted tiene un beneficio anual de: " + importe + " euros");
+
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

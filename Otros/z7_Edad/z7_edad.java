@@ -22,5 +22,8 @@ public class z7_edad {
         if (edad<18) System.out.println("Eres menor de edad");
         if (edad>=18 && edad<=64) System.out.println("Eres adulto");
         if (edad>=65) System.out.println("Eres adulto mayor");
+
+        //Cierra la variable sc
+        sc.close();
     }
 }

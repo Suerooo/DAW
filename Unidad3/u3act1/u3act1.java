@@ -38,6 +38,9 @@ public class u3act1 {
 
             //Cuadrado del numero
             System.out.println("El cuadrado de "+num+" es "+num*num);
+
+            //Cierra la variable sc
+            sc.close();
         }
     }
 }

@@ -17,6 +17,8 @@ public class z10_SumaDeNumeros {
             Scanner sc = new Scanner(System.in); 
             System.out.print("Introduce un número: "); 
             numero = sc.nextInt();
+            //Cierra la variable sc
+            sc.close();
 
             //If que suma el número siempre y cuando no sea negativo
             if (numero>=0) total+=numero;

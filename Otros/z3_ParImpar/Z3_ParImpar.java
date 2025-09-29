@@ -33,7 +33,9 @@ public class Z3_ParImpar {
             System.out.println("El numero es par");
         else
             System.out.println("El numero es impar");
-              
+        
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

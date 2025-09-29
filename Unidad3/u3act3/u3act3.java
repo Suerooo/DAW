@@ -34,7 +34,10 @@ public class u3act3 {
             ++aciertos;
 
             //Print de respuesta correcta
-            System.out.println("Respuesta correcta siguente pregunta:");
+            System.out.println("Respuesta correcta siguiente pregunta:");
+
+            //Cierra la variable sc
+            sc.close();
 
         } while (numero1+numero2==respuesta);
         

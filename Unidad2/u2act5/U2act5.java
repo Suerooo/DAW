@@ -43,7 +43,7 @@ public class U2act5 {
                 System.out.println("Hoy es Martes");
                 break;
             case 3:
-                System.out.println("Hoy es Miercoles");
+                System.out.println("Hoy es Miércoles");
                 break;
             case 4:
                 System.out.println("Hoy es Jueves");
@@ -52,13 +52,15 @@ public class U2act5 {
                 System.out.println("Hoy es Viernes");
                 break;
             case 6:
-                System.out.println("Hoy es Sabado");
+                System.out.println("Hoy es Sábado");
                 break;
             case 7:
                 System.out.println("Hoy es Domingo");
                 break;
                 
         }
+
+        //Cierra la variable sc
+        sc.close();
     }
-    
 }

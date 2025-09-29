@@ -65,6 +65,9 @@ public class U1act5 {
         
         boolean salir = (((llueve == false) && (tarea==true)) || (biblio==true));
         System.out.println("Puedo salir: " + salir);
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

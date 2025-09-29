@@ -42,12 +42,12 @@ public class U2act6 {
         
         if (seg>=59) {
             seg = 0;
-            min = ++min;    
+            ++min;    
         }
         
         if (min>=59) {
             min = 0;
-            hora = ++hora;
+            ++hora;
         }
         
         if (hora>24) {
@@ -58,6 +58,8 @@ public class U2act6 {
         
         System.out.println("Dentro de un segundo serán las: " + hora + ":" + min + ":" + seg);
         
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

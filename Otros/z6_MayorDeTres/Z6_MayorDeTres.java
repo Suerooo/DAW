@@ -43,6 +43,9 @@ public class Z6_MayorDeTres {
                 System.out.println("El numero mas grande es: " + b);
                 else 
                 System.out.println("El numero mas grande es: " +  c);
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

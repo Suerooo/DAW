@@ -35,6 +35,8 @@ public class U2act1 {
         else
             System.out.println("No es un numero casi-cero");
         
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

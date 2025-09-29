@@ -59,6 +59,8 @@ public class U2act3 {
         recaudado = vendidas*precio;
         System.out.println("Dinero total recaudado: " + recaudado);
         
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

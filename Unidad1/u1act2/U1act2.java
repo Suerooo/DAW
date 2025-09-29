@@ -36,6 +36,9 @@ public class U1act2 {
         
         System.out.println("La longitud de tu circunferencia es: " + longitud + " metros" );
         System.out.println("Y el area es: " + area + " metros" );
+
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

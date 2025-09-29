@@ -28,16 +28,16 @@ public class U2act8 {
         */
         
         
-        int dni, restodni;
+        int dni, restoDNI;
         
         Scanner sc = new Scanner(System.in); 
-        System.out.print("8 digitos del DNI: "); 
+        System.out.print("8 dígitos del DNI: "); 
         dni = sc.nextInt();
         
-        restodni = dni%23;
+        restoDNI = dni%23;
         
         
-        switch (restodni) {
+        switch (restoDNI) {
             case 0:
                 System.out.println("La letra de tu dni es T: " + dni + "T");
                 break;
@@ -108,6 +108,9 @@ public class U2act8 {
                 System.out.println("La letra de tu dni es E: " + dni + "E");
                 break;  
         }
+
+        //Cierra la variable sc
+        sc.close();
         
     }
     

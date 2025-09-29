@@ -42,18 +42,20 @@ public class U2act7 {
         numAnimales = sc.nextInt();
         
         if (kilosPorAnimal<=0 || numAnimales<=0) {
-            System.out.println("Error los kilos por animal/numeros de animales es <= 0");
+            System.out.println("Error los kilos por animal/números de animales es <= 0");
             System.exit(1);
         }
         
         if ( (comidaDiaria/kilosPorAnimal) == numAnimales ) {
-            System.out.println("Se cumple la recomendacion de kilos por animal \n Dale a cada animal " + kilosPorAnimal + " kilos");
+            System.out.println("Se cumple la recomendación de kilos por animal \n Dale a cada animal " + kilosPorAnimal + " kilos");
         }
         else {
-            System.out.println("No se cumple la recomendacion de kilos por animal");
+            System.out.println("No se cumple la recomendación de kilos por animal");
             reKilosPorAnimal = comidaDiaria/(double)numAnimales;
-            System.out.println("Tendriamos que darle " + reKilosPorAnimal + " kilos a cada animal");
+            System.out.println("Tendríamos que darle " + reKilosPorAnimal + " kilos a cada animal");
         }
+
+        //Cierra la variable sc
+        sc.close();
     }
-    
 }

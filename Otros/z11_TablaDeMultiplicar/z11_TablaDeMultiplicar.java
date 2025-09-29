@@ -20,5 +20,8 @@ public class z11_TablaDeMultiplicar {
             resultado=numero*multi;
             System.out.println(numero+"*"+multi+"="+resultado);
         }
+
+        //Cierra la variable sc
+        sc.close();
     }
 }

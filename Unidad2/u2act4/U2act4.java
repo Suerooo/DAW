@@ -23,7 +23,7 @@ public class U2act4 {
         Febrero tiene 28 días
         */
         
-        int dia, mes, año, diasmes = 0;
+        int dia, mes, año, díasDelMes = 0;
         
         Scanner sc = new Scanner(System.in); 
         System.out.print("Dia: "); 
@@ -35,29 +35,31 @@ public class U2act4 {
         System.out.print("Año: "); 
         año = sc.nextInt();
         
-        if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) diasmes=31;
-        if (mes==4 || mes==6 || mes==9 || mes==11) diasmes=30;
-        if (mes==2) diasmes=28;
+        if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) díasDelMes=31;
+        if (mes==4 || mes==6 || mes==9 || mes==11) díasDelMes=30;
+        if (mes==2) díasDelMes=28;
         
-        if (mes>12 || dia > diasmes) {
+        if (mes>12 || dia > díasDelMes) {
             System.out.println("Fecha invalida");
             System.exit(1);
         }
         
-        if (dia<diasmes)
-            dia = ++dia; 
+        if (dia<díasDelMes)
+            ++dia; 
         else {
             dia = 1;
-            mes = ++mes;
+            ++mes;
         }
         
         if (mes>12) {
             mes = 1;
-            año = ++año;
+            ++año;
         }
         
         System.out.println("Mañana sera " + dia + "/" + mes + "/" + año);
         
+        //Cierra la variable sc
+        sc.close();
     }
     
 }

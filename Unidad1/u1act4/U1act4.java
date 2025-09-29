@@ -29,6 +29,8 @@ public class U1act4 {
         
         System.out.println("El usuario es mayor de edad: " + mayoria);
         
+        //Cierra la variable sc
+        sc.close();
     }
     
 }
