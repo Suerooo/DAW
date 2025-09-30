@@ -8,7 +8,8 @@ public class u3act5 {
         por teclado y mostrar la media.*/
 
         //Variables
-        int veces, total=0, num, media;
+        int veces, num;
+        double total=0, media;
 
         //Bucle para pedir 10 números
         for (veces=0;veces!=10;veces++) {
@@ -26,7 +27,7 @@ public class u3act5 {
         }
         
         //Calculo de la media y print para mostrar lo
-        media=total/10;
+        media=total/10.0;
         System.out.println("Media de todos los números: "+media);
         
     }

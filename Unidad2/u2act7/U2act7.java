@@ -28,12 +28,12 @@ public class U2act7 {
         Nota: Evitar que la aplicación realice divisiones por cero.
         */
         
-        int comidaDiaria, numAnimales;
-        double kilosPorAnimal, reKilosPorAnimal;
+        int numAnimales;
+        double kilosPorAnimal,comidaDiaria, reKilosPorAnimal;
         
         Scanner sc = new Scanner(System.in); 
         System.out.print("Comida comprada: "); 
-        comidaDiaria = sc.nextInt();
+        comidaDiaria = sc.nextDouble();
         
         System.out.print("Kilos que come cada animal: "); 
         kilosPorAnimal = sc.nextDouble();
@@ -49,6 +49,11 @@ public class U2act7 {
         if ( (comidaDiaria/kilosPorAnimal) == numAnimales ) {
             System.out.println("Se cumple la recomendación de kilos por animal \n Dale a cada animal " + kilosPorAnimal + " kilos");
         }
+
+        if ( (comidaDiaria/kilosPorAnimal) > numAnimales ) {
+            System.out.println("Se cumple la recomendación de kilos por animal \n Dale a cada animal " + kilosPorAnimal + " kilos y sobra "+(comidaDiaria-(kilosPorAnimal*numAnimales)));
+        }
+
         else {
             System.out.println("No se cumple la recomendación de kilos por animal");
             reKilosPorAnimal = comidaDiaria/(double)numAnimales;

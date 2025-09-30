@@ -16,7 +16,8 @@ public class U3act2 {
         */
         
         //Variables
-        int edad = 0, total = 0, media = 0, alumnos = 0, mayores = 0;
+        int edad = 0, total = 0, alumnos = 0, mayores = 0;
+        double media = 0;
         
         //Loop en el que pregunta la edad hasta que sea un numero negativo
         while (edad>=0) {
@@ -29,9 +30,9 @@ public class U3act2 {
             //Numero de alumnos
             ++alumnos;
             //Calcular la suma de las edades
-            total = total + edad;
+            total += edad;
             // Calcular la media de las edades
-            media = total/alumnos;
+            media = (double)total/alumnos;
             //Cuantos son mayores de edad 
             if (edad>=18) ++mayores;
             }

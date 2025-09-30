@@ -25,19 +25,13 @@ public class u3act3 {
             //Genera el segundo numero aleatorio
             numero2 = rand.nextInt(100) + 1;
 
+            //Cuenta la cantidad de aciertos
+            ++aciertos;
+
             //Pregunta cual es la respuesta
             Scanner sc = new Scanner(System.in); 
             System.out.print("Cuanto es: "+numero1+"+"+numero2+"="); 
             respuesta = sc.nextInt();
-
-            //Cuenta la cantidad de aciertos
-            ++aciertos;
-
-            //Print de respuesta correcta
-            System.out.println("Respuesta correcta siguiente pregunta:");
-
-            //Cierra la variable sc
-            sc.close();
 
         } while (numero1+numero2==respuesta);
         

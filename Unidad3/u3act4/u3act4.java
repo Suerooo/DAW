@@ -20,12 +20,12 @@ public class u3act4 {
         System.out.print("Cuantas veces si tiene que repetir ECO: "); 
         numero = sc.nextInt();
 
-        //Cierra la variable sc
-        sc.close();
-
         //Bucle en el que se repite el ECO un numero de veces
         for (veces=0; numero!=veces; veces++) {
             System.out.println("ECO");
         }
+
+        //Cierra la variable sc
+        sc.close();
     }
 }
