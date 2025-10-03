@@ -12,7 +12,7 @@ public class u3act7 {
         en 10 segundos, resultan las 14:00:01 */
 
         //Variables
-        int horas, minutos, segundos;
+        int horas, minutos, segundos, cuantos;
 
         //Pide la hora
         Scanner sc = new Scanner(System.in); 
@@ -25,24 +25,30 @@ public class u3act7 {
         System.out.print("Segundos: "); 
         segundos = sc.nextInt();
 
-        //Incrementa 10 segundos
-        segundos+=10;
+        System.out.print("Cuantos segundos incrementamos: "); 
+        cuantos = sc.nextInt();
 
-        //If para cuando los segundos superen los 59
-        if (segundos>59) {
-            minutos+=1;
-            segundos-=60;
-        }
+        //For para incrementar n segundos
+        for (int veces=0; veces<cuantos; veces++) {
+            //Incrementa un segundo
+            segundos++;
 
-        //If para cuando los minutos superen los 59
-        if (minutos>59) {
-            minutos=0;
-            horas++;
-        }
+            //If para cuando los segundos superen los 59
+            if (segundos>59) {
+                minutos+=1;
+                segundos-=60;
+            }
 
-        //If para cuando las horas superen los 23
-        if (horas>23) {
-            horas=0;
+            //If para cuando los minutos superen los 59
+            if (minutos>59) {
+                minutos=0;
+                horas++;
+            }
+
+            //If para cuando las horas superen los 23
+            if (horas>23) {
+                horas=0;
+            }
         }
 
         //Imprime la hora
