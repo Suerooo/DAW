@@ -9,3 +9,8 @@ Subir tus cambios a GitHub:
 git add .
 git commit -m "a"
 git push origin main
+
+Si no te importan tus modificaciones locales (⚠️ perderás tus cambios):
+git reset --hard
+git clean -fd
+git pull origin main

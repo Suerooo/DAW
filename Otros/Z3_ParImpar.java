@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class Z3_ParImpar {
+public class z3_ParImpar {
 
     /**
      * @param args the command line arguments

@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class Z5_Multiplos {
+public class z5_Multiplos {
 
     /**
      * @param args the command line arguments
