@@ -19,7 +19,7 @@ public class u3act8 {
         5 Números primos en total */
         
         //Variables
-        int n;
+        int n, primo=1,resto;
 
         //Pregunta hasta que numero quiere saber cuales son primos
         Scanner sc = new Scanner(System.in);
@@ -27,5 +27,18 @@ public class u3act8 {
         n = sc.nextInt();
 
         //For 
+        for (int i=2; i<n; i++) {
+            resto=n%i;
+            System.out.println(i+" Resto: "+resto);
+            primo*=resto;
+        }
+
+
+        System.out.println(primo);
+        if (primo==0) {
+                System.out.println("No es primo");
+            } else {
+                System.out.println("Es primo");
+            }
     }
 }
