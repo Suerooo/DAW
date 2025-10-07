@@ -51,6 +51,6 @@ public class u3act8 {
         }
 
         //Cierra la variable sc
-         sc.close();
+        sc.close();
     }
 }

@@ -12,10 +12,12 @@ public class u3act12 {
         * 
         */
 
+        //Pregunta al usuario el limite del triangulo rectángulo
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int n = sc.nextInt();
 
+        
         for (int i=n; i>=1; i--) {
             System.out.println();
 
