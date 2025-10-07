@@ -3,12 +3,11 @@
 import java.util.Scanner;
 
 public class u3act8 {
-    @SuppressWarnings("resource")
 	public static void main(String[] args) {
         /*Realiza un programa que nos pida un número n y que nos diga
         cuantos números primos hay entre 1 y n. Un número primo es aquel
         que solo es divisible por 1 y por el mismo. Veamos un ejemplo para n=8.
-        1 - primo
+        1 - no primo
         2 - primo 
         3 - primo
         4 - no primo
@@ -19,26 +18,39 @@ public class u3act8 {
         5 Números primos en total */
         
         //Variables
-        int n, primo=1,resto;
+        int limite, restoAcumulado=1, resto = 0;
 
         //Pregunta hasta que numero quiere saber cuales son primos
         Scanner sc = new Scanner(System.in);
         System.out.print("Hasta que numero quieres saber cuales son primos: ");
-        n = sc.nextInt();
+        limite = sc.nextInt();
 
-        //For 
-        for (int i=2; i<n; i++) {
-            resto=n%i;
-            System.out.println(i+" Resto: "+resto);
-            primo*=resto;
+
+        //Segmenta el numero (n) ingresado por el usuario
+        for (int j=2; j<=limite; j++) {
+
+            //Segmenta los segmentos del for anterior
+            for (int i=2; i<j; i++) {
+                //Calculamos el resto de la segmentación de la segmentación (ignorando 1 y j) y lo multiplicamos todo en la variables primo
+                resto=j%i;
+                restoAcumulado*=resto;
+            }
+
+            //Entonces si primo==0 el numero no es primo porque significa que existe una division que no es 1 o el propio numero que no tiene resto
+            if (restoAcumulado==0) {
+                    System.out.println(j+" - no primo");
+                }
+                //Si primo!=0 significa que ignorando 1 y el propio numero no existe ninguna otra division sin resto 
+                else {
+                    System.out.println(j+" - primo");
+                }
+            
+            //Reseteamos las variables para calcular el siguiente numero
+            restoAcumulado=1;
+            resto=0;
         }
 
-
-        System.out.println(primo);
-        if (primo==0) {
-                System.out.println("No es primo");
-            } else {
-                System.out.println("Es primo");
-            }
+        //Cierra la variable sc
+         sc.close();
     }
 }
