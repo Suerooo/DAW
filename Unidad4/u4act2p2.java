@@ -15,17 +15,42 @@ public class u4act2p2 {
     }
 
     @SuppressWarnings("resource")
-    static void menu(int opción) {
+    static void menu() {
+        int opción;
         do {
             Scanner sc = new Scanner(System.in);
-            System.out.print("Introduce un número: ");
-            int opcion = sc.nextInt();
+            System.out.print("Calcular el area del cilindro (1) o calcular el volumen (2), escribe otro numero para cerrar: ");
+            opción = sc.nextInt();
 
-            
-        } while (opción!=1 || opción!=2);
+            switch (opción) {
+                case 1 -> {
+                    System.out.print("Cuantos cm mide la altura del cilindro: ");
+                    double altura = sc.nextDouble();
+
+                    System.out.print("Cuantos cm mide el radio del cilindro: ");
+                    double radio = sc.nextDouble();
+
+                    areaCilindro(radio, altura);
+
+                }
+                case 2 -> {
+                    System.out.print("Cuantos cm mide la altura del cilindro: ");
+                    double altura = sc.nextDouble();
+
+                    System.out.print("Cuantos cm mide el radio del cilindro: ");
+                    double radio = sc.nextDouble();
+
+                    volumenCilindro(radio, altura);
+                }
+                default -> System.out.println("Cerrando...");
+            }
+
+        } while (opción==1 || opción==2);
     }
 
     public static void main(String[] args) {
         
+        menu();
+
     }
 }

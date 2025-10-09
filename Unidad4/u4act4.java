@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class u4act4 {
 
-    static void aleatorio(int cantidad, double min, double max) {
+    static void aleatorio(int cantidad, int min, int max) {
 
         for (int i=1; i<=cantidad; i++){
-            int numeroAleatorio = (int) (Math.random()*((max-min)+min)+1);
+            int numeroAleatorio = (int) (Math.random()*(max-min+1)+min);
             System.out.println("El numero aleatorio es: "+numeroAleatorio);
         }
 
@@ -20,13 +20,13 @@ public class u4act4 {
         de números aleatorios que se mostrarán y los valores mínimos y máximos que estos pueden tomar. */
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce un número: ");
+        System.out.print("Cantidad de números aleatorios: ");
         int cantidad = sc.nextInt();
 
-        System.out.print("Introduce un número: ");
+        System.out.print("Mínimo: ");
         int min = sc.nextInt();
 
-        System.out.print("Introduce un número: ");
+        System.out.print("Máximo: ");
         int max = sc.nextInt();
 
         aleatorio(cantidad, min, max);
