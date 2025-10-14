@@ -4,16 +4,19 @@ import java.util.Scanner;
 
 public class u4act2 {
 
-    //Función
+    //Crea un método que calcula el area y el volumen a partir de 3 variables (altura, radio, opción[que quiere calcular)
     static void areaVolumen(int opción, double altura, double radio) {
         
+        //Crea pi como una variable final
         final double pi=3.14159265359;
 
+        //Si la variable(opción) es == 1, calcula con las anteriores variables(altura,radio) el area y lo imprime
         if (opción==1) {
 
             double area=2*pi * radio * (altura+radio);
             System.out.println("El area es "+area);
 
+        //Si la variable(opción) es == 2, calcula con las anteriores variables(altura,radio) el volumen y lo imprime
         } else if(opción==2){
 
             double volumen=pi * (radio*radio) * altura;
@@ -34,6 +37,7 @@ public class u4act2 {
 
         Volumen = pi * radio2 * altura  */
 
+        //Pregunta y guarda la opción que quiere elegir la altura y el radio del cilindro
         Scanner sc = new Scanner(System.in);
         System.out.print("Quieres calcular el area (escribe 1) o el volumen (escribe 2): ");
         int opción = sc.nextInt();
@@ -44,6 +48,7 @@ public class u4act2 {
         System.out.print("Cuantos cm mide el radio del cilindro: ");
         double radio = sc.nextDouble();
 
+        //Llama al método areaVolumen
         areaVolumen(opción, altura, radio);
     }
 }

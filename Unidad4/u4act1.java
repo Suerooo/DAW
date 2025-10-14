@@ -7,9 +7,11 @@ public class u4act1 {
     //Función
         static void numeroEntre(int x, int y) {
 
+            //Calcula que variable(x,y) es mayor y cual es menor para guardarlo en unas variables (max,min)
             int max = x>y ? x : y;
             int min = x<y ? x : y;
 
+            //Imprime los números comprendidos entre las variables(max,min)
             for (int i=min; i<=max; i++) {
                 System.out.println(i);
             }
@@ -20,7 +22,7 @@ public class u4act1 {
         /* Escribir una función a la que se le pasen dos 
         enteros y muestre todos los números comprendidos entre ellos.*/
 
-        //Pregunta al usuario el numero mínimo y el máximo
+        //Pregunta y guarda los valores x e y que usamos para imprimir los números que hay entre ellos
         @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.print("Quieres los todos números desde el: ");
