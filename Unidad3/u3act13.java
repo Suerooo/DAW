@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class u3act13 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Crea un programa en Java que genere un número aleatorio entre 1 y 100.
         Luego, pide al usuario que adivine el número. El programa debe indicar si 

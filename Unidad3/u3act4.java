@@ -3,7 +3,6 @@
 import java.util.Scanner;
 
 public class u3act4 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Implementa la aplicación ECO, que pide al
         usuario un número y muestra en pantalla la salida:

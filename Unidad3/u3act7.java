@@ -3,7 +3,6 @@
 import java.util.Scanner;
 
 public class u3act7 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Escribe un programa que incremente la hora
         de un reloj. Se pide por teclado la hora, minutos

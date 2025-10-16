@@ -5,18 +5,32 @@ import java.util.Scanner;
 public class u4act2p2 {
 
     //Método que calcula el area del cilindro con las variables (altura, radio)
-    static void areaCilindro(double radio, double altura) {
+    static void areaCilindro() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Cuantos cm mide la altura del cilindro: ");
+        double altura = sc.nextDouble();
+
+        System.out.print("Cuantos cm mide el radio del cilindro: ");
+        double radio = sc.nextDouble();
+
         double area=2*Math.PI * radio * (altura+radio);
         System.out.println("El area es "+area);
     }
 
     //Método que calcula el volumen del cilindro con las variables (altura, radio)
-    static void volumenCilindro(double radio, double altura) {
+    static void volumenCilindro() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Cuantos cm mide la altura del cilindro: ");
+        double altura = sc.nextDouble();
+
+        System.out.print("Cuantos cm mide el radio del cilindro: ");
+        double radio = sc.nextDouble();
+
         double volumen=Math.PI * (radio*radio) * altura;
         System.out.println("El volumen es "+volumen);
     }
 
-    @SuppressWarnings("resource")
+    
     //Método que crea un menu en el que puedes elegir que método llamar, areaCilindro o volumenCilindro
     static void menu() {
         int opción;
@@ -31,23 +45,13 @@ public class u4act2p2 {
             en caso de elegir otro numero termina el programa e imprime "Cerrando..."*/
             switch (opción) {
                 case 1 -> {
-                    System.out.print("Cuantos cm mide la altura del cilindro: ");
-                    double altura = sc.nextDouble();
 
-                    System.out.print("Cuantos cm mide el radio del cilindro: ");
-                    double radio = sc.nextDouble();
-
-                    areaCilindro(radio, altura);
+                    areaCilindro();
 
                 }
                 case 2 -> {
-                    System.out.print("Cuantos cm mide la altura del cilindro: ");
-                    double altura = sc.nextDouble();
 
-                    System.out.print("Cuantos cm mide el radio del cilindro: ");
-                    double radio = sc.nextDouble();
-
-                    volumenCilindro(radio, altura);
+                    volumenCilindro();
                 }
                 default -> System.out.println("Cerrando...");
             }

@@ -3,7 +3,6 @@
 import java.util.Scanner;
 
 public class u3act10 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Realiza un menú con las siguientes opciones:
         ----------------------------------------------------

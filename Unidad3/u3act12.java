@@ -3,7 +3,6 @@
 import java.util.Scanner;
 
 public class u3act12 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Pedir por consola un número n y dibujar un triángulo rectángulo de n elementos de lado, utilizando para ello asteriscos (*). Por ejemplo, para n = 4:
         * * * *

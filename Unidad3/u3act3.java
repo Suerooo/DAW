@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class u3act3 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Desarrollar un juego que ayude a mejorar
         el cálculo mental de la suma. El jugador

@@ -25,7 +25,6 @@ public class u4act2 {
         }
     }
 
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Realizar una función que calcule y muestre el área 
         o el volumen de un cilindro, según se especifique. Para distinguir

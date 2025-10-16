@@ -3,7 +3,6 @@
 import java.util.Scanner;
 
 public class u3act6 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Pedir 5 calificaciones 
         de alumnos y decir al 

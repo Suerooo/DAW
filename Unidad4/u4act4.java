@@ -19,7 +19,6 @@ public class u4act4 {
 
     }
 
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Crea una función que muestre por consola una serie de números
         aleatorios enteros. Los parámetros de la función serán: la cantidad

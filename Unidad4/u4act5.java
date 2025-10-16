@@ -17,12 +17,9 @@ public class u4act5 {
         return diferencia;
     }
 
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Diseña una función a la que se le pasan las horas y minutos de dos instantes de tiempo, con el siguiente prototipo:
-
         Static int diferenciaMin (int hora1,  int minuto1,  int  hora2,  int  minuto2)
-
         La función devolverá la cantidad de minutos que existen de diferencia entre los dos instantes utilizados. */
 
         //Pregunta y guarda la primera hora y minuto y la segunda hora y minuto

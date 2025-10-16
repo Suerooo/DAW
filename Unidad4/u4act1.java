@@ -23,7 +23,6 @@ public class u4act1 {
         enteros y muestre todos los números comprendidos entre ellos.*/
 
         //Pregunta y guarda los valores x e y que usamos para imprimir los números que hay entre ellos
-        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.print("Quieres los todos números desde el: ");
         int x = sc.nextInt();

@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class u3act9 {
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         /*Dadas 6 notas, 
         escribir la cantidad de
