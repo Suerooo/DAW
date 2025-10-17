@@ -9,36 +9,36 @@ public class u5act3 {
         de los negativos y cuenta el número de ceros introducidos. */
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Cantidad de numeros que quieres almacenar: ");
+        System.out.print("Cantidad de números que quieres almacenar: ");
         int cantidad = sc.nextInt();
 
-        double almacen[] = new double[cantidad];
+        double almacén[] = new double[cantidad];
 
-        for (int i=0; i<almacen.length; i++) {
+        for (int i=0; i<almacén.length; i++) {
             System.out.print((i+1)+"º numero: ");
-            almacen[i] = sc.nextDouble();
+            almacén[i] = sc.nextDouble();
         }
 
         double totalNegativo=0.0, totalPositivo=0.0;
         int contador0=0, contadorPositivo=0, contadorNegativo=0;
-        for (int i=0; i<almacen.length; i++) {
-            if (almacen[i]>0) {
-                totalPositivo+=almacen[i];
+        for (int i=0; i<almacén.length; i++) {
+            if (almacén[i]>0) {
+                totalPositivo+=almacén[i];
                 contadorPositivo++;
 
-            } if (almacen[i]<0) {
-                totalNegativo+=almacen[i];
+            } if (almacén[i]<0) {
+                totalNegativo+=almacén[i];
                 contadorNegativo++;
 
-            } if (almacen[i]==0) {
+            } if (almacén[i]==0) {
                 contador0++;
             }
         }
         double mediaPositivo=totalPositivo/contadorPositivo;
         double mediaNegativo=totalNegativo/contadorNegativo;
 
-        System.out.println("La media de los numeros postiivos es: "+mediaPositivo);
-        System.out.println("La media de los numeros negativos es: "+mediaNegativo);
+        System.out.println("La media de los números positivos es: "+mediaPositivo);
+        System.out.println("La media de los números negativos es: "+mediaNegativo);
         System.out.println("La cantidad de ceros es: "+contador0);
     }
 }
