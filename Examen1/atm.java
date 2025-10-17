@@ -20,47 +20,56 @@ public class atm {
 
     //Método para ingresar dinero
     static double ingresarDinero(double saldoActual) {
+        //Pregunta y guarda la cantidad de dinero que el usuario quiere ingresar
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.print("¿Que cantidad deseas ingresar?: ");
         double ingreso = sc.nextDouble();
 
-        if (ingreso<=saldoActual && ingreso>0) {
+        //Si esa cantidad es mayor que 0 lo suma a saldoActual y si no imprime un error
+        if (ingreso>0) {
             saldoActual+=ingreso;
             System.out.println("Ingreso realizado correctamente");
-
-        } if (ingreso>saldoActual || ingreso<0) {
-            System.out.println("Error: Saldo insuficiente");
+        } else {
+            System.out.println("Error: Numero incorrecto");
         }
 
+        //Devuelve la variable saldoActual
         return saldoActual;
     }
 
     //Método para retirar dinero
     static double retirarDinero(double saldoActual) {
+        //Pregunta y guarda la cantidad de dinero que el usuario quiere retirar
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.print("¿Que cantidad deseas retirar?: ");
         double retiro = sc.nextDouble();
 
+        //Si esa cantidad es menor o igual a la del saldo y es mayor que 0 resta a saldoActual la cantidad de dinero que el usuario quiere retirar
         if (retiro<=saldoActual && retiro>0) {
             saldoActual-=retiro;
             System.out.println("Retirada realizada correctamente");
 
+        //Si la cantidad es menor que 0 o mayor que la de saldoAtual da un error
         } if (retiro>saldoActual || retiro<0) {
-            System.out.println("Error: Saldo insuficiente");
+            System.out.println("Error: Numero incorrecto");
         }
 
+        //Devuelve la variable saldoActual
         return saldoActual;
     }
 
     public static void main(String[] args) {
 
+        //Variables
         double saldoActual=1000.0;
         int opcion = 0;
 
         do {
+            //Llama la variable mostrarMenu para mostrar el menu
             mostrarMenu();
 
-            Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+            //Pregunta y guarda la opcion que quiere usar el usuario
+            Scanner sc = new Scanner(System.in);
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
 
