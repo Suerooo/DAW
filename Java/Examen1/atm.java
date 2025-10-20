@@ -49,7 +49,7 @@ public class atm {
             saldoActual-=retiro;
             System.out.println("Retirada realizada correctamente");
 
-        //Si la cantidad es menor que 0 o mayor que la de saldoAtual da un error
+        //Si la cantidad es menor que 0 o mayor que la de saldoActual da un error
         } if (retiro>saldoActual || retiro<0) {
             System.out.println("Error: Numero incorrecto");
         }
@@ -62,18 +62,18 @@ public class atm {
 
         //Variables
         double saldoActual=1000.0;
-        int opcion = 0;
+        int opción = 0;
 
         do {
             //Llama la variable mostrarMenu para mostrar el menu
             mostrarMenu();
 
-            //Pregunta y guarda la opcion que quiere usar el usuario
+            //Pregunta y guarda la opción que quiere usar el usuario
             Scanner sc = new Scanner(System.in);
             System.out.print("Elige una opción: ");
-            opcion = sc.nextInt();
+            opción = sc.nextInt();
 
-            switch (opcion) {
+            switch (opción) {
                 case 1 -> {
                     consultarSaldo(saldoActual);
                 }
@@ -84,12 +84,12 @@ public class atm {
                     saldoActual=retirarDinero(saldoActual);
                 }
                 case 4 -> {
-                    System.out.println("Gracias por utilizar nuestros serivicios. Hasta pronto");
+                    System.out.println("Gracias por utilizar nuestros servicios. Hasta pronto");
                 }
                 default -> System.out.println("Numero incorrecto vuelve a intentarlo");
             }
 
-        } while (opcion!=4);
+        } while (opción!=4);
 
     }
 }
