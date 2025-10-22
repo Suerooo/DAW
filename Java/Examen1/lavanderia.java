@@ -2,9 +2,9 @@ package Examen1;
 
 import java.util.Scanner;
 
-public class lavanderia {
+public class Lavanderia {
 
-    //Variable Scanner static
+    //Scanner compartido para todas las entradas del usuario
     static Scanner sc = new Scanner(System.in);
 
     //Método que muestra el menú
@@ -25,107 +25,110 @@ public class lavanderia {
 
     //Método consultar el saldo que el usuario tiene
     static void consultarSaldo(double saldo) {
-        System.out.println("Tienes "+saldo+" euros");
+        System.out.printf("Tienes %.2f euros %n", saldo);
     }
 
     //Método que verifica si la compra de fichas es posible
     static boolean validacion(double precio, double saldo, int fichas, int cantidadCompra) {
         boolean validacion=false;
 
+        //Valida si es posible comprar para enviar el resultado de la validación a los otros metodos
         if (cantidadCompra<=0) {
-            System.out.println("Error: tienes que comprar como minimo 1 ficha");
+            System.out.println("Error: tienes que comprar como mínimo 1 ficha");
         } else if (saldo-(precio*cantidadCompra)<0) {
             System.out.println("Error: Saldo insuficiente");
         } else {
             System.out.println("Compra aceptada");
             validacion=true;
         }
-
         return validacion;
     }
 
-    static int comprarFichas(boolean validacion, int fichas, int cantidadCompra) {
-        if (validacion) {
-            fichas+=cantidadCompra;
-        }
-        return fichas;
-    }
-
-    static double gastarDinero(boolean validacion, double precio, double saldo, int cantidadCompra) {
-        if (validacion) {
-           saldo-=(precio*cantidadCompra);
-        }
-        return saldo;
-    }
-
+    //Método para usar las fichas en la lavandería
     static int usarLavadora(int fichas) {
+        //Pregunta y guarda la cantidad de fichas que se quieren usar
         System.out.print("Cuantas fichas quieres gastar: ");
-        int numero = sc.nextInt();
+        int fichasUsadas = sc.nextInt();
 
-        if (numero<=0) {
-            System.out.println("Error: tienes que usar como minimo 1 ficha");
-        } else if (numero>fichas) {
+        //Valida que no se pueda usar fichas negativas ni usar mas fichas de las que el usuario tiene
+        if (fichasUsadas<=0) {
+            System.out.println("Error: tienes que usar como mínimo 1 ficha");
+        } else if (fichasUsadas>fichas) {
             System.out.println("Error: Fichas insuficiente");
         } else {
-            fichas-=numero;
+            fichas-=fichasUsadas;
         }
 
+        //Devuelve las fichas
         return fichas;
     }
 
+    //Método para añadir saldo
     static double añadirDinero(double saldo) {
         System.out.print("Cuanto dinero quieres ingresar: ");
-        int numero = sc.nextInt();
+        double ingresoDinero = sc.nextDouble();
 
-        if (numero<=0) {
-            System.out.println("Error: no se permiten numeros menores que 0");
+        //Valida que no se ingrese números menores a 0
+        if (ingresoDinero<=0) {
+            System.out.println("Error: no se permiten números menores que 0");
         } else {
-            saldo+=numero;
+            saldo+=ingresoDinero;
         }
 
         return saldo;
     }
     
     public static void main(String[] args) {
-        
+        //Variables
         int fichas=20, opcion;
         double saldo=100.0, precio=20.0;
 
-
+        //Muestra el menu hasta que el usuario elija como opción el 6
         do {
-            
+            //Llama al método mostrarMenu para mostrar el menu
             mostrarMenu();
 
+            //Pregunta al usuario que opción del menu quiere usar
             System.out.print("Introduce un número: ");
             opcion = sc.nextInt();
 
+            //Hace que el menu sea interactivo con un switch
             switch (opcion) {
                 case 1 -> {
+                    //Llama al método consultarFichas
                     consultarFichas(fichas);
                 }
                 case 2 -> {
+                    //Llama al método consultarSaldo
                     consultarSaldo(saldo);
                 }
                 case 3 -> {
+                    //Pregunto al usuario la cantidad de fichas que quiere comprar y si el método validación devuelve true añade las fichas y resta el precio al saldo
                     System.out.print("Introduce un número: ");
                     int cantidadCompra = sc.nextInt();
-                    boolean validacion=validacion(precio, saldo, fichas, cantidadCompra);
-                    fichas=comprarFichas(validacion, fichas, cantidadCompra);
-                    saldo=gastarDinero(validacion, precio, saldo, cantidadCompra);
+                    if (validacion(precio, saldo, fichas, cantidadCompra)) {
+                        fichas+=cantidadCompra;
+                        saldo-=(precio*cantidadCompra);
+                    }
                 }
                 case 4 -> {
+                    //Iguala la variable fichas al resultado del método usarLavadora
                     fichas=usarLavadora(fichas);
                 }
                 case 5 -> {
+                    //Iguala la variable saldo al resultado del método gastarDinero
                     saldo=añadirDinero(saldo);
                 }
                 case 6 -> {
+                    //Imprime "Saliendo..." ya que el bucle va a acabar
                     System.out.println("Saliendo...");
                 }
-                default -> System.out.println("Error");
+                //En caso de introducir un numero que no esta comprendido en el menu da un error
+                default -> System.out.println("Error: Esa opción no existe");
             }
-
         } while (opcion!=6);
 
+        //Cierra la variable Scanner
+        sc.close();
     }
 }
