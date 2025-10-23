@@ -3,7 +3,7 @@ package Examen1;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class atm {
+public class Atm {
     //Método que muestra el menu del atm
     static void mostrarMenu() {
         System.out.println("*** BIENVENIDO A TU CAJERO AUTOMÁTICO ***");
