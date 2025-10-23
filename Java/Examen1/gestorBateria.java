@@ -14,64 +14,56 @@ public class GestorBateria {
         System.out.println();
     }
 
-    static void consultarBatería(double batería) {
-        System.out.println("La batería actual es: "+batería);
+    static void consultarBateria(double bateria) {
+        System.out.println("La batería actual es: "+bateria);
     }
 
-    static double cargar(double batería) {
+    static double cargar(double bateria) {
         System.out.print("Cuanta batería se ha cargado: ");
         double cargar = sc.nextDouble();
 
-        if (batería+cargar>100 ||cargar<0) {
+        if (bateria+cargar>100 ||cargar<0) {
             System.out.println("Error: Número invalido");
         } else {
-            batería+=cargar;
+            bateria+=cargar;
         }
 
-        return batería;
+        return bateria;
     }
 
-    static double usar(double batería) {
+    static double usar(double bateria) {
         System.out.print("Cuanta batería se ha usado: ");
         double usar = sc.nextDouble();
         
-        if (batería-usar<0 || usar<0) {
+        if (bateria-usar<0 || usar<0) {
             System.out.println("Error número invalido");
         } else {
-            batería-=usar;
+            bateria-=usar;
         }
 
-        return batería;
+        return bateria;
     }
 
     public static void main(String[] args) {
         
-        double batería=65.0;
-        int opción;
+        double bateria=65.0;
+        int opcion;
 
         do {
             mostrarMenu();
 
             System.out.print("Que opción quieres elegir: ");
-            opción = sc.nextInt();
+            opcion = sc.nextInt();
 
-            switch (opción) {
-                case 1 -> {
-                    consultarBatería(batería);
-                }
-                case 2 -> {
-                    batería=cargar(batería);
-                }
-                case 3 -> {
-                    batería=usar(batería);
-                }
-                case 4 -> {
-                    System.out.println("Saliendo...");
-                }
+            switch (opcion) {
+                case 1 -> consultarBateria(bateria);
+                case 2 -> bateria=cargar(bateria);
+                case 3 -> bateria=usar(bateria);
+                case 4 -> System.out.println("Saliendo...");
                 default -> System.out.println("Error: esa opción no existe");
             }
 
-        } while (opción!=4);
+        } while (opcion!=4);
 
     }
 }

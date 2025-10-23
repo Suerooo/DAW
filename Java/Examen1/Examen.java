@@ -114,13 +114,13 @@ public class Examen {
     static void miniCalculadora() {
         
         System.out.print("Introduce el primer número: ");
-        int a = sc.nextInt();
+        double a = sc.nextDouble();
         
         System.out.print("Introduce el operador (+, -, *, /): ");
         String operador = sc.next();
         
         System.out.print("Introduce el segundo número: ");
-        int b = sc.nextInt();
+        double b = sc.nextDouble();
         
         double resultado=0.0;
         
@@ -184,12 +184,9 @@ public class Examen {
             opcion = sc.nextInt();
             
             switch (opcion) {
-                case 1 -> {
-                    calcularTramos();
-                }
-                case 2 -> {
-                    contadorPares();
-                }
+                case 1 -> calcularTramos();
+                case 2 -> contadorPares();
+
                 case 3 -> {
                     System.out.print("Email: ");
                     String email=sc.next();
@@ -198,12 +195,8 @@ public class Examen {
                         System.out.println("El email ES válido");
                     } else System.out.println("El email NO es válido");
                 }
-                case 4 -> {
-                    miniCalculadora();
-                }
-                case 0 -> {
-                    System.out.println("Saliendo...");
-                }
+                case 4 -> miniCalculadora();
+                case 0 -> System.out.println("Saliendo...");
                 default -> System.out.println("Error: esa opción no esta en el menú");
             }
             
