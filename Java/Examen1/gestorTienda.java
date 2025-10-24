@@ -2,7 +2,7 @@ package Examen1;
 
 import java.util.Scanner;
 
-public class GestorTienda {
+public class gestorTienda {
 
     static Scanner sc = new Scanner(System.in);
 

@@ -2,7 +2,7 @@ package Examen1;
 
 import java.util.Scanner;
 
-public class Lavanderia {
+public class lavanderia {
 
     //Scanner compartido para todas las entradas del usuario
     static Scanner sc = new Scanner(System.in);
