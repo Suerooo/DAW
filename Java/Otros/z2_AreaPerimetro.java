@@ -18,7 +18,7 @@ public class z2_AreaPerimetro {
         double area, perimetro, base, altura;
         
         Scanner sc = new Scanner(System.in); 
-        System.out.print("Cuantos metros mide la base del rectangulo: "); 
+        System.out.print("Cuantos metros mide la base del rectángulo: "); 
         base = sc.nextDouble();
         
         System.out.print("Cuantos metros mide la altura del rectángulo: "); 
