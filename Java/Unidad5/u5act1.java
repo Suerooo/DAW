@@ -2,16 +2,17 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class u5act1 {
+public class U5act1 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Crear un programa en Java que permita almacenar las notas de un grupo 
         de alumnos, calcular la media, y encontrar la nota más alta y la más baja. */
 
-        Scanner sc = new Scanner(System.in);
         System.out.print("Cuantos alumnos hay en la clase: ");
         int numeroAlumnos = sc.nextInt();
 
-        double notas[] = new double[numeroAlumnos];
+        double[] notas = new double[numeroAlumnos];
 
         for (int i=0; i<numeroAlumnos; i++){
             System.out.print("Nota del "+(i+1)+"º alumno: ");

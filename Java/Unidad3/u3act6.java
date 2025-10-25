@@ -2,7 +2,9 @@
 
 import java.util.Scanner;
 
-public class u3act6 {
+public class U3act6 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Pedir 5 calificaciones 
         de alumnos y decir al 
@@ -14,7 +16,6 @@ public class u3act6 {
         
         for (int veces=0; veces!= 5; veces++) {
             //Pide la nota
-            Scanner sc = new Scanner(System.in); 
             System.out.print("Introduce una calificación: "); 
             nota = sc.nextInt();
 

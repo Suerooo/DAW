@@ -2,7 +2,9 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class u4act1 {
+public class U4act1 {
+    static Scanner sc = new Scanner(System.in); 
+
 
     //Función
         static void numeroEntre(int x, int y) {
@@ -23,7 +25,6 @@ public class u4act1 {
         enteros y muestre todos los números comprendidos entre ellos.*/
 
         //Pregunta y guarda los valores x e y que usamos para imprimir los números que hay entre ellos
-        Scanner sc = new Scanner(System.in);
         System.out.print("Quieres los todos números desde el: ");
         int x = sc.nextInt();
 

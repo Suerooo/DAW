@@ -2,7 +2,9 @@
 
 import java.util.Scanner;
 
-public class u3act10 {
+public class U3act10 {
+    static Scanner sc = new Scanner(System.in); 
+    
     public static void main(String[] args) {
         /*Realiza un menú con las siguientes opciones:
         ----------------------------------------------------
@@ -15,17 +17,16 @@ public class u3act10 {
         El menú debe repetirse hasta que el usuario decida salir. */
 
         //Variables
-        int opción;
+        int opcion;
 
         //Bucle para el menu
         do {
             //Pregunta al usuario que opción quiere usar
-            Scanner sc = new Scanner(System.in);
             System.out.print("Que opción quieres usar: ");
-            opción = sc.nextInt();
+            opcion = sc.nextInt();
 
             //Switch que funciona como menu
-            switch (opción) {
+            switch (opcion) {
                 //Suma dos números
                 case 1:
                     //Pide el primer numero
@@ -71,7 +72,7 @@ public class u3act10 {
                     break;
             }
         //Cuando el usuario escriba 0 termina el bucle
-        } while (opción!=0);
+        } while (opcion!=0);
         System.out.println("Cerrando programa");
     }
 }

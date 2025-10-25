@@ -2,7 +2,9 @@
 
 import java.util.Scanner;
 
-public class u3act7 {
+public class U3act7 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Escribe un programa que incremente la hora
         de un reloj. Se pide por teclado la hora, minutos
@@ -15,7 +17,6 @@ public class u3act7 {
         int horas, minutos, segundos, cuantos;
 
         //Pide la hora
-        Scanner sc = new Scanner(System.in); 
         System.out.print("Hora: "); 
         horas = sc.nextInt();
 

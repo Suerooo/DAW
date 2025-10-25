@@ -2,7 +2,9 @@
 
 import java.util.Scanner;
 
-public class u3act4 {
+public class U3act4 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Implementa la aplicación ECO, que pide al
         usuario un número y muestra en pantalla la salida:
@@ -16,7 +18,6 @@ public class u3act4 {
         int numero, veces;
 
         //Pregunta el numero de veces que se tiene que repetir ECO
-        Scanner sc = new Scanner(System.in); 
         System.out.print("Cuantas veces si tiene que repetir ECO: "); 
         numero = sc.nextInt();
 

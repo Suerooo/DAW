@@ -2,11 +2,11 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class u4act2p2 {
+public class U4act2p2 {
+    static Scanner sc = new Scanner(System.in); 
 
     //Método que calcula el area del cilindro con las variables (altura, radio)
     static void areaCilindro() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Cuantos cm mide la altura del cilindro: ");
         double altura = sc.nextDouble();
 
@@ -19,7 +19,6 @@ public class u4act2p2 {
 
     //Método que calcula el volumen del cilindro con las variables (altura, radio)
     static void volumenCilindro() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Cuantos cm mide la altura del cilindro: ");
         double altura = sc.nextDouble();
 
@@ -33,30 +32,22 @@ public class u4act2p2 {
     
     //Método que crea un menu en el que puedes elegir que método llamar, areaCilindro o volumenCilindro
     static void menu() {
-        int opción;
+        int opcion;
         do {
             //Pregunta y guarda la elección del usuario
-            Scanner sc = new Scanner(System.in);
             System.out.print("Calcular el area del cilindro (1) o calcular el volumen (2), escribe otro numero para cerrar: ");
-            opción = sc.nextInt();
+            opcion = sc.nextInt();
 
             /*Pregunta y guarda las variables (altura, radio) y si el usuario en la variable (opción)
             eligió 1 llama el método areaCilindro y si eligió 2 llama al método volumenCilindro 
             en caso de elegir otro numero termina el programa e imprime "Cerrando..."*/
-            switch (opción) {
-                case 1 -> {
-
-                    areaCilindro();
-
-                }
-                case 2 -> {
-
-                    volumenCilindro();
-                }
+            switch (opcion) {
+                case 1 -> areaCilindro();
+                case 2 -> volumenCilindro();
                 default -> System.out.println("Cerrando...");
             }
 
-        } while (opción==1 || opción==2);
+        } while (opcion==1 || opcion==2);
     }
 
     public static void main(String[] args) {

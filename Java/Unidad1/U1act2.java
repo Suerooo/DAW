@@ -2,15 +2,8 @@ package Unidad1;
 
 import java.util.Scanner;
 
-/**
- *
- * @author 49399328C
- */
 public class U1act2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         /*
         Diseñar una aplicación que calcule la longitud y el área de una circunferencia. Para ello, el usuario debe introducir el radio (que puede contener decimales).

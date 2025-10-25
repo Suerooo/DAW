@@ -1,6 +1,3 @@
-
-
-
 import java.util.Scanner;
 
 public class U3act2 {

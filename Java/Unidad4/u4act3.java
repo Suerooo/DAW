@@ -3,7 +3,8 @@ package Unidad4;
 import java.util.Scanner;
 
 
-public class u4act3 {
+public class U4act3 {
+    static Scanner sc = new Scanner(System.in); 
 
     //Método que determina si un numero es primo o no primo
     static boolean esPrimo(int numero) {
@@ -19,12 +20,11 @@ public class u4act3 {
 
     //Método que calcula los números primos de los divisores de un numero
     static void divisoresPrimos() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int numero = sc.nextInt();
 
         for (int i=1; i<=numero; i++) {
-            if (esPrimo(i)==true) {
+            if (esPrimo(i)) {
                 System.out.println(i+" es primo");
             } else {
                 System.out.println(i+" no es primo");

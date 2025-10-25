@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-public class u3act13 {
+public class U3act13 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Crea un programa en Java que genere un número aleatorio entre 1 y 100.
         Luego, pide al usuario que adivine el número. El programa debe indicar si 
@@ -10,7 +12,6 @@ public class u3act13 {
 
         //Variables
         int numeroAleatorio, numeroDelUsuario;
-        Scanner sc = new Scanner(System.in);
 
         //Genera un numero aleatorio entre 1 y 100
         numeroAleatorio = (int) (Math.random()*100+1);
@@ -30,7 +31,7 @@ public class u3act13 {
                 System.out.println("Demasiado bajo \n");
             }
             if (numeroDelUsuario==numeroAleatorio) {
-               System.out.println("El numero: "+numeroDelUsuario+" es correcto"); 
+                System.out.println("El numero: "+numeroDelUsuario+" es correcto"); 
             } 
 
         } while (numeroAleatorio!=numeroDelUsuario);

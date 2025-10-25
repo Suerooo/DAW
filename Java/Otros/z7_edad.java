@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class z7_edad {
+public class Z7_Edad {
     public static void main(String[] args) {
         /*
         Pide la edad de una persona y muestra:

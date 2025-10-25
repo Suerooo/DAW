@@ -1,14 +1,6 @@
 import java.util.Scanner;
-
-/**
- *
- * @author Usuario
- */
 public class U2act7 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         /*
         En una granja se compra diariamente una cantidad (comidaDiaria) 

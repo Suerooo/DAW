@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class z8_MenuConSwitch {
+public class Z8_MenuConSwitch {
     public static void main(String[] args) {
         /*Pide una opción del 1 al 4 y 
         muestra un mensaje distinto para 

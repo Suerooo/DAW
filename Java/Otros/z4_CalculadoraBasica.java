@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class z4_CalculadoraBasica {
+public class Z4_CalculadoraBasica {
 
     /**
      * @param args the command line arguments

@@ -2,7 +2,7 @@ package Examen1;
 
 import java.util.Scanner;
 
-public class lavanderia {
+public class Lavanderia {
 
     //Scanner compartido para todas las entradas del usuario
     static Scanner sc = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class lavanderia {
     }
 
     //Método que verifica si la compra de fichas es posible
-    static boolean validacion(double precio, double saldo, int fichas, int cantidadCompra) {
+    static boolean validacion(double precio, double saldo, int cantidadCompra) {
         boolean validacion=false;
 
         //Valida si es posible comprar para enviar el resultado de la validación a los otros metodos
@@ -64,7 +64,7 @@ public class lavanderia {
     }
 
     //Método para añadir saldo
-    static double añadirDinero(double saldo) {
+    static double anadirDinero(double saldo) {
         System.out.print("Cuanto dinero quieres ingresar: ");
         double ingresoDinero = sc.nextDouble();
 
@@ -94,36 +94,20 @@ public class lavanderia {
 
             //Hace que el menu sea interactivo con un switch
             switch (opcion) {
-                case 1 -> {
-                    //Llama al método consultarFichas
-                    consultarFichas(fichas);
-                }
-                case 2 -> {
-                    //Llama al método consultarSaldo
-                    consultarSaldo(saldo);
-                }
+                case 1 -> consultarFichas(fichas);
+                case 2 -> consultarSaldo(saldo);
                 case 3 -> {
                     //Pregunto al usuario la cantidad de fichas que quiere comprar y si el método validación devuelve true añade las fichas y resta el precio al saldo
                     System.out.print("Introduce un número: ");
                     int cantidadCompra = sc.nextInt();
-                    if (validacion(precio, saldo, fichas, cantidadCompra)) {
+                    if (validacion(precio, saldo, cantidadCompra)) {
                         fichas+=cantidadCompra;
                         saldo-=(precio*cantidadCompra);
                     }
                 }
-                case 4 -> {
-                    //Iguala la variable fichas al resultado del método usarLavadora
-                    fichas=usarLavadora(fichas);
-                }
-                case 5 -> {
-                    //Iguala la variable saldo al resultado del método gastarDinero
-                    saldo=añadirDinero(saldo);
-                }
-                case 6 -> {
-                    //Imprime "Saliendo..." ya que el bucle va a acabar
-                    System.out.println("Saliendo...");
-                }
-                //En caso de introducir un numero que no esta comprendido en el menu da un error
+                case 4 -> fichas=usarLavadora(fichas);
+                case 5 -> saldo=anadirDinero(saldo);
+                case 6 -> System.out.println("Saliendo...");
                 default -> System.out.println("Error: Esa opción no existe");
             }
         } while (opcion!=6);

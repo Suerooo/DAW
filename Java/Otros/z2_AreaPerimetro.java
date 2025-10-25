@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class z2_AreaPerimetro {
+public class Z2_AreaPerimetro {
 
     /**
      * @param args the command line arguments

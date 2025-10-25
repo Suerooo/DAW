@@ -3,7 +3,10 @@ package Examen1;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class atm {
+public class Atm {
+    //Scanner global
+    static Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
     //Método que muestra el menu del atm
     static void mostrarMenu() {
         System.out.println("*** BIENVENIDO A TU CAJERO AUTOMÁTICO ***");
@@ -21,7 +24,6 @@ public class atm {
     //Método para ingresar dinero
     static double ingresarDinero(double saldoActual) {
         //Pregunta y guarda la cantidad de dinero que el usuario quiere ingresar
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.print("¿Que cantidad deseas ingresar?: ");
         double ingreso = sc.nextDouble();
 
@@ -40,7 +42,6 @@ public class atm {
     //Método para retirar dinero
     static double retirarDinero(double saldoActual) {
         //Pregunta y guarda la cantidad de dinero que el usuario quiere retirar
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.print("¿Que cantidad deseas retirar?: ");
         double retiro = sc.nextDouble();
 
@@ -50,7 +51,7 @@ public class atm {
             System.out.println("Retirada realizada correctamente");
 
         //Si la cantidad es menor que 0 o mayor que la de saldoActual da un error
-        } if (retiro>saldoActual || retiro<0) {
+        } else if (retiro>saldoActual || retiro<0) {
             System.out.println("Error: Numero incorrecto");
         }
 
@@ -62,34 +63,25 @@ public class atm {
 
         //Variables
         double saldoActual=1000.0;
-        int opción = 0;
+        int opcion = 0;
 
         do {
             //Llama la variable mostrarMenu para mostrar el menu
             mostrarMenu();
 
             //Pregunta y guarda la opción que quiere usar el usuario
-            Scanner sc = new Scanner(System.in);
             System.out.print("Elige una opción: ");
-            opción = sc.nextInt();
+            opcion = sc.nextInt();
 
-            switch (opción) {
-                case 1 -> {
-                    consultarSaldo(saldoActual);
-                }
-                case 2 -> {
-                    saldoActual=ingresarDinero(saldoActual);
-                }
-                case 3 -> {
-                    saldoActual=retirarDinero(saldoActual);
-                }
-                case 4 -> {
-                    System.out.println("Gracias por utilizar nuestros servicios. Hasta pronto");
-                }
+            switch (opcion) {
+                case 1 -> consultarSaldo(saldoActual);
+                case 2 -> saldoActual=ingresarDinero(saldoActual);
+                case 3 -> saldoActual=retirarDinero(saldoActual);
+                case 4 -> System.out.println("Gracias por utilizar nuestros servicios. Hasta pronto");
                 default -> System.out.println("Numero incorrecto vuelve a intentarlo");
             }
 
-        } while (opción!=4);
+        } while (opcion!=4);
 
     }
 }

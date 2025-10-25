@@ -3,7 +3,9 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class u3act3 {
+public class U3act3 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Desarrollar un juego que ayude a mejorar
         el cálculo mental de la suma. El jugador
@@ -29,7 +31,6 @@ public class u3act3 {
             ++aciertos;
 
             //Pregunta cual es la respuesta
-            Scanner sc = new Scanner(System.in); 
             System.out.print("Cuanto es: "+numero1+"+"+numero2+"="); 
             respuesta = sc.nextInt();
 

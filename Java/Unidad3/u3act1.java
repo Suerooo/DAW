@@ -1,8 +1,6 @@
-
-
 import java.util.Scanner;
 
-public class u3act1 {
+public class U3act1 {
     public static void main(String[] args) {
 
         /*

@@ -2,7 +2,9 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class u5act2 {
+public class U5act2 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Crear un programa que verifica si un nombre introducido por el usuario se encuentra en una lista predefinida de invitados. 
         Crea un array de tipo String llamado listaInvitados.
@@ -10,11 +12,10 @@ public class u5act2 {
         Pide al usuario que escriba un nombre para comprobar si está en la lista.*/
 
         //Pregunta el numero de invitados para crear un array del tamaño del numero de invitados
-        Scanner sc = new Scanner(System.in);
         System.out.print("Cuantos invitados quieres: ");
         int numeroInvitado = sc.nextInt();
 
-        String listaInvitados[]= new String[numeroInvitado];
+        String[] listaInvitados= new String[numeroInvitado];
 
         //Pregunta y guarda el nombre en mayúsculas de cada invitado para guardarlo en el array
         for (int i=0; i<numeroInvitado; i++) {
@@ -37,7 +38,7 @@ public class u5act2 {
         }
 
         //Si la variable invitado es true imprime que si esta invitado y si es false imprime que no esta invitado
-        if (invitado==true) {
+        if (invitado) {
             System.out.println(consulta+" si esta invitado");
         } else {
             System.out.println(consulta+" no esta invitado");

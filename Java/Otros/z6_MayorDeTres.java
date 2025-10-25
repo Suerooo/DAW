@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class z6_MayorDeTres {
+public class Z6_MayorDeTres {
 
     /**
      * @param args the command line arguments

@@ -2,7 +2,7 @@ package Unidad1;
 
 import java.util.Scanner;
 
-public class u1act1 {
+public class U1act1 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

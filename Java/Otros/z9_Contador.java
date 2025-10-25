@@ -1,4 +1,4 @@
-public class z9_Contador {    public static void main(String[] args) {
+public class Z9_Contador {    public static void main(String[] args) {
         /*Usa un bucle for para 
         imprimir los números del 1 al 100.*/
 

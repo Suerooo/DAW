@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class z10_SumaDeNumeros {
+public class Z10_SumaDeNumeros {
     public static void main(String[] args) {
         /*Usando un while, pide números al usuario
         hasta que introduzca un número 

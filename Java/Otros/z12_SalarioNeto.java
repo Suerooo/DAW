@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class z12_SalarioNeto {
+public class Z12_SalarioNeto {
     public static void main(String[] args) {
         /*Las primeras 35 horas se pagan al precio normal por hora
         Las horas que exceden esas 35 horas se pagan 1,5 veces el precio normal.

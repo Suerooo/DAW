@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class z1_ConversionDeGrados {
+public class Z1_ConversionDeGrados {
 
     /**
      * @param args the command line arguments

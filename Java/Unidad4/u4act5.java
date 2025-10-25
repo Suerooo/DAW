@@ -2,7 +2,8 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class u4act5 {
+public class U4act5 {
+    static Scanner sc = new Scanner(System.in); 
 
     //Método que calcula la diferencia de minutos entre dos horas
     static int diferenciaMin (int hora1,  int min1,  int  hora2,  int  min2) {
@@ -10,11 +11,8 @@ public class u4act5 {
         int hora = Math.abs(hora1-hora2);
         int min = Math.abs(min1-min2);
 
-        //Transforma la diferencia de horas en minutos y le suma la diferencia de minutos
-        int diferencia = (hora*60)+min;
-
-        //Devuelve el valor calculado
-        return diferencia;
+        //Transforma la diferencia de horas en minutos y le suma la diferencia de minutos y lo devuelve
+        return (hora*60)+min;
     }
 
     public static void main(String[] args) {
@@ -23,17 +21,16 @@ public class u4act5 {
         La función devolverá la cantidad de minutos que existen de diferencia entre los dos instantes utilizados. */
 
         //Pregunta y guarda la primera hora y minuto y la segunda hora y minuto
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce un número: ");
+        System.out.print("Primeras horas: ");
         int hora1 = sc.nextInt();
 
-        System.out.print("Introduce un número: ");
+        System.out.print("Primeros minutos: ");
         int min1 = sc.nextInt();
 
-        System.out.print("Introduce un número: ");
+        System.out.print("Segundas horas: ");
         int hora2 = sc.nextInt();
 
-        System.out.print("Introduce un número: ");
+        System.out.print("Segundos minutos: ");
         int min2 = sc.nextInt();
 
         //Llama al método diferenciaMin y lo guarda el resultado en una variable para imprimir el resultado

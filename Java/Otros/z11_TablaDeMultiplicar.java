@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class z11_TablaDeMultiplicar {
+public class Z11_TablaDeMultiplicar {
     public static void main(String[] args) {
         /*Pide un número y muestra su tabla 
         de multiplicar del 1 al 10.*/

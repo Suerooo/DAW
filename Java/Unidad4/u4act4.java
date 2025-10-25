@@ -2,7 +2,8 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class u4act4 {
+public class U4act4 {
+    static Scanner sc = new Scanner(System.in); 
 
     //Método que crea un números aleatorios comprendidos entre dos números a partir de la variable (cantidad, min, max)
     static void aleatorio(int cantidad, int x, int y) {
@@ -25,7 +26,6 @@ public class u4act4 {
         de números aleatorios que se mostrarán y los valores mínimos y máximos que estos pueden tomar. */
 
         //Pregunta y guarda al usuario la cantidad de números aleatorios que hay que imprimir y entre que números tienen que ser los números aleatorios
-        Scanner sc = new Scanner(System.in);
         System.out.print("Cantidad de números aleatorios: ");
         int cantidad = sc.nextInt();
 

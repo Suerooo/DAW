@@ -2,7 +2,7 @@ package Examen1;
 
 import java.util.Scanner;
 
-public class gestorTienda {
+public class GestorTienda {
 
     static Scanner sc = new Scanner(System.in);
 
@@ -18,12 +18,12 @@ public class gestorTienda {
         System.out.println("El stock es: "+stock);
     }
 
-    static int añadirUnidades(int stock) {
+    static int anadirUnidades(int stock) {
         System.out.print("Cuantas unidades añadimos: ");
-        int añadir = sc.nextInt();
+        int unidades = sc.nextInt();
 
-        if (añadir>=0) {
-            stock+=añadir;
+        if (unidades>=0) {
+            stock+=unidades;
         } else {
             System.out.println("Error: número invalido");
         }
@@ -48,31 +48,23 @@ public class gestorTienda {
 
     public static void main(String[] args) {
 
-        int opción, stock=50;
+        int option, stock=50;
 
         do {
             mostrarMenu();
 
             System.out.print("Que opción quieres elegir: ");
-            opción = sc.nextInt();
+            option = sc.nextInt();
 
-            switch (opción) {
-                case 1 -> {
-                    consultarStock(stock);
-                }
-                case 2 -> {
-                    stock=añadirUnidades(stock);
-                }
-                case 3 -> {
-                    stock=retirarUnidades(stock);
-                }
-                case 4 -> {
-                    System.out.println("Saliendo...");
-                }
+            switch (option) {
+                case 1 -> consultarStock(stock);
+                case 2 -> stock=anadirUnidades(stock);
+                case 3 -> stock=retirarUnidades(stock);
+                case 4 -> System.out.println("Saliendo...");
                 default -> System.out.println("Error: esa opción no existe");
             }
 
-        } while (opción!=4);
+        } while (option!=4);
 
     }
 }

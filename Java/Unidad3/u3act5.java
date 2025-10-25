@@ -2,7 +2,9 @@
 
 import java.util.Scanner;
 
-public class u3act5 {
+public class U3act5 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Pedir diez números enteros
         por teclado y mostrar la media.*/
@@ -15,15 +17,11 @@ public class u3act5 {
         for (veces=0;veces!=10;veces++) {
 
             //Pide uno de los números
-            Scanner sc = new Scanner(System.in); 
             System.out.print("Introduce un numero: "); 
             num = sc.nextInt();
 
             //Lo añade al total
             total+=num;
-
-            //Cierra la variable sc
-            sc.close();
         }
         
         //Calculo de la media y print para mostrar lo

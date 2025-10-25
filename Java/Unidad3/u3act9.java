@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-public class u3act9 {
+public class U3act9 {
+    static Scanner sc = new Scanner(System.in); 
+
     public static void main(String[] args) {
         /*Dadas 6 notas, 
         escribir la cantidad de
@@ -9,19 +11,19 @@ public class u3act9 {
 
         //Variables
         int aprobados = 0, condicionados = 0, suspensos = 0; 
-        double nota = 0.0;
+        double nota;
 
         //For que pregunta 6 veces las notas
-        for (int veces=0;veces<6;veces++) {
+        int respuestas = 0;
+        while (respuestas < 6) {
             //Pide una nota al usuario
-            Scanner sc = new Scanner(System.in);
             System.out.print("Introduce una nota: ");
             nota = sc.nextDouble();
 
             //Evita que el usuario introduzca una nota incorrecta
             if (nota<0 || nota >10) {
                 System.out.println("Nota incorrecta");
-                veces--;
+                continue;
             }
 
             //If para los aprobados
@@ -32,6 +34,8 @@ public class u3act9 {
 
             //If para los condicionados
             if (nota==4) condicionados++;
+
+            respuestas++;
         }
 
         //Imprime los aprobados suspensos y condicionados

@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class u3act8 {
+public class U3act8 {
 	public static void main(String[] args) {
         /*Realiza un programa que nos pida un número n y que nos diga
         cuantos números primos hay entre 1 y n. Un número primo es aquel
@@ -31,7 +31,6 @@ public class u3act8 {
 
             //Segmenta los segmentos del for anterior
             for (int i=2; i<j; i++) {
-                //Calculamos el resto de la segmentación de la segmentación (ignorando 1 y j) y lo multiplicamos todo en la variables primo
                 resto=j%i;
                 restoAcumulado*=resto;
             }
@@ -47,7 +46,6 @@ public class u3act8 {
             
             //Reseteamos las variables para calcular el siguiente numero
             restoAcumulado=1;
-            resto=0;
         }
 
         //Cierra la variable sc
