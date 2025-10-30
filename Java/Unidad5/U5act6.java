@@ -40,7 +40,7 @@ public class U5act6 {
         //Ejemplo: implementación del método buscarTodo
         int[] notas={3, 4, 6, 3, 1, 7, 3, 7, 8, 8, 8, 2};
 
-        System.out.print("El indice de que nota quieres buscar: ");
+        System.out.print("Los indices de que notas quieres buscar: ");
         int notaBuscada=sc.nextInt();
 
         if (notaBuscada>=0 && notaBuscada<=10) {
