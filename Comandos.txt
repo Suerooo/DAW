@@ -14,3 +14,5 @@ Si no te importan tus modificaciones locales (⚠️ perderás tus cambios):
 git reset --hard
 git clean -fd
 git pull origin main
+
+ctrol+shift+p > Git: Fetch from All Remotes
