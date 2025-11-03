@@ -1,5 +1,6 @@
 package Unidad5;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class U5act9 {
@@ -15,13 +16,24 @@ public class U5act9 {
         es introducir como puntuación un -1. La aplicación debe mostrar, finalmente, los puntos 
         ordenados de todos los participantes. */
 
-        int puntuacion;
+        int puntuacion=0;
+        int[] puntuacionesTotal=new int[0];
         do {
             for(int i=0; i<5; i++){
-                System.out.print("De que número quieres el indice: ");
+                System.out.print("Puntuación del "+(i+1)+"º participante: ");
                 puntuacion=sc.nextInt();
+
+                if (puntuacion==-1) {
+                    System.out.println("Mostrando resultados ordenados...");
+                    break;
+                } else {
+                    puntuacionesTotal=Arrays.copyOf(puntuacionesTotal, puntuacionesTotal.length+1);
+                    puntuacionesTotal[puntuacionesTotal.length-1]=puntuacion;
+                }
             }
 
+            if (puntuacion!=-1) System.out.println("Registrado los 5 participantes. Si no se van a sumar mas participantes escribe '-1'");
         } while (puntuacion!=-1);
+
     }
 }
