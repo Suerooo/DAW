@@ -54,7 +54,8 @@ public class U5act20 {
         int[][] tablero = {
             {22, 21, 19, 21},
             {28, 39, 27, 29},
-            {15, 17, 16, -1}
+            {15, 17, 16, 0},
+            {5, 47, 62, 10}
         };
 
         //imprimirTablero
@@ -71,7 +72,7 @@ public class U5act20 {
         else System.out.println("Ese número no esta en el tablero"); 
         
         //sumarFilaCompleta
-        System.out.print("De que ciudad quieres calcular la media (1-"+(tablero.length+1)+"): ");
+        System.out.print("De que ciudad quieres calcular la media (1-"+tablero.length+"): ");
         int numeroFila=sc.nextInt();
 
         System.out.println("La suma de la fila "+numeroFila+" es: "+sumarFilaCompleta(tablero, numeroFila-1));

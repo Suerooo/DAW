@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class U5act19 {
     static Scanner sc = new Scanner(System.in);
 
-    static double encontrarTempMaxima(double[][] temperatura) {
-        double temperaturaMaxima=temperatura[0][0];
+    static int encontrarTempMaxima(int[][] temperatura) {
+        int temperaturaMaxima=temperatura[0][0];
 
         for (int i=0; i<temperatura.length; i++) {
             for (int j=0; j<temperatura[i].length; j++) {
@@ -17,7 +17,7 @@ public class U5act19 {
         return temperaturaMaxima;
     }
 
-    static double calcularMediaCiudad(double[][] temperatura, int comprobarCiudad) {
+    static double calcularMediaCiudad(int[][] temperatura, int comprobarCiudad) {
         double sumaTemperaturas=0.0;
 
         for (int i=0; i<temperatura[comprobarCiudad-1].length; i++) {
@@ -27,16 +27,14 @@ public class U5act19 {
         return sumaTemperaturas/temperatura[comprobarCiudad-1].length;
     }
 
-    static boolean huboAlertaHelada(double[][] temperatura) {
-        boolean huboAlertaHelada=false;
-
+    static boolean huboAlertaHelada(int[][] temperatura) {
         for (int i=0; i<temperatura.length; i++) {
             for (int j=0; j<temperatura[i].length; j++) {
-                if (temperatura[i][j]<=0) huboAlertaHelada=true;
+                if (temperatura[i][j]<=0) return true;
             }
         }
 
-        return huboAlertaHelada;
+        return false;
     }
     
     public static void main(String[] args) {
@@ -46,7 +44,7 @@ public class U5act19 {
         Crear una función llamada huboAlertaHelada que reciba la matriz y devuelva true si alguna temperatura fue de 0 grados o menos, y false si todas fueron positivas.
         En la función main, llama a estas funciones e imprime los resultados. */
 
-        double[][] temperatura = {
+        int[][] temperatura = {
             {22, 24, 19, 21},
             {28, 30, 27, 29},
             {15, 17, 16, -1}
@@ -56,7 +54,7 @@ public class U5act19 {
         System.out.println("La temperatura máxima es: "+encontrarTempMaxima(temperatura));
 
         //calcularMediaCiudad
-        System.out.print("De que ciudad quieres calcular la media (1-"+(temperatura.length+1)+"): ");
+        System.out.print("De que ciudad quieres calcular la media (1-"+temperatura.length+"): ");
         System.out.println("La media es: "+calcularMediaCiudad(temperatura, sc.nextInt()));
 
         //huboAlertaHelada
