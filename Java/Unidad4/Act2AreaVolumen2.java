@@ -2,7 +2,7 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class U4act2p2 {
+public class Act2AreaVolumen2 {
     static Scanner sc = new Scanner(System.in); 
 
     //Método que calcula el area del cilindro con las variables (altura, radio)

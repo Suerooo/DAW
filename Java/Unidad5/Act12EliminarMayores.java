@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Arrays;
 
-public class U5act12 {
+public class Act12EliminarMayores {
 
     static int[] eliminarMayores(int[] t, int valor) {
         int[] tSinMayoresDeValor=new int[0];

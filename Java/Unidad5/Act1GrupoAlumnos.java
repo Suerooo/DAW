@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class U5act1 {
+public class Act1GrupoAlumnos {
     static Scanner sc = new Scanner(System.in); 
 
     public static void main(String[] args) {

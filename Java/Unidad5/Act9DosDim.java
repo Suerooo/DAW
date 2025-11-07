@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Arrays;
 
-public class U5act9 {
+public class Act9DosDim {
     public static void main(String[] args) {
         /*Crear un tablero de 4x6 y en las casillas donde i y j sean par poner "holi". */
         String[][] holiEnPares=new String[4][6];//Dimensiones del tablero

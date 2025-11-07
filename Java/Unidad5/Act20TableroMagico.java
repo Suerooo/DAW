@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class U5act20 {
+public class Act20TableroMagico {
     static Scanner sc = new Scanner(System.in);
 
     static void imprimirTablero(int[][] tablero) {

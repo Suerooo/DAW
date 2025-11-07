@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class U5act19 {
+public class Act19MonitorizandoTemps {
     static Scanner sc = new Scanner(System.in);
 
     static int encontrarTempMaxima(int[][] temperatura) {

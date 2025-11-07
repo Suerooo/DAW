@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class U5act4 {
+public class Act4BuscarClave {
     static Scanner sc = new Scanner(System.in);
 
     static int buscar (int[] t, int clave) {

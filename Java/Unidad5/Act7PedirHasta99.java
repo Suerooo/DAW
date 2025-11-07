@@ -3,7 +3,7 @@ package Unidad5;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class U5act7 {
+public class Act7PedirHasta99 {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         /*Realiza un programa que pida números por teclado y los guarde en un array.

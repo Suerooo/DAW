@@ -2,7 +2,7 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class U4act1 {
+public class Act1NumerosEntre {
     static Scanner sc = new Scanner(System.in); 
 
 

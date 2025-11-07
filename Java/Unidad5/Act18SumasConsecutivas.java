@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Arrays;
 
-public class U5act18 {
+public class Act18SumasConsecutivas {
 
     static int[] suma(int[] t, int numElementos) {
         int[] suma=new int[0];

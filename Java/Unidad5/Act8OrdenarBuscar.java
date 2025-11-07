@@ -3,7 +3,7 @@ package Unidad5;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class U5act8 {
+public class Act8OrdenarBuscar {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

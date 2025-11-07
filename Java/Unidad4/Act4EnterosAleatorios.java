@@ -2,7 +2,7 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class U4act4 {
+public class Act4EnterosAleatorios {
     static Scanner sc = new Scanner(System.in); 
 
     //Método que crea un números aleatorios comprendidos entre dos números a partir de la variable (cantidad, min, max)

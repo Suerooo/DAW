@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Scanner;
 
-public class U5act14 {
+public class Act14CamaraSecreta {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class U4act2 {
+public class Act2AreaVolumen {
     static Scanner sc = new Scanner(System.in); 
 
     //Crea un método que calcula el area y el volumen a partir de 3 variables (altura, radio, opción[que quiere calcular)

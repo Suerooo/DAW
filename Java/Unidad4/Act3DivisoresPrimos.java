@@ -3,7 +3,7 @@ package Unidad4;
 import java.util.Scanner;
 
 
-public class U4act3 {
+public class Act3DivisoresPrimos {
     static Scanner sc = new Scanner(System.in); 
 
     //Método que determina si un numero es primo o no primo

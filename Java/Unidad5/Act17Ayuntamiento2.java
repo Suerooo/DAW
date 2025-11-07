@@ -3,7 +3,7 @@ package Unidad5;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class U5act17_2 {
+public class Act17Ayuntamiento2 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

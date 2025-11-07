@@ -2,7 +2,7 @@ package Unidad4;
 
 import java.util.Scanner;
 
-public class U4act5 {
+public class Act5DiferenciaTiempo {
     static Scanner sc = new Scanner(System.in); 
 
     //Método que calcula la diferencia de minutos entre dos horas

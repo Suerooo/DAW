@@ -3,7 +3,7 @@ package Unidad5;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class U5act6 {
+public class Act6BuscarTodo {
     static Scanner sc = new Scanner(System.in);
 
     static int[] buscarTodos(int[] t, int clave) {

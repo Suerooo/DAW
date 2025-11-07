@@ -3,7 +3,7 @@ package Unidad5;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class U5act16 {
+public class Act16Eliminar {
     static Scanner sc = new Scanner(System.in);
 
     static int[] borrarElementoTabla(int[] tabla, int elementoAEliminar) {

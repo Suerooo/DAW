@@ -1,6 +1,6 @@
 package Unidad5;
 
-public class U5act5 {
+public class Act5Maximo {
 
     static int maximo(int[] t) {
         int numeroMaximo=0;

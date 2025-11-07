@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Arrays;
 
-public class U5act10 {
+public class Act10Loteria {
 
     static int comprobarAciertosArrays(int[] arrayAComparar, int[] arrayModelo) {
         Arrays.sort(arrayModelo);

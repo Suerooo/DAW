@@ -2,7 +2,7 @@ package Unidad5;
 
 import java.util.Arrays;
 
-public class U5act13 {
+public class Act13TablaParImapr {
     public static void main(String[] args) {
         /*Leer y almacenar n números enteros en una tabla, 
         a partir de la que se construirán otras dos tablas con los elementos con valores pares e impares de la primera, 
