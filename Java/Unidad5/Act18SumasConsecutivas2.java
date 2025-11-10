@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Act18SumasConsecutivas2 {
 
-    static int[] suma(int[] t, int numElementos) {
+    static int[] suma(int[] array, int numElementos) {
         int[] suma=new int[0];
         int sumaElementos=0;
 
-        for (int i=0; i<t.length-(numElementos-1); i++) {
-            int[] copia=Arrays.copyOfRange(t, i, i+numElementos);
+        for (int i=0; i<array.length-(numElementos-1); i++) {
+            int[] copia=Arrays.copyOfRange(array, i, i+numElementos);
 
             for (int j=0; j<copia.length; j++) {
                 sumaElementos+=copia[j];

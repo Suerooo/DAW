@@ -4,15 +4,15 @@ import java.util.Arrays;
 
 public class Act18SumasConsecutivas {
 
-    static int[] suma(int[] t, int numElementos) {
+    static int[] suma(int[] array, int numElementos) {
         int[] suma=new int[0];
         int sumaNumElementos=0;
 
-        for (int i=0; i<t.length-(numElementos-1); i++) {
+        for (int i=0; i<array.length-(numElementos-1); i++) {
             sumaNumElementos=0;
 
             for(int j=0; j<numElementos; j++) {
-                sumaNumElementos+=t[j+i];
+                sumaNumElementos+=array[j+i];
             }
 
             suma=guardarDatosIntArray(suma, sumaNumElementos);
