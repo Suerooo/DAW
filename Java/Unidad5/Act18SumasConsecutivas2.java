@@ -2,22 +2,23 @@ package Unidad5;
 
 import java.util.Arrays;
 
-public class Act18SumasConsecutivas {
+public class Act18SumasConsecutivas2 {
 
     static int[] suma(int[] array, int numElementos) {
         int[] suma=new int[0];
-        int sumaNumElementos=0;
+        int sumaElementos=0;
 
         for (int i=0; i<array.length-(numElementos-1); i++) {
-            sumaNumElementos=0;
+            int[] copia=Arrays.copyOfRange(array, i, i+numElementos);
 
-            for(int j=0; j<numElementos; j++) {
-                sumaNumElementos+=array[j+i];
+            for (int j=0; j<copia.length; j++) {
+                sumaElementos+=copia[j];
             }
 
-            suma=guardarDatosIntArray(suma, sumaNumElementos);
+            suma=guardarDatosIntArray(suma, sumaElementos);
+
+            sumaElementos=0;
         }
-    
         return suma;
     }
 
@@ -39,7 +40,7 @@ public class Act18SumasConsecutivas {
         8 + 9 + 2. Igual a 19.
         Por lo tanto, la función devolverá una tabla con los resultados: [16, 14, 22, 19]. */
 
-        int[] t={10, 1, 5, 8, 9, 2};
+        int[] t={10, 1, 5, 8, 9, 2,};
         int numElementos=3;
 
         System.out.println(Arrays.toString(suma(t, numElementos)));
