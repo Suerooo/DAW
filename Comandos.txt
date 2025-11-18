@@ -1,18 +1,1 @@
-CARGAR (cuando EMPIEZAS a trabajar)
-Descargar los cambios hechos en el otro ordenador:
 
-git pull origin main
-
-GUARDAR (cuando TERMINAS de trabajar)
-Subir tus cambios a GitHub:
-
-git add .
-git commit -m "a"
-git push origin main
-
-Si no te importan tus modificaciones locales (⚠️ perderás tus cambios):
-git reset --hard
-git clean -fd
-git pull origin main
-
-ctrol+shift+p > Git: Fetch from All Remotes
