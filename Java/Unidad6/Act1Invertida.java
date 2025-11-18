@@ -1,18 +1,15 @@
 package Unidad6;
 
-import java.util.Arrays;
-
 public class Act1Invertida {
 
     static String invertirString(String texto) {
-        char[] arrayTextoInvertido=new char[0];
+        String textoInvertido="";
 
         for (int i=texto.length()-1; i>=0; i--) {
-            arrayTextoInvertido=Arrays.copyOf(arrayTextoInvertido, arrayTextoInvertido.length+1);
-            arrayTextoInvertido[arrayTextoInvertido.length-1]=texto.charAt(i);
+            textoInvertido+=texto.charAt(i);
         }
 
-        return new String(arrayTextoInvertido);
+        return textoInvertido;
     }
 
     public static void main(String[] args) {
