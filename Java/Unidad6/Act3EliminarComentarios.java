@@ -1,5 +1,3 @@
-package Unidad6;
-
 import java.util.Arrays;
 
 public class Act3EliminarComentarios {

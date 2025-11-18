@@ -27,6 +27,8 @@ public class Act11CampeonatoProgram {
             if (datos!=-1) System.out.println("Registrado los 5 participantes. Si no se van a sumar mas participantes escribe '-1'");
         } while (datos!=-1);
 
+        Arrays.sort(array);
+
         return array;
     }
 
@@ -41,12 +43,7 @@ public class Act11CampeonatoProgram {
         ordenados de todos los participantes. */
 
         int[] puntuacionTotal=guardarDatos();
-        Arrays.sort(puntuacionTotal);
 
         System.out.println(Arrays.toString(puntuacionTotal));
-        
-        
-        
-        
     }
 }

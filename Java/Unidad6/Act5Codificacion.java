@@ -1,5 +1,3 @@
-package Unidad6;
-
 import java.util.Scanner;
 
 public class Act5Codificacion {
