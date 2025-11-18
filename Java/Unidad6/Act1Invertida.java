@@ -1,5 +1,3 @@
-package Unidad6;
-
 public class Act1Invertida {
 
     static String invertirString(String texto) {
