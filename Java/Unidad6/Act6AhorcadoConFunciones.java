@@ -1,7 +1,27 @@
 import java.util.Scanner;
 
-public class Act6Ahorcado {
+public class Act6AhorcadoConFunciones {
     static Scanner sc=new Scanner(System.in);
+
+    static String ocultarPalabra(String palabraAOcultar) {
+        String palabraOcultada="";
+
+        for (int i=0; i<palabraAOcultar.length(); i++) {
+            palabraOcultada+="_";
+        }
+
+        return palabraOcultada;
+    }
+
+    static String revelarLetras(String palabraVisible, String palabraOculta, char letraARevelar) {
+        for(int j=0; j<palabraVisible.length(); j++) {
+            if (letraARevelar==palabraVisible.charAt(j)) {
+                palabraOculta=palabraOculta.substring(0, j)+palabraVisible.charAt(j)+palabraOculta.substring(j+1);
+            }
+        }
+
+        return palabraOculta;
+    }
 
     public static void main(String[] args) {
         /*Realiza el juego del ahorcado. Las reglas del juego son:
@@ -16,12 +36,9 @@ public class Act6Ahorcado {
         System.out.print("Jugador A - Teclea tu palabra: ");
         String palabraAAdivinar=sc.nextLine().toLowerCase();
 
-        String palabraOculta="";
+        String palabraOculta=ocultarPalabra(palabraAAdivinar);
         int intentos=7;
 
-        for (int i=0; i<palabraAAdivinar.length(); i++) {
-            palabraOculta+="_";
-        }
         System.out.println("\n Palabra: "+palabraOculta);
 
         do {
@@ -29,22 +46,17 @@ public class Act6Ahorcado {
             char letraIntentada=sc.next().toLowerCase().charAt(0);
 
             if (palabraAAdivinar.indexOf(letraIntentada) >= 0) {
-                for(int j=0; j<palabraAAdivinar.length(); j++) {
-                    if (letraIntentada==palabraAAdivinar.charAt(j)) {
-                        palabraOculta=palabraOculta.substring(0, j)+palabraAAdivinar.charAt(j)+palabraOculta.substring(j+1);
-                    }
-                }
-                
+                palabraOculta=revelarLetras(palabraAAdivinar, palabraOculta, letraIntentada);
                 System.out.println("Acertaste!! \n");
                 
             } else {
-
                 System.out.println("Fallaste te quedan "+(intentos-1)+" intentos \n");
                 intentos--;
             }
 
             if (intentos>0) {
                 System.out.println("Palabra: "+palabraOculta);
+                
             } else {
                 System.out.println("Intentos gastados - Ganador: Jugador A");
             }
