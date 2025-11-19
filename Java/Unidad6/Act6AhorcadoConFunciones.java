@@ -16,9 +16,9 @@ public class Act6AhorcadoConFunciones {
     }
 
     static String revelarLetras(String palabraVisible, String palabraOculta, char letraARevelar) {
-        for(int j=0; j<palabraVisible.length(); j++) {
-            if (letraARevelar==palabraVisible.charAt(j)) {
-                palabraOculta=palabraOculta.substring(0, j)+palabraVisible.charAt(j)+palabraOculta.substring(j+1);
+        for(int i=0; i<palabraVisible.length(); i++) {
+            if (letraARevelar==palabraVisible.charAt(i)) {
+                palabraOculta=palabraOculta.substring(0, i)+palabraVisible.charAt(i)+palabraOculta.substring(i+1);
             }
         }
 
@@ -47,7 +47,7 @@ public class Act6AhorcadoConFunciones {
             System.out.print("Jugador B - Con que letra quieres intentar: ");
             char letraIntentada=sc.next().toLowerCase().charAt(0);
 
-            if (palabraAAdivinar.indexOf(letraIntentada) >= 0) {
+            if (palabraAAdivinar.indexOf(letraIntentada) != -1) {
                 palabraOculta=revelarLetras(palabraAAdivinar, palabraOculta, letraIntentada);
                 System.out.println("Acertaste!! \n");
                 
@@ -63,7 +63,7 @@ public class Act6AhorcadoConFunciones {
                 System.out.println("Intentos gastados - Ganador: Jugador A");
             }
 
-        } while (intentos>0 && palabraOculta.indexOf('_') >= 0);
+        } while (intentos>0 && palabraOculta.indexOf('_') != -1);
 
         if (intentos>0) {
             System.out.println("Palabra adivinada - Ganador: Jugador B");
