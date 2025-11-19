@@ -1,3 +1,5 @@
+package Otros;
+
 public class Act9Contador {    public static void main(String[] args) {
         /*Usa un bucle for para 
         imprimir los números del 1 al 100.*/

@@ -1,3 +1,5 @@
+package Unidad2;
+
 import java.util.Scanner;
 public class Act7Animales {
 

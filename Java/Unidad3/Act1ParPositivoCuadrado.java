@@ -1,3 +1,5 @@
+package Unidad3;
+
 import java.util.Scanner;
 
 public class Act1ParPositivoCuadrado {

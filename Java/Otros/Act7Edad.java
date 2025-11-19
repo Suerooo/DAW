@@ -1,3 +1,5 @@
+package Otros;
+
 import java.util.Scanner;
 
 public class Act7Edad {
