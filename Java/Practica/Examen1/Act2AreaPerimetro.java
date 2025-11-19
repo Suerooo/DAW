@@ -1,4 +1,4 @@
-package Otros;
+package Practica.Examen1;
 
 import java.util.Scanner;
 

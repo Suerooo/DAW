@@ -1,4 +1,4 @@
-package Examen1;
+package Practica.Examen1.TipoExamen;
 
 import java.util.Locale;
 import java.util.Scanner;
