@@ -70,18 +70,21 @@ public class Act1InventarioZapatillas {
         return marca;
     }
 
-    /*static void eliminarProducto(int[] codigo, double[] precio, String[] marca) {
+    static int 
+
+    static int[] eliminarCodigo(int[] codigo) {
         boolean estaEnInventario;
-        int productoAEliminar, indiceProductoAEliminar;
+        int codigoAEliminar;
+        int indicecodigoAEliminar=-1;
 
         do {
             System.out.print("Cual es el código del producto que quiere eliminar: ");
-            productoAEliminar=sc.nextInt();
+            codigoAEliminar=sc.nextInt();
             estaEnInventario=true;
 
             for (int i=0; i<codigo.length; i++) {
-                if (productoAEliminar==codigo[i]) {
-                    indiceProductoAEliminar=i;
+                if (codigoAEliminar==codigo[i]) {
+                    indicecodigoAEliminar=i;
                 } else {
                     System.out.println("El código introducido no se encuentra en el inventario");
                     estaEnInventario=false;
@@ -89,21 +92,30 @@ public class Act1InventarioZapatillas {
             }
         } while (!estaEnInventario);
 
-        int[] codigoSinEditar=Arrays.copyOf(codigo, codigo.length);
-        double[] precioSinEditar=Arrays.copyOf(precio, precio.length);
-        String[] marcaSinEditar=Arrays.copyOf(marca, marca.length);
+        int[] codigoActualizado=new int[0];
 
-        codigo=Arrays.copyOf(codigo, codigo.length-1);
-        precio=Arrays.copyOf(precio, precio.length-1);
-        marca=Arrays.copyOf(marca, marca.length-1);
-
-        for(int i=0; i<codigoSinEditar.length; i++) {
-            if (productoAEliminar) {
-                
+        for(int i=0; i<codigo.length; i++) {
+            if (indicecodigoAEliminar!=i) {
+                codigoActualizado=Arrays.copyOf(codigoActualizado, codigoActualizado.length+1);
+                codigoActualizado[codigoActualizado.length-1]=codigo[i];
             }
         }
 
-    }*/
+        return codigo;
+    }
+
+    static double[] eliminarPrecio(double[] precio) {
+        double[] codigoActualizado=new double[0];
+
+        for(int i=0; i<precio.length; i++) {
+            if (indicecodigoAEliminar!=i) {
+                codigoActualizado=Arrays.copyOf(codigoActualizado, codigoActualizado.length+1);
+                codigoActualizado[codigoActualizado.length-1]=precio[i];
+            }
+        }
+
+        return precio;
+    }
 
     
     public static void main(String[] args) {
