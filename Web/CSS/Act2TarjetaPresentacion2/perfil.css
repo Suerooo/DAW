@@ -1,0 +1,25 @@
+#cabecera {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  border: 3px solid black;
+  margin-bottom: 20px;
+}
+
+.sobre-mi {
+  background-color: #3498db;
+  color: white;
+  max-width: 500px;
+  padding: 15px;
+  margin: 20px auto;
+  border: 2px solid #2980b9;
+  border-radius: 10px;
+}
+
+.hobbies {
+  background-color: #e74c3c;
+  color: white;
+  padding: 20px;
+  margin: 30px;
+  border: 2px dashed white;
+}
