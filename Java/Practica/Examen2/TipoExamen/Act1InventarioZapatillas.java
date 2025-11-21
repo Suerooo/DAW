@@ -194,7 +194,8 @@ public class Act1InventarioZapatillas {
                 }
                 case 4 -> {
                     int indiceProducto=encontrarIndiceProducto(codigo);
-                    mostrarXProducto(codigo, precio, marca, indiceProducto);
+                    
+                    if (indiceProducto!=-1) mostrarXProducto(codigo, precio, marca, indiceProducto);
                 }
                 case 5 -> System.out.println("Saliendo...");
                 default -> System.out.println("Esa opción no existe");
