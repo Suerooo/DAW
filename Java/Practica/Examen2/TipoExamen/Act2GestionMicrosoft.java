@@ -83,7 +83,7 @@ public class Act2GestionMicrosoft {
         return Integer.parseInt(usuario[2]);
     }
 
-    static void motrarUsuario(int[] nivelesUsuarios, double[] sueldosUsuarios, String[] datosUsuarios, int indiceUsuario) {
+    static void motrarUsuario(String[] datosUsuarios, double[] sueldosUsuarios, int[] nivelesUsuarios, int indiceUsuario) {
         System.out.println(
         "Nombre: "+guardarNombreUsuario(datosUsuarios, indiceUsuario)+" "+
         "DNI: "+guardarDNIUsuario(datosUsuarios, indiceUsuario)+" "+
@@ -92,7 +92,7 @@ public class Act2GestionMicrosoft {
         "Nivel: "+nivelesUsuarios[indiceUsuario]);
     }
 
-    static void mostrarUsuarioEntreDosNiveles(int[] nivelesUsuarios, double[] sueldosUsuarios, String[] datosUsuarios, int nivelMaximo, int nivelMinimo) {
+    static void mostrarUsuarioEntreDosNiveles(String[] datosUsuarios, double[] sueldosUsuarios, int[] nivelesUsuarios, int nivelMaximo, int nivelMinimo) {
         if (nivelMinimo>nivelMaximo) {
             int temp=nivelMaximo;
             nivelMaximo=nivelMinimo;
@@ -101,12 +101,12 @@ public class Act2GestionMicrosoft {
 
         for(int i=0; i<nivelesUsuarios.length; i++) {
             if (nivelesUsuarios[i]>=nivelMinimo && nivelesUsuarios[i]<=nivelMaximo) {
-                motrarUsuario(nivelesUsuarios, sueldosUsuarios, datosUsuarios, i);
+                motrarUsuario(datosUsuarios, sueldosUsuarios, nivelesUsuarios, i);
             }
         }
     }
 
-    static void mostrarEdadMaxMin(int[] nivelesUsuarios, double[] sueldosUsuarios, String[] datosUsuarios) {
+    static void mostrarEdadMaxMin(String[] datosUsuarios, double[] sueldosUsuarios, int[] nivelesUsuarios) {
         int edadMax=guardarEdadUsuario(datosUsuarios, 0);
         int edadMin=guardarEdadUsuario(datosUsuarios, 0);
         int indiceEdadMax=0;
@@ -125,10 +125,10 @@ public class Act2GestionMicrosoft {
         }
 
         System.out.println("Usuario mas viejo: ");
-        motrarUsuario(nivelesUsuarios, sueldosUsuarios, datosUsuarios, indiceEdadMax);
+        motrarUsuario(datosUsuarios, sueldosUsuarios, nivelesUsuarios, indiceEdadMax);
 
         System.out.println("Usuario mas joven: ");
-        motrarUsuario(nivelesUsuarios, sueldosUsuarios, datosUsuarios, indiceEdadMin);
+        motrarUsuario(datosUsuarios, sueldosUsuarios, nivelesUsuarios, indiceEdadMin);
     }
 
     static void mostrarEdadMedia(String[] datosUsuarios) {
@@ -139,6 +139,12 @@ public class Act2GestionMicrosoft {
         }
 
         System.out.println("Edad media de los usuarios: "+edadMedia);
+    }
+
+    static void mostrarListaUsuarios(String[] datosUsuarios, double[] sueldosUsuarios, int[] nivelesUsuarios) {
+        for (int i=0; i<datosUsuarios.length; i++) {
+            motrarUsuario(datosUsuarios, sueldosUsuarios, nivelesUsuarios, i);
+        }
     }
 
     public static void main(String[] args) {
@@ -159,7 +165,7 @@ public class Act2GestionMicrosoft {
         };
 
         double[] sueldosUsuarios = {
-            2500.0,   // Juan3
+            2500.0,   // Juan
             1800.5,   // María
             3200.75,  // Pedro
             2100.0,   // Lucía
@@ -213,12 +219,14 @@ public class Act2GestionMicrosoft {
 
                     System.out.print("Introduce el 2º nivel: ");
                     int nivel2=sc.nextInt();
-                    mostrarUsuarioEntreDosNiveles(nivelesUsuarios, sueldosUsuarios, datosUsuarios, nivel, nivel2);
+                    mostrarUsuarioEntreDosNiveles(datosUsuarios, sueldosUsuarios, nivelesUsuarios, nivel, nivel2);
                 }
                 //Edad máxima y mínima
-                case 4 -> mostrarEdadMaxMin(nivelesUsuarios, sueldosUsuarios, datosUsuarios);
+                case 4 -> mostrarEdadMaxMin(datosUsuarios, sueldosUsuarios, nivelesUsuarios);
                 //Media de edad
                 case 5 -> mostrarEdadMedia(datosUsuarios);
+                //Mostar datos
+                case 6 -> mostrarListaUsuarios(datosUsuarios, sueldosUsuarios, nivelesUsuarios);
                 default -> System.out.println("Ese número no esta entre las opciones");
             }
             
