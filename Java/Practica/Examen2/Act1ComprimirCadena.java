@@ -8,7 +8,7 @@ public class Act1ComprimirCadena {
         char letra=cadenaAComprimir.charAt(0);
 
         for (int i=0; i<cadenaAComprimir.length(); i++) {
-            if (letra==cadenaAComprimir.) {
+            if (letra=='a') { //AQI
                 contadorLetrasRepetidas++;
             }
         }

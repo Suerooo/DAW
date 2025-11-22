@@ -70,7 +70,7 @@ public class Act1InventarioZapatillas {
         return precio;
     }
 
-    static String[] agregarMarcar(String[] marca) {
+    static String[] agregarMarca(String[] marca) {
         System.out.print("Cual es la marca del producto nuevo: ");
         marca=Arrays.copyOf(marca, marca.length+1);
         marca[marca.length-1]=sc.next();
@@ -178,7 +178,7 @@ public class Act1InventarioZapatillas {
                     if (codigoNoRepetido!=-1) {
                         codigo=agregarCodigo(codigo, codigoNoRepetido);
                         precio=agregarPrecio(precio);
-                        marca=agregarMarcar(marca);
+                        marca=agregarMarca(marca);
                     }
                     
                 }
