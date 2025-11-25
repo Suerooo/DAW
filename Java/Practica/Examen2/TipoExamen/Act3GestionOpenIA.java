@@ -68,7 +68,7 @@ public class Act3GestionOpenIA {
 
         } else {
             String nuevoEmpleado = nombre + delimitador + lenguaje + delimitador + key + delimitador + salario;
-            agregarElemento(empleados, nuevoEmpleado);
+            empleados = agregarElemento(empleados, nuevoEmpleado);
 
             return empleados;
         }
