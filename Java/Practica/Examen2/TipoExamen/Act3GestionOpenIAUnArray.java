@@ -47,6 +47,10 @@ public class Act3GestionOpenIAUnArray {
 
         return lenguajeElegido;
     }
+    
+    // ----------------------------------------------------------------------
+    // ----------------------  Extraer datos  -------------------------------
+    // ----------------------------------------------------------------------
 
     static String extraerNombreEmpleado(String[] listaEmpleados, int indiceEmpleado) {
         String[] unicoEmpleado = listaEmpleados[indiceEmpleado].split(delimitador);
@@ -72,6 +76,38 @@ public class Act3GestionOpenIAUnArray {
         return Double.parseDouble(unicoEmpleado[3]);
     }
 
+    static String extraerUnEmpleado(String[] listaEmpleados, int indiceEmpleado) {
+        String empleado =
+        extraerNombreEmpleado(listaEmpleados, indiceEmpleado) + delimitador +
+        extraerLenguajeEmpleado(listaEmpleados, indiceEmpleado) + delimitador +
+        extraerKeyEmpleado(listaEmpleados, indiceEmpleado) + delimitador +
+        extraerSalarioEmpleado(listaEmpleados, indiceEmpleado);
+
+        return empleado;
+    }
+
+    // ----------------------------------------------------------------------
+    // --------------------  Agregar elementos  -----------------------------
+    // ----------------------------------------------------------------------
+
+    static String[] agregarElemento(String[] aux, String elemento) {
+        aux = Arrays.copyOf(aux, aux.length + 1);
+        aux[aux.length - 1] = elemento;
+
+        return aux;
+    }
+
+    static double[] agregarElemento(double[] aux, double elemento) {
+        aux = Arrays.copyOf(aux, aux.length + 1);
+        aux[aux.length - 1] = elemento;
+
+        return aux;
+    }
+
+    // ----------------------------------------------------------------------
+    // -----------------------  Auxiliares  ---------------------------------
+    // ----------------------------------------------------------------------
+
     static int localizarIndiceEmpleado(String[] listaEmpleados, int keyEmpleadoALocalizar) {
         for (int i = 0; i < listaEmpleados.length; i++) {
             if (extraerKeyEmpleado(listaEmpleados, i) == keyEmpleadoALocalizar) {
@@ -82,13 +118,19 @@ public class Act3GestionOpenIAUnArray {
         return -1;
     }
 
-    static String[] agregarElemento(String[] aux, String elemento) {
-        aux = Arrays.copyOf(aux, aux.length + 1);
-        aux[aux.length - 1] = elemento;
-
-        return aux;
+    static void mostrarUnEmpleado(String[] listaEmpleados, int indiceEmpleado) {
+        System.out.println((indiceEmpleado+1) + "º empleado: Nombre-> " +
+            extraerNombreEmpleado(listaEmpleados, indiceEmpleado) + " Lenguaje-> " +
+            extraerLenguajeEmpleado(listaEmpleados, indiceEmpleado) + " Key-> " +
+            extraerKeyEmpleado(listaEmpleados, indiceEmpleado) + " Salario-> " +
+            extraerSalarioEmpleado(listaEmpleados, indiceEmpleado));
     }
 
+    // ----------------------------------------------------------------------
+    // --------------------------  Menú  ------------------------------------
+    // ----------------------------------------------------------------------
+
+    // --- 1ª opción "Ingresar" ---
     static String[] ingresarEmpleado(String[] listaEmpleados, String nombre, String lenguaje, int key, double salario) {
         if (localizarIndiceEmpleado(listaEmpleados, key) != -1) {
             System.out.println("La key de ese empleado ya este registrada");
@@ -105,20 +147,14 @@ public class Act3GestionOpenIAUnArray {
         }
     }
 
-    static void mostrarUnEmpleado(String[] listaEmpleados, int indiceEmpleado) {
-        System.out.println((indiceEmpleado+1) + "º empleado: Nombre-> " +
-            extraerNombreEmpleado(listaEmpleados, indiceEmpleado) + " Lenguaje-> " +
-            extraerLenguajeEmpleado(listaEmpleados, indiceEmpleado) + " Key-> " +
-            extraerKeyEmpleado(listaEmpleados, indiceEmpleado) + " Salario-> " +
-            extraerSalarioEmpleado(listaEmpleados, indiceEmpleado));
-    }
-
+    // --- 2ª opción "Mostrar" ---
     static void mostrarEmpleados(String[] listaEmpleados) {
         for (int i = 0; i < listaEmpleados.length; i++) {
             mostrarUnEmpleado(listaEmpleados, i);
         }
     }
 
+    // --- 3ª opción "Lenguaje" ---
     static String[] extraerEmpleadosXLenguaje(String[] listaEmpleados, String lenguaje) {
         String[] listaEmpleadosXLenguaje = new String[0];
 
@@ -131,6 +167,7 @@ public class Act3GestionOpenIAUnArray {
         return listaEmpleadosXLenguaje;
     }
 
+    // --- 4ª opción "Eliminar" ---
     static String[] eliminarEmpleado(String[] listaEmpleados, int key) {
         String[] listaEmpleadosActualizada = new String[0];
 
@@ -151,6 +188,7 @@ public class Act3GestionOpenIAUnArray {
         }   
     }
 
+    // --- 5ª opción "Salarios" ---
     static void mostrarEmpleadoEntreSalarios(String[] listaEmpleados, double salario1, double salario2) {
         double salarioMax = salario1 > salario2 ? salario1 : salario2;
         double salarioMin = salario1 < salario2 ? salario1 : salario2;
@@ -162,14 +200,75 @@ public class Act3GestionOpenIAUnArray {
         }
     }
 
+    // --- 6ª opción "Aumento" ---
+    static String[] aumentarSalarioEmpleados(String[] listaEmpleados, double aumento) {
+        if (aumento>0) aumento /= 100;
+        double salarioModificado;
+
+        for (int i = 0; i < listaEmpleados.length; i++) {
+            salarioModificado = extraerSalarioEmpleado(listaEmpleados, i) + (aumento * extraerSalarioEmpleado(listaEmpleados, i));
+
+            listaEmpleados[i] = 
+            extraerNombreEmpleado(listaEmpleados, i) + delimitador +
+            extraerLenguajeEmpleado(listaEmpleados, i) + delimitador +
+            extraerKeyEmpleado(listaEmpleados, i) + delimitador +
+            salarioModificado;
+        }
+
+        return listaEmpleados;
+    }
+    
+    // --- 7ª opción "Ordenar" ---
+    static String[] ordenarKeyAscendente(String[] listaEmpleados) {
+        for (int i = 0; i < listaEmpleados.length; i++) {
+            for (int j = 0; j < listaEmpleados.length - i - 1; j++) {
+                if (extraerKeyEmpleado(listaEmpleados, j) > extraerKeyEmpleado(listaEmpleados, j + 1)) {
+                    String tempEmpleado = extraerUnEmpleado(listaEmpleados, j + 1);
+                    
+                    listaEmpleados[j + 1] = extraerUnEmpleado(listaEmpleados, j);
+                    listaEmpleados[j] = tempEmpleado;
+                }
+            }
+        }
+
+        return listaEmpleados;
+    }
+
+    // --- 8ª opción "Cálculo de matriz" ---
+    static double[] sumarFilasMatriz(double[][] matriz) {
+        double filas = matriz.length;
+        double columnas = matriz[0].length;
+
+        double[] listaResultadoSuma = new double[0];
+        double resultadoSuma;
+
+        for (int i = 0; i < filas; i++) {
+            resultadoSuma = 0;
+
+            for (int j = 0; j < columnas; j++) {
+                resultadoSuma += matriz[i][j];
+            }
+
+            listaResultadoSuma = agregarElemento(listaResultadoSuma, resultadoSuma);
+        }
+
+        return listaResultadoSuma;
+    }
+
     public static void main(String[] args) {
         // userName(0):language(1):key(2):salary(3)
         String[] listaEmpleados = new String[3];
         int opcion;
 
-        listaEmpleados[0] = "Raul:JAVA:111:2000";
-        listaEmpleados[1] = "Pedro:PHP:112:3000";
-        listaEmpleados[2] = "Raul:JAVA:113:1000";
+        listaEmpleados[0] = "Raul:JAVA:112:2000";
+        listaEmpleados[1] = "Pedro:PHP:113:3000";
+        listaEmpleados[2] = "Raul:JAVA:110:1000";
+
+        double[][] matriz = {
+            {1, 2, 3, 4, 5},
+            {1, 2, 3, 4, 5},
+            {1, 2, 3, 4, 5}
+        };
 
         do {
             mostrarMenu();
@@ -213,6 +312,15 @@ public class Act3GestionOpenIAUnArray {
                     double salario2 = sc.nextDouble();
 
                     mostrarEmpleadoEntreSalarios(listaEmpleados, salario1, salario2);
+                }
+                case 6 -> {
+                    System.out.print("Introduce el porcentaje de aumento que quiere realizar a los empleados: ");
+                    aumentarSalarioEmpleados(listaEmpleados, sc.nextDouble());
+                }
+                case 7 -> ordenarKeyAscendente(listaEmpleados);
+                case 8 -> {
+                    double[] listaResultadoSuma = sumarFilasMatriz(matriz);
+                    System.out.println("Resultado suma de filas: " + Arrays.toString(listaResultadoSuma));
                 }
                 case 0 -> System.out.println("Saliendo...");
                 default -> System.out.println("Esa opción no existe");
