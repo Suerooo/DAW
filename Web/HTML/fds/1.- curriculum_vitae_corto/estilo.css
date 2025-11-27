@@ -1,0 +1,49 @@
+body {
+	font-family: "Arial", sans-serif;
+	background-color: grey;
+	text-align: left;
+}
+
+h1 {
+	color: white;
+	background-color: black;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 18px;
+}
+
+h2 {
+	color: white;
+	background-color: black;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+h3 {
+	color: white;
+	background-color: black;
+	font-size: 14px;
+}
+
+p {
+	background-color: grey;
+	line-height: lighter;
+}
+
+em {
+	color: yellow;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: lighter;
+}
+
+strong {
+	color: black;
+	font-weight: bold;
+}
+
+adress {
+	background-color: yellow;
+	font-style: normal;
+	text-align: center;
+}
