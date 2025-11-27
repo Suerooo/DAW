@@ -1,8 +1,8 @@
-package Practica.Examen2.TipoExamen;
+package Practica.Examen2;
 
 import java.util.*;
 
-public class Act3GestionOpenIAUnArray {
+public class Act4GestionOpenIAUnArray {
     static final Scanner sc = new Scanner(System.in);
     static final String DELIMITADOR = ":";
 

@@ -1,9 +1,9 @@
-package Practica.Examen2.TipoExamen;
+package Practica.Examen2;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Act1InventarioZapatillas {
+public class Act2InventarioZapatillas {
     static Scanner sc=new Scanner(System.in);
 
     static void mostrarMenu() {

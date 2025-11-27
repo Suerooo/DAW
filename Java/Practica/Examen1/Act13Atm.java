@@ -1,9 +1,9 @@
-package Practica.Examen1.TipoExamen;
+package Practica.Examen1;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Atm {
+public class Act13Atm {
     //Scanner global
     static Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 

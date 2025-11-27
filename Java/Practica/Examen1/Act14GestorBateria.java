@@ -1,8 +1,8 @@
-package Practica.Examen1.TipoExamen;
+package Practica.Examen1;
 
 import java.util.Scanner;
 
-public class GestorBateria {
+public class Act14GestorBateria {
 
     static Scanner sc = new Scanner(System.in);
 

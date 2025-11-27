@@ -1,8 +1,8 @@
-package Practica.Examen1.TipoExamen;
+package Practica.Examen1;
 
 import java.util.Scanner;
 
-public class Examen {
+public class Act0ExamenRaulSuero {
     
     static Scanner sc = new Scanner(System.in);
     

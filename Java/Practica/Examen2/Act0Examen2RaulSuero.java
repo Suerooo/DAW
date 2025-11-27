@@ -1,8 +1,8 @@
-package Practica.Examen2.TipoExamen;
+package Practica.Examen2;
 
 import java.util.*;
 
-public class Examen2RaulSuero {
+public class Act0Examen2RaulSuero {
     static final Scanner sc = new Scanner(System.in);
     static final int CAPACIDAD_MAXIMA = 5;
     static final String DELIMITADOR = ":";

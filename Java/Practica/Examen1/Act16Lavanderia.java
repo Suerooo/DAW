@@ -1,8 +1,8 @@
-package Practica.Examen1.TipoExamen;
+package Practica.Examen1;
 
 import java.util.Scanner;
 
-public class Lavanderia {
+public class Act16Lavanderia {
 
     //Scanner compartido para todas las entradas del usuario
     static Scanner sc = new Scanner(System.in);
