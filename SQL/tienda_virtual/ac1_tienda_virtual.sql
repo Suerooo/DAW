@@ -1,0 +1,68 @@
+create database tienda_virtual;
+
+use tienda_virtual;
+
+create table familia(
+cod_familia numeric(3,0) auto_increment,
+deno_familia varchar(50) unique not null,
+constraint fam_cod_pk primary key (cod_familia)
+);
+
+create table producto(
+cod_producto numeric(5,0) auto_increment,
+deno_producto varchar(20) not null,
+descripcion varchar(100),
+precio_base decimal(8,2) not null,
+porc_reposicion numeric(3,0),
+unidades_minimas numeric(4,0) not null,
+cod_familia numeric (3,0) not null,
+constraint pro_cod_PK primary key (cod_producto),
+constraint pro_pre_che check(precio_base > 0),
+constraint pro_por_che check(porc_reposicion > 0),
+constraint pro_uni_che check(unidades_minimas > 0),
+constraint pro_cod_FK foreign key (cod_familia) references familia(cod_familia)
+);
+
+create database tienda_virtual;
+
+use tienda_virtual;
+
+create table familia(
+cod_familia numeric(3),
+deno_familia varchar(50) not null,
+constraint fam_cod_pk primary key (cod_familia),
+constraint fam_deno_unique unique (deno_familia)
+);
+
+create table producto(
+cod_producto numeric(5),
+deno_producto varchar(20) not null,
+descripcion varchar(100),
+precio_base decimal(8,2) not null,
+porc_reposicion numeric(3),
+unidades_minimas numeric(4) not null,
+cod_familia numeric (3) not null,
+constraint pro_cod_PK primary key (cod_producto),
+constraint pro_pre_che check(precio_base > 0),
+constraint pro_por_che check(porc_reposicion > 0),
+constraint pro_uni_che check(unidades_minimas > 0),
+constraint pro_cod_FK foreign key (cod_familia) references familia(cod_familia)
+);
+
+create table tienda(
+    cod_tienda numeric(3),
+    deno_tienda varchar(20) not null,
+    telefono varchar(11),
+    codigo_postal varchar(5) not null,
+    provincia varchar(5) not null,
+    constraint tie_cod_PK primary key (cod_tienda)
+);
+
+create table stock(
+	cod_tienda numeric(3) not null,
+    cod_producto numeric(5) not null,
+    unidades numeric(6) not null,
+    constraint sto_codt_FK foreign key (cod_tienda) references tienda(cod_tienda),
+    constraint sto_codp_FK foreign key (cod_producto) references producto(cod_producto),
+    constraint sto_uni_che check(unidades >= 0)
+);
