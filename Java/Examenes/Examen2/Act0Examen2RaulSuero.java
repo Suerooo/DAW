@@ -297,13 +297,33 @@ public class Act0Examen2RaulSuero {
         return esMagica;
     }
 
-    static void comprobarMatrizMagica() {
-        int[][] matriz = new int[3][3];
+    static boolean comprobarNumeroRepetidoMatriz(int[][] matriz, int numero) {
+        boolean repetido = false;
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print("Introduce el valor de la fila numero " + (i + 1) + " y columna numero " + (j + 1) + ": ");
-                matriz[i][j] = sc.nextInt();
+                if (matriz[i][j] == numero) {
+                    repetido = true;
+                }
+            } 
+        }
+
+        return repetido;
+    }
+
+    static void comprobarMatrizMagica() {
+        int[][] matriz = new int[3][3];
+        int numero;
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                do {
+                    System.out.print("Introduce el valor de la fila numero " + (i + 1) + " y columna numero " + (j + 1) + ": ");
+                    numero = sc.nextInt();
+                    
+                    if (comprobarNumeroRepetidoMatriz(matriz, numero)) System.out.println("Ese numero ya lo introdujiste antes vuelve a pon otro diferente");
+                } while (comprobarNumeroRepetidoMatriz(matriz, numero));
+                matriz[i][j] = numero;
             }
         }
 
