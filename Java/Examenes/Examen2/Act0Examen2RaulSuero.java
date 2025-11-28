@@ -21,7 +21,9 @@ public class Act0Examen2RaulSuero {
     }
 
     static void mostrarMenu() {
-        System.out.println("\n1. Añadir nuevo jugador");
+        System.out.println();
+        System.out.println("------------------------------");
+        System.out.println("1. Añadir nuevo jugador");
         System.out.println("2. Eliminar nuevo jugador");
         System.out.println("3. Buscar jugador por DNI");
         System.out.println("4. Mostrar todos los registros");
@@ -30,6 +32,7 @@ public class Act0Examen2RaulSuero {
         System.out.println("7. Puntuación maxima y minima");
         System.out.println("8. FINAL BOSS: MATRIZ MÁGICA");
         System.out.println("9. Salir");
+        System.out.println("------------------------------");
     }
 
     static String extraerDNIJugador(int indiceJugador) {
