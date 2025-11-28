@@ -6,16 +6,18 @@ public class Act0Examen2RaulSuero {
     static final Scanner sc = new Scanner(System.in);
     static final int CAPACIDAD_MAXIMA = 5;
     static final String DELIMITADOR = ":";
+    static int contadorJugadores = 0;
+    static String[] datosJugadores = new String[CAPACIDAD_MAXIMA];
 
     // ------------------------------------------
     // -------------- Auxiliar ------------------
     // ------------------------------------------
-    static void mostrarJugador(String[] datosJugadores, int indiceJugador) {
+    static void mostrarJugador(int indiceJugador) {
         System.out.println(
-                "Jugador: " + (indiceJugador + 1) + " Nombre: " + extraerNombreJugador(datosJugadores, indiceJugador) +
-                        " | DNI: " + extraerDNIJugador(datosJugadores, indiceJugador) +
-                        " | Edad: " + extraerEdadJugador(datosJugadores, indiceJugador) +
-                        " | Puntuación: " + extraerPuntuacionJugador(datosJugadores, indiceJugador));
+                "Jugador: " + (indiceJugador + 1) + " Nombre: " + extraerNombreJugador(indiceJugador) +
+                        " | DNI: " + extraerDNIJugador(indiceJugador) +
+                        " | Edad: " + extraerEdadJugador(indiceJugador) +
+                        " | Puntuación: " + extraerPuntuacionJugador(indiceJugador));
     }
 
     static void mostrarMenu() {
@@ -30,7 +32,7 @@ public class Act0Examen2RaulSuero {
         System.out.println("9. Salir");
     }
 
-    static String extraerDNIJugador(String[] datosJugadores, int indiceJugador) {
+    static String extraerDNIJugador(int indiceJugador) {
         if (datosJugadores[indiceJugador] != null) {
             String[] datosUnJugador = datosJugadores[indiceJugador].split(DELIMITADOR);
             return datosUnJugador[1];
@@ -39,7 +41,7 @@ public class Act0Examen2RaulSuero {
         }
     }
 
-    static String extraerNombreJugador(String[] datosJugadores, int indiceJugador) {
+    static String extraerNombreJugador(int indiceJugador) {
         if (datosJugadores[indiceJugador] != null) {
             String[] datosUnJugador = datosJugadores[indiceJugador].split(DELIMITADOR);
             return datosUnJugador[0];
@@ -48,7 +50,7 @@ public class Act0Examen2RaulSuero {
         }
     }
 
-    static int extraerEdadJugador(String[] datosJugadores, int indiceJugador) {
+    static int extraerEdadJugador(int indiceJugador) {
         if (datosJugadores[indiceJugador] != null) {
             String[] datosUnJugador = datosJugadores[indiceJugador].split(DELIMITADOR);
             return Integer.parseInt(datosUnJugador[2]);
@@ -57,7 +59,7 @@ public class Act0Examen2RaulSuero {
         }
     }
 
-    static double extraerPuntuacionJugador(String[] datosJugadores, int indiceJugador) {
+    static double extraerPuntuacionJugador(int indiceJugador) {
         if (datosJugadores[indiceJugador] != null) {
             String[] datosUnJugador = datosJugadores[indiceJugador].split(DELIMITADOR);
             return Double.parseDouble(datosUnJugador[3]);
@@ -66,9 +68,9 @@ public class Act0Examen2RaulSuero {
         }
     }
 
-    static int buscarIndiceDNIJugador(String dni, String[] datosJugadores) {
+    static int buscarIndiceDNIJugador(String dni) {
         for (int i = 0; i < datosJugadores.length; i++) {
-            if (extraerDNIJugador(datosJugadores, i).equalsIgnoreCase(dni)) {
+            if (extraerDNIJugador(i).equalsIgnoreCase(dni)) {
                 return i;
             }
         }
@@ -79,7 +81,7 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // ------------ Agregar jugador -------------
     // ------------------------------------------
-    static int agregarJugador(int contadorJugadores, String[] datosJugadores) {
+    static int agregarJugador() {
         if (contadorJugadores >= CAPACIDAD_MAXIMA) {
             System.out.println("Se ha alcanzado la capacidad maxima");
         } else {
@@ -89,9 +91,9 @@ public class Act0Examen2RaulSuero {
                 System.out.print("Introduce el DNI del nuevo jugador: ");
                 dni = sc.next();
 
-                if (buscarIndiceDNIJugador(dni, datosJugadores) != -1)
+                if (buscarIndiceDNIJugador(dni) != -1)
                     System.out.println("Ese dni ya pertenece a un jugador");
-            } while (buscarIndiceDNIJugador(dni, datosJugadores) != -1);
+            } while (buscarIndiceDNIJugador(dni) != -1);
 
             System.out.print("Introduce el nombre del nuevo jugador: ");
             String nombre = sc.next();
@@ -114,11 +116,11 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // ---------- Eliminar jugador -------------
     // ------------------------------------------
-    static int eliminarJugador(String[] datosJugadores, int contadorJugadores) {
+    static int eliminarJugador() {
         System.out.print("Introduce el dni del jugador que desea eliminar: ");
         String dni = sc.next();
 
-        int indiceDNI = buscarIndiceDNIJugador(dni, datosJugadores);
+        int indiceDNI = buscarIndiceDNIJugador(dni);
 
         if (contadorJugadores <= 0) {
             System.out.println("No hay ningún jugador registrado");
@@ -145,26 +147,26 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // ----------- Mostrar por DNI --------------
     // ------------------------------------------
-    static void mostrarJugadorPorDNI(String[] datosJugadores) {
+    static void mostrarJugadorPorDNI() {
         System.out.print("Introduce el dni del jugador que quiere mostrar: ");
         String dni = sc.next();
 
-        int indiceJugador = buscarIndiceDNIJugador(dni, datosJugadores);
+        int indiceJugador = buscarIndiceDNIJugador(dni);
 
         if (indiceJugador == -1) {
             System.out.println("Ese DNI no pertenece a ningún jugador");
         } else {
-            mostrarJugador(datosJugadores, indiceJugador);
+            mostrarJugador(indiceJugador);
         }
     }
 
     // ------------------------------------------
     // ----- Mostrar todos los jugadores --------
     // ------------------------------------------
-    static void mostrarTodosJugadores(String[] datosJugadores) {
+    static void mostrarTodosJugadores() {
         for (int i = 0; i < datosJugadores.length; i++) {
             if (datosJugadores[i] != null) {
-                mostrarJugador(datosJugadores, i);
+                mostrarJugador(i);
             }
         }
     }
@@ -172,7 +174,7 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // ------- Mostrar por rango de edad --------
     // ------------------------------------------
-    static void mostrarRangoEdad(String[] datosJugadores) {
+    static void mostrarRangoEdad() {
         System.out.print("Introduce la edad minima de tu busqueda: ");
         int edad1 = sc.nextInt();
 
@@ -183,8 +185,8 @@ public class Act0Examen2RaulSuero {
         int edadMin = edad1 < edad2 ? edad1 : edad2;
 
         for (int i = 0; i < datosJugadores.length; i++) {
-            if (extraerEdadJugador(datosJugadores, i) >= edadMin && extraerEdadJugador(datosJugadores, i) <= edadMax) {
-                mostrarJugador(datosJugadores, i);
+            if (extraerEdadJugador(i) >= edadMin && extraerEdadJugador(i) <= edadMax) {
+                mostrarJugador(i);
             }
         }
     }
@@ -192,10 +194,10 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // ---------- Ordenar descendente -----------
     // ------------------------------------------
-    static void ordenarPuntuacionDescendente(String[] datosJugadores) {
-        for (int i = 0; i < datosJugadores.length; i++) {
-            for (int j = 0; j < datosJugadores.length - i - 1; j++) {
-                if (extraerPuntuacionJugador(datosJugadores, j) < extraerPuntuacionJugador(datosJugadores, j + 1)) {
+    static void ordenarPuntuacionDescendente() {
+        for (int i = 0; i < contadorJugadores; i++) {
+            for (int j = 0; j < contadorJugadores - i - 1; j++) {
+                if (extraerPuntuacionJugador(j) < extraerPuntuacionJugador(j + 1)) {
                     String tempPuntuacion = datosJugadores[j + 1];
                     datosJugadores[j + 1] = datosJugadores[j];
                     datosJugadores[j] = tempPuntuacion;
@@ -207,48 +209,33 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // --------- Puntuación Max y Min -----------
     // ------------------------------------------
-    static void motrarPuntuacionMaxMin(String[] datosJugadores, int contadorJugadores) {
-        double puntuacionMax = extraerPuntuacionJugador(datosJugadores, 0);
-        double puntuacionMin = extraerPuntuacionJugador(datosJugadores, 0);
+    static void motrarPuntuacionMaxMin() {
+        double puntuacionMax = extraerPuntuacionJugador(0);
+        double puntuacionMin = extraerPuntuacionJugador(0);
         int indicePuntuacionMax = 0;
         int indicePuntuacionMin = 0;
 
         for (int i = 0; i < contadorJugadores; i++) {
-            if (extraerPuntuacionJugador(datosJugadores, i) > puntuacionMax) {
-                puntuacionMax = extraerPuntuacionJugador(datosJugadores, i);
+            if (extraerPuntuacionJugador(i) > puntuacionMax) {
+                puntuacionMax = extraerPuntuacionJugador(i);
                 indicePuntuacionMax = i;
             }
-            if (extraerPuntuacionJugador(datosJugadores, i) < puntuacionMin) {
-                puntuacionMin = extraerPuntuacionJugador(datosJugadores, i);
+            if (extraerPuntuacionJugador(i) < puntuacionMin) {
+                puntuacionMin = extraerPuntuacionJugador(i);
                 indicePuntuacionMin = i;
             }
         }
         System.out.println("Jugador con la maxima puntuación: ");
-        mostrarJugador(datosJugadores, indicePuntuacionMax);
+        mostrarJugador(indicePuntuacionMax);
         System.out.println("Jugador con la minima puntuación: ");
-        mostrarJugador(datosJugadores, indicePuntuacionMin);
+        mostrarJugador(indicePuntuacionMin);
 
     }
 
-    static void comprobarMatrizMagica() {
-        int[][] matriz = new int[3][3];
-
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print(
-                        "Introduce el valor de la fila numero " + (i + 1) + " y columna numero " + (j + 1) + ": ");
-                matriz[i][j] = sc.nextInt();
-            }
-        }
-
-        System.out.println("Tu matriz es: " + Arrays.deepToString(matriz));
-
-        int numeroMagico = (matriz.length * ((matriz.length * matriz.length) + 1)) / 2;
-        boolean sumaDeFilas = true;
-        boolean sumaColumnas = true;
-        boolean sumaDiagonal1 = true;
-        boolean sumaDiagonal2 = true;
-
+    // ------------------------------------------
+    // ------------- Matriz Mágica --------------
+    // ------------------------------------------
+    static boolean comprobarSumaMagicaFilas(int[][] matriz, boolean esMagica, int numeroMagico) {
         int resultadoSumaFilas;
         for (int i = 0; i < matriz.length; i++) {
             resultadoSumaFilas = 0;
@@ -256,10 +243,14 @@ public class Act0Examen2RaulSuero {
                 resultadoSumaFilas += matriz[i][j];
             }
             if (resultadoSumaFilas != numeroMagico) {
-                sumaDeFilas = false;
+                esMagica = false;
             }
         }
 
+        return esMagica;
+    }
+
+    static boolean comprobarSumaMagicaColumnas(int[][] matriz, boolean esMagica, int numeroMagico) {
         int resultadoSumaColumnas;
         for (int i = 0; i < matriz.length; i++) {
             resultadoSumaColumnas = 0;
@@ -267,35 +258,66 @@ public class Act0Examen2RaulSuero {
                 resultadoSumaColumnas += matriz[j][i];
             }
             if (resultadoSumaColumnas != numeroMagico) {
-                sumaColumnas = false;
+                esMagica = false;
             }
         }
 
-        int resultadoSumaDiagonal1 = 0;
+        return esMagica;
+    }
+
+    static boolean comprobarSumaMagicaDiagonalPrincipal(int[][] matriz, boolean esMagica, int numeroMagico) {
+        int resultadoSumaDiagonalPrincipal = 0;
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                 if ((i == 0 && j == 0) || (i == 1 && j == 1) || (i == 2 && j == 2)) {
-                    resultadoSumaDiagonal1 += matriz[i][j];
+                    resultadoSumaDiagonalPrincipal += matriz[i][j];
                 }
             }
         }
-        if (resultadoSumaDiagonal1 != numeroMagico) {
-            sumaDiagonal1 = false;
+        if (resultadoSumaDiagonalPrincipal != numeroMagico) {
+            esMagica = false;
         }
 
-        int resultadoSumaDiagonal2 = 0;
+        return esMagica;
+    }
+
+    static boolean comprobarSumaMagicaDiagonalAlternativa(int[][] matriz, boolean esMagica, int numeroMagico) {
+        int resultadoSumaDiagonalAlternativa = 0;
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                 if ((i == 0 && j == 2) || (i == 1 && j == 1) || (i == 2 && j == 0)) {
-                    resultadoSumaDiagonal2 += matriz[i][j];
+                    resultadoSumaDiagonalAlternativa += matriz[i][j];
                 }
             }
         }
-        if (resultadoSumaDiagonal2 != numeroMagico) {
-            sumaDiagonal2 = false;
+        if (resultadoSumaDiagonalAlternativa != numeroMagico) {
+            esMagica = false;
         }
 
-        if (sumaDeFilas && sumaColumnas && sumaDiagonal1 && sumaDiagonal2) {
+        return esMagica;
+    }
+
+    static void comprobarMatrizMagica() {
+        int[][] matriz = new int[3][3];
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print("Introduce el valor de la fila numero " + (i + 1) + " y columna numero " + (j + 1) + ": ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Tu matriz es: " + Arrays.deepToString(matriz));
+
+        int numeroMagico = (matriz.length * ((matriz.length * matriz.length) + 1)) / 2;
+        boolean esMagica = true;
+
+        esMagica = comprobarSumaMagicaFilas(matriz, esMagica, numeroMagico);
+        esMagica = comprobarSumaMagicaColumnas(matriz, esMagica, numeroMagico);
+        esMagica = comprobarSumaMagicaDiagonalPrincipal(matriz, esMagica, numeroMagico);
+        esMagica = comprobarSumaMagicaDiagonalAlternativa(matriz, esMagica, numeroMagico);
+
+        if (esMagica) {
             System.out.println("Y si es una matriz mágica");
         } else {
             System.out.println("Y no es una matriz mágica");
@@ -306,11 +328,7 @@ public class Act0Examen2RaulSuero {
     // ---------------- Main --------------------
     // ------------------------------------------
     public static void main(String[] args) {
-        String[] datosJugadores = new String[CAPACIDAD_MAXIMA];
-        int contadorJugadores = 2;
         int opcion;
-        datosJugadores[0] = "Raul:1:18:100";
-        datosJugadores[1] = "Juan:2:20:120";
 
         do {
             mostrarMenu();
@@ -318,13 +336,13 @@ public class Act0Examen2RaulSuero {
             opcion = sc.nextInt();
 
             switch (opcion) {
-                case 1 -> contadorJugadores = agregarJugador(contadorJugadores, datosJugadores);
-                case 2 -> contadorJugadores = eliminarJugador(datosJugadores, contadorJugadores);
-                case 3 -> mostrarJugadorPorDNI(datosJugadores);
-                case 4 -> mostrarTodosJugadores(datosJugadores);
-                case 5 -> mostrarRangoEdad(datosJugadores);
-                case 6 -> ordenarPuntuacionDescendente(datosJugadores);
-                case 7 -> motrarPuntuacionMaxMin(datosJugadores, contadorJugadores);
+                case 1 -> contadorJugadores = agregarJugador();
+                case 2 -> contadorJugadores = eliminarJugador();
+                case 3 -> mostrarJugadorPorDNI();
+                case 4 -> mostrarTodosJugadores();
+                case 5 -> mostrarRangoEdad();
+                case 6 -> ordenarPuntuacionDescendente();
+                case 7 -> motrarPuntuacionMaxMin();
                 case 8 -> comprobarMatrizMagica();
                 case 9 -> System.out.println("Saliendo...");
                 default -> System.out.println("Esa opción no este en el menu");
