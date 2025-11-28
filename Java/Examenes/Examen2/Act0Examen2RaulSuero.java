@@ -248,6 +248,7 @@ public class Act0Examen2RaulSuero {
             if (resultadoSumaFilas != numeroMagico) {
                 esMagica = false;
             }
+            System.out.println(resultadoSumaFilas);
         }
 
         return esMagica;
@@ -263,6 +264,7 @@ public class Act0Examen2RaulSuero {
             if (resultadoSumaColumnas != numeroMagico) {
                 esMagica = false;
             }
+            System.out.println(resultadoSumaColumnas);
         }
 
         return esMagica;
@@ -280,6 +282,7 @@ public class Act0Examen2RaulSuero {
         if (resultadoSumaDiagonalPrincipal != numeroMagico) {
             esMagica = false;
         }
+        System.out.println(resultadoSumaDiagonalPrincipal);
 
         return esMagica;
     }
@@ -296,6 +299,7 @@ public class Act0Examen2RaulSuero {
         if (resultadoSumaDiagonalAlternativa != numeroMagico) {
             esMagica = false;
         }
+        System.out.println(resultadoSumaDiagonalAlternativa);
 
         return esMagica;
     }
@@ -314,6 +318,16 @@ public class Act0Examen2RaulSuero {
         return repetido;
     }
 
+    static boolean comprobarRangoNumero(int numero) {
+        boolean rangoCorrecto = false;
+
+        if (numero >= 1 && numero <= 9) {
+            rangoCorrecto = true;
+        }
+
+        return rangoCorrecto;
+    }
+
     static void comprobarMatrizMagica() {
         int[][] matriz = new int[3][3];
         int numero;
@@ -324,8 +338,8 @@ public class Act0Examen2RaulSuero {
                     System.out.print("Introduce el valor de la fila numero " + (i + 1) + " y columna numero " + (j + 1) + ": ");
                     numero = sc.nextInt();
                     
-                    if (comprobarNumeroRepetidoMatriz(matriz, numero)) System.out.println("Ese numero ya lo introdujiste antes vuelve a pon otro diferente");
-                } while (comprobarNumeroRepetidoMatriz(matriz, numero));
+                    if (comprobarNumeroRepetidoMatriz(matriz, numero) || !comprobarRangoNumero(numero)) System.out.println("Ese numero ya lo introdujiste antes vuelve a pon otro diferente");
+                } while (comprobarNumeroRepetidoMatriz(matriz, numero) || !comprobarRangoNumero(numero));
                 matriz[i][j] = numero;
             }
         }
@@ -334,6 +348,7 @@ public class Act0Examen2RaulSuero {
 
         int numeroMagico = (matriz.length * ((matriz.length * matriz.length) + 1)) / 2;
         boolean esMagica = true;
+        System.out.println(numeroMagico);
 
         esMagica = comprobarSumaMagicaFilas(matriz, esMagica, numeroMagico);
         esMagica = comprobarSumaMagicaColumnas(matriz, esMagica, numeroMagico);
