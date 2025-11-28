@@ -1,4 +1,4 @@
-package Practica.Examen1;
+package Examenes.Examen1;
 
 import java.util.Scanner;
 

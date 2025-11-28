@@ -1,4 +1,4 @@
-package Practica.Examen2;
+package Examenes.Examen2;
 
 import java.util.Arrays;
 import java.util.Scanner;

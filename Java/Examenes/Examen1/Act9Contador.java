@@ -1,4 +1,4 @@
-package Practica.Examen1;
+package Examenes.Examen1;
 
 public class Act9Contador {    public static void main(String[] args) {
         /*Usa un bucle for para 
