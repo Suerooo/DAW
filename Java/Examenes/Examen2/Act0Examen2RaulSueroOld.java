@@ -2,7 +2,7 @@ package Examenes.Examen2;
 
 import java.util.*;
 
-public class Examen2 {
+public class Act0Examen2RaulSueroOld {
     static final Scanner sc = new Scanner(System.in);
     static final int CAPACIDAD_MAXIMA = 5;
     static final String DELIMITADOR = ":";

@@ -248,7 +248,6 @@ public class Act0Examen2RaulSuero {
             if (resultadoSumaFilas != numeroMagico) {
                 esMagica = false;
             }
-            System.out.println(resultadoSumaFilas);
         }
 
         return esMagica;
@@ -264,7 +263,6 @@ public class Act0Examen2RaulSuero {
             if (resultadoSumaColumnas != numeroMagico) {
                 esMagica = false;
             }
-            System.out.println(resultadoSumaColumnas);
         }
 
         return esMagica;
@@ -282,7 +280,6 @@ public class Act0Examen2RaulSuero {
         if (resultadoSumaDiagonalPrincipal != numeroMagico) {
             esMagica = false;
         }
-        System.out.println(resultadoSumaDiagonalPrincipal);
 
         return esMagica;
     }
@@ -299,7 +296,6 @@ public class Act0Examen2RaulSuero {
         if (resultadoSumaDiagonalAlternativa != numeroMagico) {
             esMagica = false;
         }
-        System.out.println(resultadoSumaDiagonalAlternativa);
 
         return esMagica;
     }
@@ -348,7 +344,6 @@ public class Act0Examen2RaulSuero {
 
         int numeroMagico = (matriz.length * ((matriz.length * matriz.length) + 1)) / 2;
         boolean esMagica = true;
-        System.out.println(numeroMagico);
 
         esMagica = comprobarSumaMagicaFilas(matriz, esMagica, numeroMagico);
         esMagica = comprobarSumaMagicaColumnas(matriz, esMagica, numeroMagico);
