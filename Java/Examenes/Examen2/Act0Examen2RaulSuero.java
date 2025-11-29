@@ -84,7 +84,7 @@ public class Act0Examen2RaulSuero {
     // ------------------------------------------
     // ------------ Agregar jugador -------------
     // ------------------------------------------
-    static int agregarJugador() {
+    static void agregarJugador() {
         if (contadorJugadores >= CAPACIDAD_MAXIMA) {
             System.out.println("Se ha alcanzado la capacidad maxima");
         } else {
@@ -113,13 +113,12 @@ public class Act0Examen2RaulSuero {
             contadorJugadores++;
             System.out.println("Jugador agregado");
         }
-        return contadorJugadores;
     }
 
     // ------------------------------------------
     // ---------- Eliminar jugador -------------
     // ------------------------------------------
-    static int eliminarJugador() {
+    static String[] eliminarJugador() {
         System.out.print("Introduce el dni del jugador que desea eliminar: ");
         String dni = sc.next();
 
@@ -139,12 +138,13 @@ public class Act0Examen2RaulSuero {
                     j++;
                 }
             }
-            System.arraycopy(datosJugadoresActualizado, 0, datosJugadores, 0, datosJugadores.length);
             contadorJugadores--;
             System.out.println("Jugador eliminado");
+
+            return datosJugadoresActualizado;
         }
 
-        return contadorJugadores;
+        return datosJugadores;
     }
 
     // ------------------------------------------
@@ -232,7 +232,6 @@ public class Act0Examen2RaulSuero {
         mostrarJugador(indicePuntuacionMax);
         System.out.println("Jugador con la minima puntuación: ");
         mostrarJugador(indicePuntuacionMin);
-
     }
 
     // ------------------------------------------
@@ -369,8 +368,8 @@ public class Act0Examen2RaulSuero {
             opcion = sc.nextInt();
 
             switch (opcion) {
-                case 1 -> contadorJugadores = agregarJugador();
-                case 2 -> contadorJugadores = eliminarJugador();
+                case 1 -> agregarJugador();
+                case 2 -> datosJugadores = eliminarJugador();
                 case 3 -> mostrarJugadorPorDNI();
                 case 4 -> mostrarTodosJugadores();
                 case 5 -> mostrarRangoEdad();
