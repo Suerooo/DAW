@@ -1,4 +1,4 @@
-package POO.Alumnos;
+package Examenes.Examen3.Alumnos;
 
 public class App {
     public static void main(String[] args) {

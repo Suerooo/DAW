@@ -1,4 +1,4 @@
-package POO.Alumnos;
+package Examenes.Examen3.Alumnos;
 
 import java.util.Objects;
 
