@@ -70,7 +70,7 @@ public class Alumno {
 
     public void setTelefono(long telefono) {
         if (telefono < 0) {
-            throw new IllegalArgumentException("telefono no puede ser negativo");
+            throw new IllegalArgumentException("teléfono no puede ser negativo");
         }
         this.telefono = telefono;
     }
@@ -104,7 +104,7 @@ public class Alumno {
                 ", apellidos='" + apellidos + '\'' +
                 ", email='" + email + '\'' +
                 ", edad=" + edad +
-                ", telefono=" + telefono +
+                ", teléfono=" + telefono +
                 '}';
     }
 }
