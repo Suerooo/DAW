@@ -5,6 +5,26 @@ import java.util.Scanner;
 public class Act6Ahorcado {
     static Scanner sc=new Scanner(System.in);
 
+    static String ocultarPalabra(String palabraAOcultar) {
+        String palabraOcultada="";
+
+        for (int i=0; i<palabraAOcultar.length(); i++) {
+            palabraOcultada+="_";
+        }
+
+        return palabraOcultada;
+    }
+
+    static String revelarLetras(String palabraVisible, String palabraOculta, char letraARevelar) {
+        for(int i=0; i<palabraVisible.length(); i++) {
+            if (letraARevelar==palabraVisible.charAt(i)) {
+                palabraOculta=palabraOculta.substring(0, i)+palabraVisible.charAt(i)+palabraOculta.substring(i+1);
+            }
+        }
+
+        return palabraOculta;
+    }
+
     public static void main(String[] args) {
         /*Realiza el juego del ahorcado. Las reglas del juego son:
         a) El jugador A teclea una palabra, sin que el jugador B la vea.
@@ -18,40 +38,32 @@ public class Act6Ahorcado {
         System.out.print("Jugador A - Teclea tu palabra: ");
         String palabraAAdivinar=sc.nextLine().toLowerCase();
 
-        String palabraOculta="";
+        String palabraOculta=ocultarPalabra(palabraAAdivinar);
         int intentos=7;
 
-        for (int i=0; i<palabraAAdivinar.length(); i++) {
-            palabraOculta+="_";
-        }
         System.out.println("\n Palabra: "+palabraOculta);
 
         do {
             System.out.print("Jugador B - Con que letra quieres intentar: ");
             char letraIntentada=sc.next().toLowerCase().charAt(0);
 
-            if (palabraAAdivinar.indexOf(letraIntentada) >= 0) {
-                for(int j=0; j<palabraAAdivinar.length(); j++) {
-                    if (letraIntentada==palabraAAdivinar.charAt(j)) {
-                        palabraOculta=palabraOculta.substring(0, j)+palabraAAdivinar.charAt(j)+palabraOculta.substring(j+1);
-                    }
-                }
-                
+            if (palabraAAdivinar.indexOf(letraIntentada) != -1) {
+                palabraOculta=revelarLetras(palabraAAdivinar, palabraOculta, letraIntentada);
                 System.out.println("Acertaste!! \n");
                 
             } else {
-
                 System.out.println("Fallaste te quedan "+(intentos-1)+" intentos \n");
                 intentos--;
             }
 
             if (intentos>0) {
                 System.out.println("Palabra: "+palabraOculta);
+                
             } else {
                 System.out.println("Intentos gastados - Ganador: Jugador A");
             }
 
-        } while (intentos>0 && palabraOculta.indexOf('_') >= 0);
+        } while (intentos>0 && palabraOculta.indexOf('_') != -1);
 
         if (intentos>0) {
             System.out.println("Palabra adivinada - Ganador: Jugador B");

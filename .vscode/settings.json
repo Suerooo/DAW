@@ -1,4 +1,5 @@
 {
   "sqltools.connections": [],
-  "java.format.settings.url": "file:///C:/Users/rauls/Documents/Visual Studio Code/GitHub/DAW/.vscode/formatter.xml"
+  "java.format.settings.url": "file:///C:/Users/rauls/Documents/Visual Studio Code/GitHub/DAW/.vscode/formatter.xml",
+  "java.project.sourcePaths": ["Java"]
 }
