@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+body {
+	background-color: #effaf2;
+	font-family: cursive;
+}
+
+h1 {
+	font-size: 26px;
+	font-variant: small-caps;
+}
+
+p {
+	font-size: 18px;
+}
+
+p.infancia {
+	font-family: serif;
+	font-style: italic;
+	color: #0a2418;
+}
+
+p.animales {
+	font-family: sans-serif;
+	letter-spacing: 2px;
+	color: #0a2418;
+}
+
+p.literatura {
+	font-family: monospace;
+	font-size: 12px;
+	color: #8b2e62;
+}
+
+p.numeros {
+	font-family: cursive;
+	word-spacing: 5px;
+	color: #0a2418;
+}
