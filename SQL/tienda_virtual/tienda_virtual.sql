@@ -42,3 +42,20 @@ create table stock(
     constraint sto_codp_FK foreign key (cod_producto) references producto(cod_producto),
     constraint sto_uni_che check(unidades >= 0)
 );
+
+alter table stock add fecha_ultima_entrada datetime default(now());
+alter table stock add beneficio decimal (2,1);
+
+alter table producto drop descripcion;
+alter table producto add perecedero enum('S', 'N');
+alter table producto modify deno_producto varchar(50) not null;
+
+alter table familia add iva decimal(2,2);
+
+alter table tienda add constraint tie_sto_uni unique(codigo_postal);
+
+rename table stock to prodxtiendas;
+
+alter table producto drop foreign key pro_cod_FK;
+alter table producto drop cod_familia;
+drop table familia;
