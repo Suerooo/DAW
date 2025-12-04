@@ -118,5 +118,24 @@ form {
   margin-bottom: 1%;
 }
 
-label {
+input, textarea {
+	background-color: #fff6ed;
+}
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  background-color: #74bffd;
+  border: 3px solid #2276ee;
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: #162a55;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+img {
+	border-radius: 25px;
+	box-shadow: black 6px 6px;
 }
