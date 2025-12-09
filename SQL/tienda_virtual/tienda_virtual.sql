@@ -43,7 +43,7 @@ create table stock(
     constraint sto_uni_che check(unidades >= 0)
 );
 
-alter table stock add fecha_ultima_entrada datetime default(now());
+alter table stock add fecha_ultima_entrada datetime default(CURRENT_DATE);
 alter table stock add beneficio decimal (2,1);
 
 alter table producto drop descripcion;

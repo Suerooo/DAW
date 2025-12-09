@@ -53,13 +53,11 @@ alter table profesor drop direccion;
 alter table curso drop constraint cur_nif_fk;
 alter table curso drop nif;
 alter table profesor drop primary key;
-
 alter table profesor add constraint pro_nom_ape_pk primary key(nombre, apellido_paterno, apellido_materno);
 alter table curso add nombre varchar(255);
 alter table curso add apellido_paterno varchar(255);
 alter table curso add apellido_materno varchar(255);
 alter table curso add constraint cur_nom_ape_fk foreign key(nombre, apellido_paterno, apellido_materno) references profesor(nombre, apellido_paterno, apellido_materno);
-
 
 rename table profesor to tutor;
 
