@@ -44,9 +44,10 @@ create table stock(
 );
 
 alter table stock add fecha_ultima_entrada datetime default(CURRENT_DATE);
-alter table stock add beneficio decimal (2,1);
+alter table stock add beneficio decimal (1,0);
+alter table stock add constraint sto_ben_che check(beneficio in (1, 2, 3, 4, 5));
 
-alter table producto drop descripcion;
+alter table producto drop dprodxtiendasescripcion;
 alter table producto add perecedero enum('S', 'N');
 alter table producto modify deno_producto varchar(50) not null;
 
