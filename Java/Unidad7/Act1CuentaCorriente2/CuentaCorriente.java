@@ -11,20 +11,22 @@ class CuentaCorriente {
         this.saldo = 0.0;
     }
 
-    void sacarDinero(double retirar) {
-        if (retirar > saldo) {
-            System.out.println(this.nombre + " usted no dispone de tanto dinero");
+    void sacarDinero(double cantidad) {
+        if (cantidad > saldo) {
+            System.out.println(this.nombre + " no dispone de tanto dinero (Dinero faltante: " + (cantidad - this.saldo) + ")");
         } else {
-            System.out.println(this.nombre + " Dinero retirado");
-            this.saldo -= retirar;
+            this.saldo -= cantidad;
+            System.out.println(this.nombre + " ha retirado " + cantidad);
         }
     }
 
-    void ingresarDinero(double ingresar) {
-        this.saldo += ingresar;
+    void ingresarDinero(double cantidad) {
+        this.saldo += cantidad;
+        System.out.println(this.nombre + " ha ingresado " + cantidad);
     }
 
     void mostrarInformacion() {
-        System.out.println("Nombre: " + this.nombre + " dni: " + this.dni + " saldo: " + this.saldo);
+        System.out.println("Nombre: " + this.nombre + " | DNI: " + this.dni + " | Saldo: " + this.saldo);
+        System.out.println();
     }
 }
