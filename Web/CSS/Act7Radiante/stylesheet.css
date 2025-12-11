@@ -10,16 +10,19 @@
 }
 
 .box2 {
-	/*
 	background-image: url(https://www.teleadhesivo.com/es/img/cirmu021-png/folder/products-detalle-png/vinilos-decorativos-luna-llena.png), url(https://www.shutterstock.com/image-vector/cityscape-city-buildings-night-nighttime-600nw-2495953405.jpg);
 	background-size: 100px, cover;
 	background-repeat: no-repeat;
 	background-position: 80% 15%, 0 0;
+	
+	/*
+	background:
+    url("https://www.teleadhesivo.com/es/img/cirmu021-png/folder/products-detalle-png/vinilos-decorativos-luna-llena.png") 
+        80% 15% / 100px no-repeat,
+    url("https://www.shutterstock.com/image-vector/cityscape-city-buildings-night-nighttime-600nw-2495953405.jpg")
+        0 0 / cover no-repeat;
 	*/
-	
-	background: 80% 15% 100px no-repeat url(https://www.teleadhesivo.com/es/img/cirmu021-png/folder/products-detalle-png/vinilos-decorativos-luna-llena.png), 
-				0 0 cover no-repeat url(https://www.shutterstock.com/image-vector/cityscape-city-buildings-night-nighttime-600nw-2495953405.jpg);
-	
+
 	height: 400px;
 	width: 800px;
 }
