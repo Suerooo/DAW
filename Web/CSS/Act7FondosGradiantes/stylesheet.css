@@ -26,3 +26,17 @@
 	height: 400px;
 	width: 800px;
 }
+
+.box3 {
+	background-image: linear-gradient(64deg, black 10px, red, yellow);
+	
+	height: 400px;
+	width: 800px;
+}
+
+.box4 {
+	background-image: repeating-radial-gradient(circle 100px at top left, black, red);
+	
+	height: 400px;
+	width: 800px;
+}
