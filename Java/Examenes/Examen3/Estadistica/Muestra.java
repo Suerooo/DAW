@@ -1,28 +1,35 @@
 package Examenes.Examen3.Estadistica;
 
-import java.util.Arrays;
-
 public class Muestra {
-    private int[] array;
+    private int[] muestra;
     private int cantidadValores;
-    private static final int DEFAULT_SIZE = 10;
-    
+    static final int DEFAULT_SIZE = 10;
+
     public Muestra() {
-        array = new int[DEFAULT_SIZE];
+        this.muestra = new int[DEFAULT_SIZE];
+        this.cantidadValores = 0;
     }
 
-    public Muestra(int tamanio) {
-        array = new int[tamanio];
+    public Muestra(int tamanioArray) {
+        this.muestra = new int[tamanioArray];
+        this.cantidadValores = 0;
     }
 
-    public Muestra(int[] array) {
-        this.array = array;
+    public Muestra(int[] muestra) {
+        this.muestra = muestra;
+        this.cantidadValores = muestra.length;
     }
 
-    public void agregarMuestra(int...numero) {
-        for (int num : numero) {
-            array = Arrays.copyOf(array, array.length +1 );
-            array[array.length - 1] = num;
-        }
+    public int[] getMuestra() {
+        return muestra;
     }
+
+    public int getCantidadValores() {
+        return cantidadValores;
+    }
+
+    public void agregarNumero(int numero) {
+        this.muestra[cantidadValores] = numero;
+        cantidadValores++;
+    }   
 }
