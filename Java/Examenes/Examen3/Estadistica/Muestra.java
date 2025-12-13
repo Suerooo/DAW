@@ -1,27 +1,27 @@
 package Examenes.Examen3.Estadistica;
 
 public class Muestra {
-    private int[] muestra;
+    private int[] array;
     private int cantidadValores;
     static final int DEFAULT_SIZE = 10;
 
     public Muestra() {
-        this.muestra = new int[DEFAULT_SIZE];
+        this.array = new int[DEFAULT_SIZE];
         this.cantidadValores = 0;
     }
 
     public Muestra(int tamanioArray) {
-        this.muestra = new int[tamanioArray];
+        this.array = new int[tamanioArray];
         this.cantidadValores = 0;
     }
 
-    public Muestra(int[] muestra) {
-        this.muestra = muestra;
-        this.cantidadValores = muestra.length;
+    public Muestra(int[] array) {
+        this.array = array;
+        this.cantidadValores = array.length;
     }
 
     public int[] getMuestra() {
-        return muestra;
+        return array;
     }
 
     public int getCantidadValores() {
@@ -29,7 +29,7 @@ public class Muestra {
     }
 
     public void agregarNumero(int numero) {
-        this.muestra[cantidadValores] = numero;
+        this.array[cantidadValores] = numero;
         cantidadValores++;
     }   
 }
