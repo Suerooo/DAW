@@ -8,7 +8,6 @@
 ![Repositorio público](https://img.shields.io/badge/repositorio-público-lightgrey?style=for-the-badge)
 ![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
 ![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
-![Repo size](https://img.shields.io/github/repo-size/suerooo/DAW?style=for-the-badge)
 
 Repositorio de tareas y ejercicios realizados durante el curso **1º de Desarrollo de Aplicaciones Web (DAW)**.
 
@@ -39,13 +38,8 @@ El repositorio incluye, por el momento, las siguientes áreas:
 
 ---
 
-## ℹ️ Notas
+## 🚧 Estado del proyecto
 
 - El contenido del repositorio refleja el progreso del aprendizaje, por lo que algunos ejercicios pueden ser básicos o estar sujetos a mejora.
-- No se incluye ninguna licencia específica. Si alguien encuentra útil el contenido, puede utilizarlo con fines educativos sin problema.
-
----
-
-## 🚧 Estado del proyecto
 
 En desarrollo — se irán añadiendo nuevas tareas, asignaturas y mejoras conforme avance el curso de **1º DAW**.
