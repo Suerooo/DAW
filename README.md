@@ -8,8 +8,6 @@
 ![Licencia MIT](https://img.shields.io/badge/licencia-MIT-lightgrey?style=for-the-badge)
 ![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
 ![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/suerooo/DAW?style=social)
-![Forks](https://img.shields.io/github/forks/suerooo/DAW?style=social)
 
 Repositorio de tareas y ejercicios realizados durante el curso **1º de Desarrollo de Aplicaciones Web (DAW)**.
 
@@ -35,6 +33,12 @@ El repositorio incluye, por el momento, las siguientes áreas:
 
 - **Nombre:** Raúl Suero  
 - **Usuario de GitHub:** suerooo
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo **Licencia MIT**. Se puede consultar el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
