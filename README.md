@@ -5,7 +5,6 @@
 ![Lenguaje Web](https://img.shields.io/badge/Web-HTML%20%7C%20CSS-brightgreen?style=for-the-badge)
 ![SQL](https://img.shields.io/badge/SQL-Base%20de%20Datos-yellow?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-Programaci%C3%B3n-orange?style=for-the-badge)
-![Repositorio público](https://img.shields.io/badge/repositorio-público-lightgrey?style=for-the-badge)
 ![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
 ![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
 
@@ -42,4 +41,4 @@ El repositorio incluye, por el momento, las siguientes áreas:
 
 - El contenido del repositorio refleja el progreso del aprendizaje, por lo que algunos ejercicios pueden ser básicos o estar sujetos a mejora.
 
-En desarrollo — se irán añadiendo nuevas tareas, asignaturas y mejoras conforme avance el curso de **1º DAW**.
+- En desarrollo — se irán añadiendo nuevas tareas, asignaturas y mejoras conforme avance el curso de **1º DAW**.
