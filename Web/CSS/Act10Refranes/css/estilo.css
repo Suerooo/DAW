@@ -1,5 +1,49 @@
 @charset "utf-8";
 
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  border: 4px black solid;
+  text-transform: uppercase;
+}
+
 .a {
-	border: 2px 0 0 2px;
+  border-top: 15px red double;
+  border-left: 15px red double;
+}
+
+.b {
+  border-top: 3px blue dashed;
+  border-left: 29px green solid;
+  border-right: 8px green dashed;
+  border-bottom: 15px blue dashed;
+}
+
+.c {
+  border-top: 20px orange double;
+  border-bottom: 20px orange double;
+  border-left: 5px orange double;
+  border-right: 5px orange double;
+}
+
+.d {
+  border-top: 15px lawngreen solid;
+  border-bottom: 15px blue solid;
+}
+
+.e {
+  border-top: 20px red dashed;
+  border-left: 20px black dashed;
+  border-bottom: 20px black dotted;
+  border-right: 20px black solid;
+}
+
+.f {
+  border-top: 5px black dotted;
+  border-left: 20px red double;
+  border-bottom: 10px black dashed;
+  border-right: 20px black dashed;
 }
