@@ -2,9 +2,10 @@
 
 ![Estado](https://img.shields.io/badge/estado-en%20desarrollo-blue?style=for-the-badge)
 ![Curso](https://img.shields.io/badge/curso-1º%20DAW-green?style=for-the-badge)
-![Lenguaje Web](https://img.shields.io/badge/Web-HTML%20%7C%20CSS-brightgreen?style=for-the-badge)
-![SQL](https://img.shields.io/badge/SQL-Base%20de%20Datos-yellow?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-Programaci%C3%B3n-orange?style=for-the-badge)
+![HTML](https://img.shields.io/badge/HTML-Estructura-red?style=for-the-badge)
+![CSS](https://img.shields.io/badge/CSS-Estilos-blueviolet?style=for-the-badge)
+![MySQL](https://img.shields.io/badge/MySQL-Base%20de%20Datos-lightblue?style=for-the-badge)
 ![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
 ![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
 
