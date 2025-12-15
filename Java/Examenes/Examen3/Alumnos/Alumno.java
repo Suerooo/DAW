@@ -16,7 +16,9 @@ public class Alumno {
 
     // Constructor nombre, apellidos y edad
     public Alumno(String nombre, String apellidos, int edad) {
-        this(nombre, apellidos, "", edad, 0L);
+        this.nombre = Objects.requireNonNull(nombre, "Nombre no puede ser null");
+        this.apellidos = Objects.requireNonNull(apellidos, "Apellidos no pueden ser null");
+        setEdad(edad);
     }
 
     // Constructor con todos los atributos
@@ -59,7 +61,7 @@ public class Alumno {
 
     public void setEdad(int edad) {
         if (edad < 0) {
-            throw new IllegalArgumentException("edad no puede ser negativa");
+            throw new IllegalArgumentException("La edad tiene que ser mayor o igual a 0");
         }
         this.edad = edad;
     }
