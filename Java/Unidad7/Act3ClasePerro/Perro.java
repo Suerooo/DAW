@@ -20,18 +20,18 @@ public class Perro {
     }
 
     void ladrar() {
-        System.out.println(nombre + " está ladrando");
+        System.out.println(this.nombre + " está ladrando");
     }
 
     void comer() {
-        System.out.println(nombre + " está comiendo");
+        System.out.println(this.nombre + " está comiendo");
     }
 
     void mostrarInfo() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println(" Raza: " + raza);
-        System.out.println(" Edad: " + edad);
-        System.out.println(" Color: " + color);
+        System.out.println("Nombre: " + this.nombre);
+        System.out.println(" Raza: " + this.raza);
+        System.out.println(" Edad: " + this.edad);
+        System.out.println(" Color: " + this.color);
         System.out.println();
     }
 }
