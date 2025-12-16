@@ -1,14 +1,22 @@
-package Unidad7.Act1CuentaCorriente2;
+package Unidad7.Act2CuentaCorrienteSobrecarga;
 
 class CuentaCorriente {
     String nombre;
     String dni;
-    Double saldo;
+    double saldo;
 
-    public CuentaCorriente(String nombre, String dni) {
+    CuentaCorriente(String nombre, String dni) {
+        this(nombre, dni, 0.0);
+    }
+
+    CuentaCorriente(String dni, double saldo) {
+        this(null, dni, saldo);
+    }
+
+    CuentaCorriente(String nombre, String dni, double saldo) {
         this.nombre = nombre;
         this.dni = dni;
-        this.saldo = 0.0;
+        this.saldo = saldo;
     }
 
     void sacarDinero(double cantidad) {

@@ -1,10 +1,10 @@
-package Unidad7.Act1CuentaCorriente2;
+package Unidad7.Act2CuentaCorrienteSobrecarga;
 
 public class App {
     public static void main(String[] args) {
         CuentaCorriente cuenta1 = new CuentaCorriente("Raul", "53252353A");
-        CuentaCorriente cuenta2 = new CuentaCorriente("Pedro", "6546546A");
-        CuentaCorriente cuenta3 = new CuentaCorriente("Juan", "64364363A");
+        CuentaCorriente cuenta2 = new CuentaCorriente("Pedro", "6546546A", 3232.23);
+        CuentaCorriente cuenta3 = new CuentaCorriente("64364363A", 2322.23);
 
         cuenta1.ingresarDinero(1000);
         cuenta1.sacarDinero(500);

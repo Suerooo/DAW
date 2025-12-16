@@ -5,21 +5,28 @@ class CuentaCorriente {
     String dni;
     Double saldo;
 
-    double sacarDinero(double retirar) {
-        if (retirar > saldo) {
-            System.out.println("No dispone de tanto dinero");
-            return saldo;
+    public CuentaCorriente(String nombre, String dni) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.saldo = 0.0;
+    }
+
+    void sacarDinero(double cantidad) {
+        if (cantidad > saldo) {
+            System.out.println(this.nombre + " no dispone de tanto dinero (Dinero faltante: " + (cantidad - this.saldo) + ")");
         } else {
-            System.out.println("Dinero retirado");
-            return saldo-retirar;
+            this.saldo -= cantidad;
+            System.out.println(this.nombre + " ha retirado " + cantidad);
         }
     }
 
-    double ingresarDinero(double ingresar) {
-        return saldo+ingresar;
+    void ingresarDinero(double cantidad) {
+        this.saldo += cantidad;
+        System.out.println(this.nombre + " ha ingresado " + cantidad);
     }
 
     void mostrarInformacion() {
-        System.out.println("Nombre: " + nombre + " dni: " + dni + " saldo: " + saldo);
+        System.out.println("Nombre: " + this.nombre + " | DNI: " + this.dni + " | Saldo: " + this.saldo);
+        System.out.println();
     }
 }
