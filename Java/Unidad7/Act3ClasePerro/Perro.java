@@ -32,5 +32,6 @@ public class Perro {
         System.out.println(" Raza: " + raza);
         System.out.println(" Edad: " + edad);
         System.out.println(" Color: " + color);
+        System.out.println();
     }
 }
