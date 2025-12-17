@@ -5,7 +5,6 @@ public class App {
         Perro perro1 = new Perro();
         Perro perro2 = new Perro("Paco", "Chihuahua");
         Perro perro3 = new Perro("Pedro", "Chihuahua", 9, "Negro");
-        Perro perro4 = new Perro("Princesa","Pitbull");
 
         perro1.mostrarInfo();
         perro2.mostrarInfo();
