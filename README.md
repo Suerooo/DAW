@@ -6,7 +6,6 @@
 ![HTML](https://img.shields.io/badge/HTML-Estructura-red?style=for-the-badge)
 ![CSS](https://img.shields.io/badge/CSS-Estilos-blueviolet?style=for-the-badge)
 ![MySQL](https://img.shields.io/badge/MySQL-Base%20de%20Datos-lightblue?style=for-the-badge)
-![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
 ![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
 
 Repositorio de tareas y ejercicios realizados durante el curso **1º de Desarrollo de Aplicaciones Web (DAW)**.  
@@ -18,76 +17,9 @@ El objetivo es documentar mi progreso en **Java**, **SQL** y **desarrollo web (H
 
 En la raíz del proyecto encontrarás:
 
-- `Java/` – Ejercicios de programación en Java organizados por unidades y exámenes.
-- `SQL/` – Scripts SQL de diferentes bases de datos de ejemplo.
-- `Web/` – Ejercicios de HTML, CSS y recursos asociados (favicons, assets, etc.).
-
-### 🧱 Java
-
-Ruta: `Java/`
-
-Contenido principal:
-
-- `Unidad1`, `Unidad2`, ..., `Unidad7` – Unidades de programación con ejercicios individuales.
-  - Ejemplo (`Java/Unidad1`):
-    - `Act1PedirMostrar.java`
-    - `Act2LongitudAreaCirculo.java`
-    - `Act3Frutero.java`
-    - `Act4MayorEdad.java`
-    - `Act5PuedoSalir.java`
-    - `Act6CalcularIVA.java`
-    - `Act7NotasTrimestres.java`
-    - `Act8AreaTriangulo.java`
-    - `Act9Patas.java`
-    - `Act10ParqueAcuatico.java`
-    - `Unidad1-ConceptosBasicos.pdf` (apuntes/teoría de la unidad)
-
-- `Examenes/` – Ejercicios o prácticas asociados a exámenes de la asignatura.
-
-### 🗄️ SQL
-
-Ruta: `SQL/`
-
-Cada carpeta corresponde a una base de datos o caso práctico diferente:
-
-- `academia/`
-  - `academia.sql` – Definición y consultas de una base de datos de academia.
-
-- `restaurante_mouro/`
-  - Scripts SQL relacionados con la base de datos de un restaurante.
-
-- `tienda_virtual/`
-  - Scripts SQL para una base de datos de tienda online.
-
-### 🌐 Web
-
-Ruta: `Web/`
-
-Subcarpetas principales:
-
-- `HTML/` – Estructura y contenido de páginas web.
-  - `Act1WebPersonal/` – Web personal básica.
-  - `Act2Noticias/` – Sitio de noticias con varias secciones y páginas (`index.html`, `nacional.html`, `internacional.html`, `deportes.html`, etc.) y carpeta `assets/`.
-  - `Act3Formularios/` – Formularios en HTML.
-  - `Act4DivSpanAsideID/` – Prácticas con elementos de maquetación y división de contenido.
-  - `Examen1/` – Ejercicio o prueba de evaluación con HTML.
-
-- `CSS/` – Estilos aplicados a ejercicios de HTML.
-  - `Act0Noticias/`
-  - `Act1TarjetaPresentacion/`
-  - `Act2TarjetaPresentacion2/`
-  - `Act3CurriculumCorto/`
-  - `Act4CurriculumLargo/`
-  - `Act5Clases/`
-  - `Act6Bordes/` (incluye `Enunciado.pdf`, `index.html`, `estilo.css`)
-  - `Act7FondosGradientes/`
-  - `Act8FuentesAlineaciones/`
-  - `Act9EmojiPeliculas/`
-  - `Act10Refranes/`
-
-- `FAVICON/` – Recursos de iconos del sitio:
-  - `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, etc.
-  - `site.webmanifest`
+- `Java/` – Ejercicios de programación en Java organizados por unidades (`Unidad1`–`Unidad7`) y carpeta de exámenes.
+- `SQL/` – Scripts SQL y modelos de bases de datos de ejemplo (por ej. `academia`, `restaurante_mouro`, `tienda_virtual`).
+- `Web/` – Ejercicios de HTML y CSS, organizados por actividades, además de recursos como favicons (`FAVICON/`).
 
 ---
 
@@ -95,20 +27,21 @@ Subcarpetas principales:
 
 Algunos ejemplos representativos del contenido del repositorio:
 
-- **Java – Unidad 1: ejercicios básicos de introducción al lenguaje**  
+- **Java – Unidad 1: introducción al lenguaje**  
   Ruta: `Java/Unidad1`  
-  Actividades sobre variables, entrada por teclado, estructuras condicionales y operaciones sencillas:
+  Actividades sobre variables, entrada por teclado y estructuras condicionales:
   - `Act2LongitudAreaCirculo.java` – Cálculo de longitud y área de un círculo.
   - `Act5PuedoSalir.java` – Lógica condicional basada en diferentes parámetros.
   - `Act7NotasTrimestres.java` – Gestión y cálculo de notas.
+  - `Unidad1-ConceptosBasicos.pdf` – Apuntes/teoría de la unidad.
 
 - **Web – Sitio de noticias multipágina**  
   Ruta: `Web/HTML/Act2Noticias`  
-  Conjunto de páginas HTML enlazadas entre sí (`index.html`, `nacional.html`, `internacional.html`, `deportes.html`, etc.) con estructura semántica y organización por secciones.
+  Conjunto de páginas HTML enlazadas (`index.html`, `nacional.html`, `internacional.html`, `deportes.html`, etc.) con estructura semántica y carpeta `assets/`.
 
 - **Web + CSS – Bordes y maquetación**  
   Ruta: `Web/CSS/Act6Bordes`  
-  Ejercicio que combina HTML y CSS para practicar bordes, cajas y estilos visuales, incluyendo el enunciado original (`Enunciado.pdf`).
+  Ejercicio que combina HTML y CSS para practicar bordes, cajas y estilos visuales, incluyendo el enunciado (`Enunciado.pdf`).
 
 - **SQL – Base de datos de academia**  
   Ruta: `SQL/academia/academia.sql`  
@@ -123,3 +56,47 @@ Algunos ejemplos representativos del contenido del repositorio:
    ```bash
    git clone https://github.com/suerooo/DAW.git
    cd DAW
+   ```
+
+2. **Requisitos recomendados**
+
+   - **Java**: versión 17 o superior  
+   - **MySQL**: versión 8 o superior (para los ejercicios en `SQL/`)  
+   - **Navegador moderno** (Chrome, Firefox, etc.) para visualizar los ejercicios de `Web/`
+
+3. **Sugerencias de uso**
+
+   - Abrir los ejercicios de **Java** en un IDE (IntelliJ IDEA, Eclipse o VS Code con extensiones de Java).
+   - Ejecutar los scripts de **SQL** en MySQL Workbench, DBeaver o un cliente SQL compatible.
+   - Editar y visualizar los ejercicios de **Web** con VS Code y un navegador.
+
+> Este repositorio está pensado como material de aprendizaje. Puedes usarlo como referencia para estudiar, practicar o comparar soluciones.
+
+---
+
+## 🧑‍🎓 Autor
+
+- **Nombre:** Raúl Suero  
+- **GitHub:** [@suerooo](https://github.com/suerooo)
+
+---
+
+## 🚧 Estado del proyecto
+
+**En desarrollo.**  
+El contenido del repositorio refleja mi progreso en **1º DAW**, por lo que:
+
+- Muchos ejercicios son básicos o introductorios.
+- Se irán añadiendo nuevas unidades, prácticas y exámenes.
+- La estructura puede cambiar ligeramente a medida que avance el curso.
+
+---
+
+## 📄 Licencia
+
+![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-yellow?style=for-the-badge)
+
+Este repositorio está licenciado bajo la **MIT License**.  
+Consulta el archivo `LICENSE` para más información.
+
+> Nota: El contenido teórico (por ejemplo, PDFs de enunciados o apuntes incluidos en algunas unidades) puede tener sus propias condiciones de uso según su autor original.
