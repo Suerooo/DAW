@@ -18,7 +18,7 @@ El objetivo es documentar mi progreso en **Java**, **SQL** y **desarrollo web (H
 En la raíz del proyecto encontrarás:
 
 - `Java/` – Ejercicios de programación en Java organizados por unidades (`Unidad1`–`Unidad7`) y carpeta de exámenes.
-- `SQL/` – Scripts SQL y modelos de bases de datos de ejemplo (por ej. `academia`, `restaurante_mouro`, `tienda_virtual`).
+- `SQL/` – Scripts SQL y modelos de bases de datos de ejemplo (por ej. `Academia`, `RestauranteMouro`, `TiendaVirtual`).
 - `Web/` – Ejercicios de HTML y CSS, organizados por actividades, además de recursos como favicons (`FAVICON/`).
 
 ---
