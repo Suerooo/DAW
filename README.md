@@ -7,41 +7,65 @@
 ![CSS](https://img.shields.io/badge/CSS-Estilos-blueviolet?style=for-the-badge)
 ![MySQL](https://img.shields.io/badge/MySQL-Base%20de%20Datos-lightblue?style=for-the-badge)
 ![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
-![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
 
-Repositorio de tareas y ejercicios realizados durante el curso **1º de Desarrollo de Aplicaciones Web (DAW)**.
+Repositorio de tareas y ejercicios realizados durante el curso **1º de Desarrollo de Aplicaciones Web (DAW)**.  
+El objetivo es documentar mi progreso en **Java**, **SQL** y **desarrollo web (HTML/CSS)** a lo largo del curso.
 
 ---
 
-## 📚 Contenidos del repositorio
+## 📂 Estructura del repositorio
 
-El repositorio incluye, por el momento, las siguientes áreas:
+En la raíz del proyecto encontrarás:
 
-- **Lenguaje de Marcas**  
-  - HTML
-  - CSS
-- **Bases de Datos**  
-  - SQL
-- **Programación**  
-  - Java
+- `Java/` – Ejercicios de programación en Java organizados por unidades (`Unidad1`–`Unidad7`) y carpeta de exámenes.
+- `SQL/` – Scripts SQL y modelos de bases de datos de ejemplo (por ej. `Academia`, `RestauranteMouro`, `TiendaVirtual`).
+- `Web/` – Ejercicios de HTML y CSS, organizados por actividades, además de recursos como favicons (`FAVICON/`).
 
-> La estructura puede ampliarse y modificarse a medida que avance el curso y se añadan nuevas asignaturas o unidades.
+---
+
+## 🔧 Cómo usar este repositorio
+
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone https://github.com/suerooo/DAW.git
+   cd DAW
+   ```
+
+2. **Requisitos recomendados**
+
+   - **Java**: versión 17 o superior  
+   - **MySQL**: versión 8 o superior (para los ejercicios en `SQL/`)  
+   - **Navegador moderno** (Chrome, Firefox, etc.) para visualizar los ejercicios de `Web/`
+
+3. **Sugerencias de uso**
+
+   - Abrir los ejercicios de **Java** en un IDE (IntelliJ IDEA, Eclipse o VS Code con extensiones de Java).
+   - Ejecutar los scripts de **SQL** en MySQL Workbench, DBeaver o un cliente SQL compatible.
+   - Editar y visualizar los ejercicios de **Web** con VS Code y un navegador.
+
+> Este repositorio está pensado como material de aprendizaje. Puedes usarlo como referencia para estudiar, practicar o comparar soluciones.
 
 ---
 
 ## 🧑‍🎓 Autor
 
 - **Nombre:** Raúl Suero  
-- **Usuario de GitHub:** suerooo
+- **GitHub:** [@suerooo](https://github.com/suerooo)
 
 ---
 
 ## 🚧 Estado del proyecto
 
-En desarrollo — El contenido del repositorio refleja el progreso del aprendizaje, por lo que algunos ejercicios pueden ser básicos o estar sujetos a mejora. Se irán añadiendo nuevas tareas, asignaturas y mejoras conforme avance el curso de **1º DAW**.
+**En desarrollo.**  
+El contenido del repositorio refleja mi progreso en **1º DAW**, por lo que:
+
+- Muchos ejercicios son básicos o introductorios.
+- Se irán añadiendo nuevas unidades, prácticas y exámenes.
+- La estructura puede cambiar ligeramente a medida que avance el curso.
 
 ---
 
 ## 📄 Licencia
 
-![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey?style=for-the-badge)
+![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-yellow?style=for-the-badge)
