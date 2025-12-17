@@ -69,8 +69,3 @@ El contenido del repositorio refleja mi progreso en **1º DAW**, por lo que:
 ## 📄 Licencia
 
 ![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-yellow?style=for-the-badge)
-
-Este repositorio está licenciado bajo la **MIT License**.  
-Consulta el archivo `LICENSE` para más información.
-
-> Nota: El contenido teórico (por ejemplo, PDFs de enunciados o apuntes incluidos en algunas unidades) puede tener sus propias condiciones de uso según su autor original.
