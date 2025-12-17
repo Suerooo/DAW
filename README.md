@@ -6,7 +6,7 @@
 ![HTML](https://img.shields.io/badge/HTML-Estructura-red?style=for-the-badge)
 ![CSS](https://img.shields.io/badge/CSS-Estilos-blueviolet?style=for-the-badge)
 ![MySQL](https://img.shields.io/badge/MySQL-Base%20de%20Datos-lightblue?style=for-the-badge)
-![Commits](https://img.shields.io/github/commit-activity/m/suerooo/DAW?style=for-the-badge)
+![Último commit](https://img.shields.io/github/last-commit/suerooo/DAW?style=for-the-badge)
 
 Repositorio de tareas y ejercicios realizados durante el curso **1º de Desarrollo de Aplicaciones Web (DAW)**.  
 El objetivo es documentar mi progreso en **Java**, **SQL** y **desarrollo web (HTML/CSS)** a lo largo del curso.
