@@ -23,32 +23,6 @@ En la raíz del proyecto encontrarás:
 
 ---
 
-## 🌟 Ejercicios / proyectos destacados
-
-Algunos ejemplos representativos del contenido del repositorio:
-
-- **Java – Unidad 1: introducción al lenguaje**  
-  Ruta: `Java/Unidad1`  
-  Actividades sobre variables, entrada por teclado y estructuras condicionales:
-  - `Act2LongitudAreaCirculo.java` – Cálculo de longitud y área de un círculo.
-  - `Act5PuedoSalir.java` – Lógica condicional basada en diferentes parámetros.
-  - `Act7NotasTrimestres.java` – Gestión y cálculo de notas.
-  - `Unidad1-ConceptosBasicos.pdf` – Apuntes/teoría de la unidad.
-
-- **Web – Sitio de noticias multipágina**  
-  Ruta: `Web/HTML/Act2Noticias`  
-  Conjunto de páginas HTML enlazadas (`index.html`, `nacional.html`, `internacional.html`, `deportes.html`, etc.) con estructura semántica y carpeta `assets/`.
-
-- **Web + CSS – Bordes y maquetación**  
-  Ruta: `Web/CSS/Act6Bordes`  
-  Ejercicio que combina HTML y CSS para practicar bordes, cajas y estilos visuales, incluyendo el enunciado (`Enunciado.pdf`).
-
-- **SQL – Base de datos de academia**  
-  Ruta: `SQL/academia/academia.sql`  
-  Script SQL que define la estructura de una base de datos de academia (tablas, relaciones) y consultas de ejemplo.
-
----
-
 ## 🔧 Cómo usar este repositorio
 
 1. **Clonar el repositorio**
