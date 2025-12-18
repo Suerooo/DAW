@@ -30,7 +30,7 @@ Cada carpeta de proyecto suele incluir una combinación de los siguientes tipos 
 
 ---
 
-## ▶️ Cómo usar los archivos
+## ▶️ Tipos de archivos
 
 Para trabajar con estos archivos, necesitarás las siguientes herramientas:
 
