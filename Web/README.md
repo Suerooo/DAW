@@ -54,7 +54,7 @@ Para trabajar con estos proyectos web, necesitarás:
    - **Propósito:** Controlan el diseño, colores, tipografías, márgenes, posicionamiento y otros aspectos visuales de la página.
    - **Editar:** Modifica el código CSS en tu editor para cambiar la apariencia de la página. Los cambios se reflejarán al recargar el navegador.
 
-4. **Carpetas de recursos (`imagenes/`, `fonts/`, `videos/`, etc.)**
+4. **Carpetas de recursos (`imgs/`, `fonts/`, `vids/`, etc.)**
    - **Propósito:** Contienen los archivos multimedia y otros assets utilizados en el proyecto.
    - **Uso:** Estos recursos son referenciados desde los archivos HTML y CSS mediante rutas relativas (por ejemplo, `<img src="imagenes/logo.png">` o `background-image: url('imagenes/fondo.jpg');`).
 
