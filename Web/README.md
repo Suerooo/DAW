@@ -26,9 +26,9 @@ Cada carpeta de actividad suele incluir una combinación de los siguientes eleme
 - Archivos **`.html`** – estructura y contenido de las páginas web.
 - Archivos **`.css`** – estilos y diseño visual.
 - Carpetas de recursos:
-  - **`imagenes/`** o **`img/`** – imágenes utilizadas en el proyecto.
+  - **`img/`** – imágenes utilizadas en el proyecto.
   - **`fonts/`** – fuentes personalizadas.
-  - **`videos/`** – archivos de vídeo embebidos.
+  - **`vids/`** – archivos de vídeo embebidos.
   - Otros recursos según las necesidades del proyecto.
 
 > Nota: La organización interna de cada proyecto puede variar. Algunos proyectos tienen los archivos CSS en una carpeta `css/`, otros en la raíz; lo mismo ocurre con las imágenes y otros recursos.
