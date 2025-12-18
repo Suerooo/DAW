@@ -9,8 +9,8 @@ Carpeta dedicada a los **ejercicios, prácticas y exámenes de bases de datos** 
 Aquí se incluyen:
 
 - Modelos de bases de datos en **MySQL Workbench** (`.mwb`).
-- Scripts SQL (`.sql`) de creación, inserción y modificación.
-- Enunciados y exámenes en formato **PDF**.
+- Scripts SQL (`.sql`) de creación, inserción, modificación y consulta.
+- Enunciados y documentación en formato **PDF**.
 
 El objetivo es practicar desde el **diseño de modelos entidad–relación** hasta la **implementación y manipulación de bases de datos** en MySQL.
 
@@ -18,98 +18,41 @@ El objetivo es practicar desde el **diseño de modelos entidad–relación** has
 
 ## 📂 Estructura de la carpeta `SQL/`
 
-Dentro de `SQL/` encontrarás varias carpetas, cada una asociada a una base de datos o proyecto:
+Dentro de `SQL/` encontrarás varias carpetas, cada una asociada a una base de datos, proyecto o unidad temática.
 
-- **`TiendaVirtual/`**  
-  Modelado y scripts de una base de datos para una tienda online.
+Cada carpeta de proyecto suele incluir una combinación de los siguientes tipos de archivos:
 
-- **`Academia/`**  
-  Base de datos para una academia (alumnos, cursos, matrículas, etc.).
+- Ficheros **`.mwb`** – modelos de la base de datos creados con MySQL Workbench.
+- Ficheros **`.sql`** – scripts SQL para diversas operaciones (DDL y DML).
+- Ficheros **`.pdf`** – enunciados de prácticas, exámenes o documentación adicional.
 
-- **`RestauranteMouro/`** (u otros proyectos similares)  
-  Bases de datos para contextos concretos (reservas, pedidos, clientes…).
-
-Cada carpeta de proyecto suele incluir:
-
-- Ficheros **`.mwb`** – modelo de la base de datos en MySQL Workbench.
-- Ficheros **`.sql`** – scripts para crear, modificar o poblar la base de datos.
-- (Opcional) Carpeta **`Examen/`** – ejercicios y scripts asociados a pruebas evaluables.
-
-> Nota: Los nombres exactos de las carpetas y archivos pueden variar ligeramente según el ejercicio o la práctica.
+> Nota: La organización interna de cada proyecto puede variar, pero siempre se agrupan los archivos relacionados con una misma base de datos o ejercicio.
 
 ---
 
-## 🧱 Ejemplo de estructura: carpeta de Examen
+## ▶️ Cómo usar los archivos
 
-En algunos proyectos hay una carpeta `Examen/` con:
-
-- `crea_peliculas_raul.mwb`  
-  Modelo de la base de datos de ejemplo (p. ej. una base de datos de películas).
-
-- `crea_peliculas_raul.sql`  
-  Script de **creación** de la base de datos y sus tablas.
-
-- `modifica_peliculas_raul.sql`  
-  Script con **modificaciones** sobre el esquema o datos (ALTER, UPDATE, INSERT, etc.).
-
-- `examen.pdf`  
-  Enunciado del examen o práctica evaluable, donde se definen los requisitos de la base de datos y las operaciones a realizar.
-
-Este patrón se repite con otros nombres de examen o proyecto.
-
----
-
-## 🧰 Contenidos habituales
-
-Aunque cada carpeta/proyecto es distinto, normalmente se trabajan estos bloques:
-
-- **Diseño de bases de datos**
-  - Identificación de entidades y relaciones.
-  - Modelado con diagramas E/R (en `.mwb`).
-  - Normalización básica.
-
-- **Definición de datos (DDL)**
-  - Creación de bases de datos y tablas (`CREATE DATABASE`, `CREATE TABLE`).
-  - Definición de claves primarias y foráneas.
-  - Modificación de estructuras (`ALTER TABLE`).
-
-- **Manipulación de datos (DML)**
-  - Inserción de datos (`INSERT`).
-  - Actualización (`UPDATE`).
-  - Borrado (`DELETE`).
-
-- **Consultas (SELECT)**
-  - Selección simple.
-  - Filtros con `WHERE`.
-  - Ordenación (`ORDER BY`).
-  - Agrupaciones (`GROUP BY`, `HAVING`).
-  - Joins entre tablas.
-
----
-
-## ▶️ Cómo usar los archivos de SQL
+Para trabajar con estos archivos, necesitarás las siguientes herramientas:
 
 1. **Requisitos recomendados**
    - **MySQL 8 o superior**.
-   - Cliente SQL:
-     - MySQL Workbench, DBeaver, phpMyAdmin o similar.
+   - Un cliente SQL como MySQL Workbench, DBeaver, phpMyAdmin o similar.
 
-2. **Modelos (`.mwb`)**
-   - Abrir los archivos `.mwb` con **MySQL Workbench**.
-   - Revisar el diagrama entidad–relación.
-   - (Opcional) Generar el script a partir del modelo si fuera necesario.
+2. **Archivos `.mwb` (Modelos de MySQL Workbench)**
+   - **Abrir:** Utiliza **MySQL Workbench** para abrir estos archivos.
+   - **Propósito:** Permiten visualizar el diseño de la base de datos (diagrama Entidad-Relación), incluyendo tablas, relaciones, tipos de datos y claves.
 
-3. **Scripts (`.sql`)**
-   - Abrir el archivo en tu cliente SQL.
-   - Ejecutar primero los scripts de **creación** (por ejemplo, los que empiezan por `crea_`).
-   - Después, ejecutar los scripts de **modificación** o de **población de datos** (por ejemplo, los que empiezan por `modifica_`).
+3. **Archivos `.sql` (Scripts SQL)**
+   - **Abrir y ejecutar:** Abre estos archivos con tu cliente SQL preferido (MySQL Workbench, DBeaver, etc.).
+   - **Propósito:** Contienen comandos SQL para:
+     - **Crear** bases de datos y tablas (DDL - Data Definition Language).
+     - **Insertar, actualizar o eliminar** datos (DML - Data Manipulation Language).
+     - **Consultar** información de la base de datos (`SELECT`).
+   - **Orden de ejecución:** Generalmente, primero se ejecutan los scripts de creación de la estructura, seguidos por los de inserción de datos y, finalmente, los de modificación o consulta.
 
-4. **Exámenes (`examen.pdf`)**
-   - Leer el enunciado.
-   - Usar los modelos y scripts asociados como base para resolver las tareas:
-     - Crear la base de datos.
-     - Aplicar cambios.
-     - Realizar consultas solicitadas.
+4. **Archivos `.pdf` (Documentación y Enunciados)**
+   - **Abrir:** Utiliza cualquier lector de PDF.
+   - **Propósito:** Proporcionan los enunciados de las prácticas o exámenes, así como cualquier documentación relevante para entender el contexto y los requisitos de cada ejercicio.
 
 ---
 
@@ -119,12 +62,12 @@ Esta carpeta sirve como:
 
 - **Material de estudio** de bases de datos para 1º DAW.
 - **Repositorio de prácticas** de modelado y SQL.
-- **Banco de exámenes y ejercicios** para repasar y autoevaluarte.
+- **Banco de ejercicios** para repasar y autoevaluarte.
 
 Puedes usar los modelos, scripts y PDFs para:
 
-- Practicar diseño y normalización.
-- Repetir consultas y operaciones SQL típicas de examen.
+- Practicar diseño y normalización de bases de datos.
+- Repetir consultas y operaciones SQL típicas.
 - Comparar tus soluciones con las ya implementadas.
 
 ---
@@ -132,4 +75,4 @@ Puedes usar los modelos, scripts y PDFs para:
 ## 🚧 Estado
 
 **En desarrollo.**  
-Se irán añadiendo nuevos proyectos, exámenes y mejoras a medida que avance el curso y se completen más prácticas de bases de datos.
+Se irán añadiendo nuevos proyectos, ejercicios y documentación a medida que avance el curso y se completen más prácticas de bases de datos.
