@@ -1,14 +1,22 @@
-package Unidad7.Act1CuentaCorriente;
+package Unidad7.Act4ModificadoresVisibilidad;
 
 class CuentaCorriente {
-    String nombre;
-    String dni;
-    Double saldo;
+    private String nombre;
+    private String dni;
+    private double saldo;
 
-    public CuentaCorriente(String nombre, String dni) {
+    CuentaCorriente(String nombre, String dni) {
+        this(nombre, dni, 0.0);
+    }
+
+    CuentaCorriente(String dni, double saldo) {
+        this(null, dni, saldo);
+    }
+
+    CuentaCorriente(String nombre, String dni, double saldo) {
         this.nombre = nombre;
         this.dni = dni;
-        this.saldo = 0.0;
+        this.saldo = saldo;
     }
 
     void sacarDinero(double cantidad) {
@@ -28,5 +36,21 @@ class CuentaCorriente {
     void mostrarInformacion() {
         System.out.println("Nombre: " + this.nombre + " | DNI: " + this.dni + " | Saldo: " + this.saldo);
         System.out.println();
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+    String getDni() {
+        return dni;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    void setDni(String dni) {
+        this.dni = dni;
     }
 }
