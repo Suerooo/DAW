@@ -1,18 +1,19 @@
 package Unidad7.Act7ClaseCalendario;
 
 public class Calendario {
-    private int dia;
-    private int mes;
-    private int ano;        
+    private int dia = 1;
+    private int mes = 1;
+    private int anio = 1;        
     
-    public Calendario(int dia, int mes, int ano) {
-        setAno(dia);
+    public Calendario(int dia, int mes, int anio) {
+        setDia(dia);
+        setAnio(anio);
         setMes(mes);
-        setDia(ano);
+        corregirFecha();
     }
     
-    public int getAno() {
-        return ano;
+    public int getAnio() {
+        return anio;
     }
     public int getMes() {
         return mes;
@@ -21,8 +22,8 @@ public class Calendario {
         return dia;
     }
     
-    public void setAno(int ano) {
-        if (ano>=1) this.ano = ano;
+    public void setAnio(int anio) {
+        if (anio>=1) this.anio = anio;
     }
     
     public void setMes(int mes) {
@@ -30,21 +31,42 @@ public class Calendario {
     }
     
     public void setDia(int dia) {
-        int diasDelMes = 1;
-        
-        if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) diasDelMes=31;
-        if (mes==4 || mes==6 || mes==9 || mes==11) diasDelMes=30;
-        if (mes==2) diasDelMes=28;
-        
-        if (dia <= diasDelMes ) this.dia = dia;
+        if (dia <= obtenerDiasMes() && dia >= 1) this.dia = dia;
     }
+    
+    private int obtenerDiasMes() {
+        if (this.mes==1 || this.mes==3 || this.mes==5 || this.mes==7 || this.mes==8 || this.mes==10 || this.mes==12) return 31;
+        if (this.mes==4 || this.mes==6 || this.mes==9 || this.mes==11) return 30;
+        if (this.mes==2) return 28;
+        
+        return -1;
+    }
+    
+    private void corregirFecha() {
+        int diasMes = obtenerDiasMes();
+
+        while (dia > diasMes) {
+            dia -= diasMes;
+            mes++;
+            diasMes = obtenerDiasMes();
+        }
+
+        while (mes > 12) {
+            mes -= 12;
+            anio++;
+
+            if (anio == 0) {
+                anio = 1;
+            }
+        }
+}
 
     @Override
     public String toString() {
-        return "[año=" + ano + ", mes=" + mes + ", dia=" + dia + "]";
+        return "[día=" + this.dia + ", mes=" + this.mes + ", año=" + this.anio + "]";
     }
     
-    void incrementarDia() {
+    public void incrementarDia() {
         
     }
 }
