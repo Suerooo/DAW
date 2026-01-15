@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+.gravitas-one-regular {
+  font-family: "Gravitas One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+	background-image: url(../fondos/corazon-1.svg), url(../fondos/corazon-2.svg);
+	background-color: #ffe6fd;
+	background-size: 30px;
+	background-position: 0 0, 100% 0;
+	background-repeat: repeat-y, repeat-y;
+	text-align: center;
+}
+
+h1 {
+	font-family: "Gravitas One";
+	color: black;
+	size: 16px;
+}
+
+.s1 {
+	background-image: url(../fondos/manchas.png);
+	background-position: 0 0;
+	background-repeat: repeat;
+	border: 4px solid black;
+	border-radius: 0 16px 0 16px;
+	margin: 10px 3% 10px 3%;
+	color: white;
+}
+
+.s2 {
+	background-image: url(../fondos/fuego.svg),url(../fondos/fuego.svg), url(../fondos/tallos.jpg);
+	background-color: ;
+	background-position: 0 100%, 100% 100%, 0 0;
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-size: 20px, 20px, 100px;
+	border: 4px solid black;
+	margin: 10px 3% 10px 3%;
+	color: yellow;
+}
+
+.s3 {
+	background-image: url(../fondos/ojo.svg), url(../fondos/hexagonos.jpg);
+	background-color: #ffe6fd;
+	background-position: 50% 50%, 0 0;
+	background-repeat: no-repeat, repeat;
+	border: 4px solid black;
+	border-radius: 0 16px 0 16px;
+	margin: 10px 3% 10px 3%;
+	color: #852225;
+}
+
+.s4 {
+	background-image: url(../fondos/caballo.svg), url(../fondos/estrellas.png);
+	background-color: #ffe6fd;
+	background-position: 0 100%, 0 0;
+	background-repeat: repeat-x, repeat;
+	background-size: 20px, 50px;
+	border: 4px solid black;
+	margin: 10px 3% 10px 3%;
+	color: green;
+}

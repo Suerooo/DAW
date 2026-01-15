@@ -5,6 +5,7 @@ public class Automovil extends Vehiculo {
     
     @Override
     public void mostrarInfo() {
-        System.out.println("Marca: " + this.marca +"\nModelo: " + this.modelo + "\n Año: " + this.anio + "\n Puertas: " + this.puertas);
+        super.mostrarInfo();
+        System.out.println("Puertas: " + this.puertas);
     }
 }
