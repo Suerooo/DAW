@@ -1,28 +1,21 @@
 package Unidad8.Act6Instrumento;
 
-import java.util.*;
+import java.util.Arrays;
 
 public abstract class Instrumento {
-    private char[] notasMusicales;
-    private int contador = 0;
+    private Notas[] notasMusicales;
 
     protected Instrumento() {
-        this.notasMusicales = new char[6];
+        this.notasMusicales = new Notas[0];
     }
 
-    public char[] getNotasMusicales() {
+    public void add(Notas nota) {
+        notasMusicales = Arrays.copyOf(notasMusicales, notasMusicales.length + 1);
+        notasMusicales[notasMusicales.length-1] = nota;
+    }
+    public abstract void interpretar();
+
+    public Notas[] getNotasMusicales() {
         return notasMusicales;
     }
-
-    public void add(char nota) {
-        this.notasMusicales[this.contador] = nota;
-        this.contador++;
-    }
-    
-    public  abstract interpretar();
-    
 }
-
-
-
-    

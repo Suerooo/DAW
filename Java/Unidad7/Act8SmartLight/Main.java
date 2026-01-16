@@ -1,12 +1,13 @@
-package Unidad7.Act8DeepSafe;
+package Unidad7.Act8SmartLight;
 
 public class Main {
     public static void main(String[] args) {
-        Submarinista aux1 = new Submarinista("Juan", 30, 20);
+        Bombilla aux1 = new Bombilla("Salon", true, 0);
+
         System.out.println(aux1);
-        
-        aux1.sumergirse(100);
-        
+
+        aux1.setIntensidad(2000);
         System.out.println(aux1);
+
     }
 }
