@@ -1,9 +1,9 @@
 package Unidad8.Act4Electrodomestico;
 
 public class Electrodomestico {
-    protected String tipo;
-    protected String marca;
-    protected double potencia;
+    private String tipo;
+    private String marca;
+    private double potencia;
     
     public Electrodomestico(String tipo, String marca, double potencia) {
         setTipo(tipo);

@@ -9,8 +9,8 @@ public class Punto3D extends Punto {
     }
     
     public double distancia(Punto3D punto2) {
-        double dx = punto2.x - this.x;
-        double dy = punto2.y - this.y;
+        double dx = punto2.getX() - super.getX();
+        double dy = punto2.getY() - super.getY();
         double dz = punto2.z - this.z;
         return Math.sqrt(dx*dx + dy*dy + dz*dz);
     }

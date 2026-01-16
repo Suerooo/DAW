@@ -24,9 +24,11 @@ public class Sobremesa extends Ordenador {
         }
     }
     
+    
+
     @Override
     public String toString() {
-        return "Sobremesa [tipo=" + tipo + ", descripcion=" + descripcion + ", precio=" + precio + "]";
+        return super.toString() + "Sobremesa [descripcion=" + descripcion + "]";
     }
 
     @Override

@@ -23,10 +23,10 @@ public class Portatil extends Ordenador {
             this.peso = peso;
         }
     }
-    
+
     @Override
     public String toString() {
-        return "Portatil [tipo=" + tipo + ", peso=" + peso + ", precio=" + precio + "]";
+        return super.toString() + "Portatil [peso=" + peso + "]";
     }
 
     @Override

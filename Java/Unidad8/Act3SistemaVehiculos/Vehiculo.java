@@ -1,9 +1,9 @@
 package Unidad8.Act3SistemaVehiculos;
 
 public class Vehiculo {
-    protected String marca;
-    protected String modelo;
-    protected String anio;
+    private String marca;
+    private String modelo;
+    private String anio;
     
     public Vehiculo(String marca, String modelo, String anio) {
         this.marca = marca;

@@ -36,19 +36,18 @@ public class Lavadora extends Electrodomestico {
     public void setAguaCaliente(boolean aguaCaliente) {
         this.aguaCaliente = aguaCaliente;
     }
-
+    
     @Override
     public String toString() {
-        return "Lavadora [tipo=" + tipo + ", precio=" + precio + ", marca=" + marca + ", aguaCaliente=" + aguaCaliente
-                + ", potencia=" + potencia + "]";
+        return super.toString() + "Lavadora [precio=" + precio + ", aguaCaliente=" + aguaCaliente + "]";
     }
-    
+
     @Override
     public double getConsumo(int horas) {
         if (this.aguaCaliente) {
-            return horas * (this.potencia + this.potencia * 0.20);
+            return horas * (super.getPotencia() + super.getPotencia() * 0.20);
         } else {
-            return horas * potencia;
+            return horas * super.getPotencia();
         }
     }
 }

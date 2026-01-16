@@ -1,8 +1,8 @@
 package Unidad8.Act5Computers;
 
 public abstract class Ordenador {
-    protected String tipo;
-    protected double precio;
+    private String tipo;
+    private double precio;
     
     protected Ordenador(String tipo, double precio) {
         setTipo(tipo);
