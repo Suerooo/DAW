@@ -1,12 +1,14 @@
-package Unidad7.Act20DeepSafe;
+package Unidad7.Act13Decorar;
 
 public class Main {
     public static void main(String[] args) {
-        Submarinista aux1 = new Submarinista("Juan", 30, 20);
+        Color aux1 = new Color();
+
         System.out.println(aux1);
-        
-        aux1.sumergirse(100);
-        
+
+        aux1.introducirColor("negro");
         System.out.println(aux1);
+
+        aux1.paletaColores();
     }
 }

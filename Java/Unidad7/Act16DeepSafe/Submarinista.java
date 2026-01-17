@@ -1,4 +1,4 @@
-package Unidad7.Act20DeepSafe;
+package Unidad7.Act16DeepSafe;
 
 public class Submarinista {
     public String nombre;
