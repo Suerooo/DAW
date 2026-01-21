@@ -1,0 +1,49 @@
+﻿body {
+	background: url(https://img.freepik.com/free-photo/texture-swimming-pool-mosaic-tile-background-wallpaper-banner-backdrop_1258-72025.jpg?semt=ais_hybrid&w=740&q=80);
+}
+
+#pagina {
+	border: 4px solid black;
+	width: 1024px;
+	min-height: 500px; 
+	margin: auto;
+	background: #fff;
+	box-shadow: 5px 5px 15px RGB(0, 0, 0, 0.75);
+}
+
+#menu {
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	width: 760px;
+}
+
+#menu li {
+	padding: 15px;
+	width: 150px;
+	text-align: center;
+	background: lightblue;
+	display: inline-block;
+}
+
+#menu li:hover {
+	background: red;
+	color: white;
+}
+
+.fondomenu {
+	background: lightblue;
+}
+
+.header {
+	background: black;
+	color: white;
+	padding: 25px	
+}
+
+.header h1 {
+	margin: 0;
+	font-size: 72px;
+	text-align: center;
+}
+
