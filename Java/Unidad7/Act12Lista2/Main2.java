@@ -1,9 +1,9 @@
-package Unidad7.Act12Lista;
+package Unidad7.Act12Lista2;
 
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
-        Listas lista = new Listas();
-        Listas lista2 = new Listas();
+        Listas2 lista = new Listas2();
+        Listas2 lista2 = new Listas2();
 
         lista2.insertarNumeroFinal(1);
         lista2.insertarNumeroFinal(2);

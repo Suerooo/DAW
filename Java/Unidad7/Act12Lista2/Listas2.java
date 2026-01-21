@@ -1,12 +1,12 @@
-package Unidad7.Act12Lista;
+package Unidad7.Act12Lista2;
 
 import java.util.Arrays;
 
-public class Listas {
+public class Listas2 {
     private Integer[] lista;
     private int numeroElementos = 0;
 
-    public Listas() {
+    public Listas2() {
         lista = new Integer[numeroElementos];
     }
 
@@ -19,25 +19,15 @@ public class Listas {
     }
 
     public void insertarNumeroFinal(Integer numero) {
-        lista = Arrays.copyOf(lista, lista.length + 1);
-        lista[lista.length - 1] = numero;
-        numeroElementos++;
+        insertarNumero(numero, numeroElementos);
     }
 
     public void insertarNumeroInicio(Integer numero) {
-        Integer[] listaTemp = Arrays.copyOf(lista, lista.length);
-        lista = Arrays.copyOf(lista, lista.length + 1);
-        for (int i = 0; i < lista.length; i++) {
-            if (i != 0) {
-                lista[i] = listaTemp[i - 1];
-            }
-        }
-        lista[0] = numero;
-        numeroElementos++;
+        insertarNumero(numero, 0);
     }
 
     public void insertarNumero(Integer numero, int indice) {
-        if (indice >= lista.length) {
+        if (indice < 0 || indice > numeroElementos) {
             System.out.println("Error no existe ese indice en la lista");
         } else {
             Integer[] tempLista = Arrays.copyOf(lista, lista.length + 1);
@@ -47,10 +37,11 @@ public class Listas {
             }
             lista = tempLista;
             numeroElementos++;
+            mensajeExisto(numero, indice);
         }
     }
 
-    public void insertarListaAdicional(Listas listaAdicional) {
+    public void insertarListaAdicional(Listas2 listaAdicional) {
         Integer[] integerListaAdicional = listaAdicional.getLista();
         lista = Arrays.copyOf(lista, (lista.length + integerListaAdicional.length));
         int contador = 0;
@@ -94,5 +85,17 @@ public class Listas {
     @Override
     public String toString() {
         return "Lista:" + Arrays.toString(lista) + "\nNumero de elementos: " + numeroElementos;
+    }
+
+    private void mensajeExisto(int numero, int indice) {
+        String mensaje = "Numero: " + numero + " insertado con existo";
+
+        if (indice == 0) {
+            System.out.println(mensaje + " al inicio");
+        } else if (indice == numeroElementos) {
+            System.out.println(mensaje + " al final");
+        } else {
+            System.out.println(mensaje + " en el indice: " + indice);
+        }
     }
 }

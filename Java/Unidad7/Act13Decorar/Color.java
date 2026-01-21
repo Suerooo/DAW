@@ -3,7 +3,7 @@ package Unidad7.Act13Decorar;
 import java.util.Arrays;
 
 public class Color {
-    private String[] colores = { "ROJO", "AMARILLO", "AZUL" };
+    private String[] colores = { "ROJO", "AMARILLO", "AZUL", "VERDE", "BLANCO", "MORADO", };
 
     public Color(String[] colores) {
         this.colores = colores;
@@ -22,13 +22,22 @@ public class Color {
         return "Color [colores=" + Arrays.toString(colores) + "]";
     }
 
-    public void paletaColores() {
-        int index = (int) (Math.random() * colores.length);
+    public String[] paletaColores(int cantidadColores) {
+        String[] paletaColores = new String[cantidadColores];
+        boolean repetido = true;
 
-        for (int i = 0; i < colores.length; i++) {
-            if (i >= index) {
-                System.out.print(colores[i] + " ");
-            }
+        for (int i = 0; i < cantidadColores; i++) {
+            do {
+                int index = (int) (Math.random() * colores.length);
+                if (Arrays.asList(paletaColores).contains(colores[index])) {
+                    repetido = true;
+                } else {
+                    repetido = false;
+                    paletaColores[i] = colores[index];
+                }
+            } while (repetido);
         }
+
+        return paletaColores;
     }
 }
