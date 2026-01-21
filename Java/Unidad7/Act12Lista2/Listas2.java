@@ -15,7 +15,7 @@ public class Listas2 {
     }
 
     public Integer[] getLista() {
-        return lista;
+        return Arrays.copyOf(lista, numeroElementos);
     }
 
     public void insertarNumeroFinal(Integer numero) {
@@ -44,14 +44,8 @@ public class Listas2 {
     public void insertarListaAdicional(Listas2 listaAdicional) {
         Integer[] integerListaAdicional = listaAdicional.getLista();
         lista = Arrays.copyOf(lista, (lista.length + integerListaAdicional.length));
-        int contador = 0;
 
-        for (int i = 0; i < lista.length; i++) {
-            if (i >= (lista.length - integerListaAdicional.length)) {
-                lista[i] = integerListaAdicional[contador];
-                contador++;
-            }
-        }
+        System.arraycopy(integerListaAdicional, 0, lista, numeroElementos, integerListaAdicional.length);
         numeroElementos += listaAdicional.getNumeroElementos();
     }
 
@@ -75,11 +69,12 @@ public class Listas2 {
     }
 
     public int buscarElemento(int elemento) {
-        if (Arrays.binarySearch(lista, elemento) < 0) {
-            return -1;
-        } else {
-            return Arrays.binarySearch(lista, elemento);
+        for (int i = 0; i < numeroElementos; i++) {
+            if (lista[i].equals(elemento)) {
+                return i;
+            }
         }
+        return -1;
     }
 
     @Override
