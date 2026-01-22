@@ -1,64 +1,46 @@
 package Unidad8.Act5Computers;
 
 public class Sobremesa extends Ordenador {
-    private String descripcion;
-    
-    public Sobremesa(String tipo, double precio, String descripcion) {
-        super(tipo, precio);
-        setDescripcion(descripcion);
+    private Tipos tipo;
+
+    public Sobremesa(int codigo, double precio, Tipos tipo) {
+        super(codigo, precio);
+        setTipo(tipo);
     }
 
-    public void decirEslogan () {
+    public void decirEslogan() {
         System.out.println("Es el que mas pesa, pero el que menos cuesta");
     }
 
-    public String getDescipcion() {
-        return descripcion;
+    public Tipos getDescipcion() {
+        return tipo;
     }
 
-    public void setDescripcion(String descripcion) {
-        if (descripcion == null || (!descripcion.equalsIgnoreCase("ATX") && !descripcion.equalsIgnoreCase("MICROATX") && !descripcion.equalsIgnoreCase("ITX"))) {
-            this.descripcion = "ATX";
+    public void setTipo(Tipos tipo) {
+        if (tipo == null) {
+            this.tipo = Tipos.ATX;
         } else {
-            this.descripcion = descripcion;
+            this.tipo = tipo;
         }
     }
-    
-    
 
     @Override
     public String toString() {
-        return super.toString() + "Sobremesa [descripcion=" + descripcion + "]";
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = super.hashCode();
-        result = prime * result + ((descripcion == null) ? 0 : descripcion.hashCode());
-        return result;
+        return super.toString() + " tipo=" + tipo;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        Sobremesa otro = (Sobremesa) obj;
+
+        if (super.equals(obj) && this.tipo == otro.tipo) {
             return true;
-        if (obj == null)
+        } else {
             return false;
-        if (!super.equals(obj))
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Sobremesa other = (Sobremesa) obj;
-        if (descripcion == null) {
-            if (other.descripcion != null)
-                return false;
-        } else if (!descripcion.equals(other.descripcion))
-            return false;
-        return true;
+        }
     }
-    
-    public void rendimiento () {
+
+    public void rendimiento() {
         System.out.println("4000 pulsos");
     }
 }

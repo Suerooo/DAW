@@ -3,12 +3,12 @@ package Unidad8.Act5Computers;
 public class Portatil extends Ordenador {
     private double peso;
 
-    public Portatil(String tipo, double precio, double peso) {
-        super(tipo, precio);
+    public Portatil(int codigo, double precio, double peso) {
+        super(codigo, precio);
         setPeso(peso);
     }
 
-    public void decirEslogan () {
+    public void decirEslogan() {
         System.out.println("Ideal para sus viajes");
     }
 
@@ -26,36 +26,21 @@ public class Portatil extends Ordenador {
 
     @Override
     public String toString() {
-        return super.toString() + "Portatil [peso=" + peso + "]";
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = super.hashCode();
-        long temp;
-        temp = Double.doubleToLongBits(peso);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        return result;
+        return super.toString() + " peso=" + peso;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        Portatil otro = (Portatil) obj;
+
+        if (super.equals(obj) && this.peso == otro.peso) {
             return true;
-        if (obj == null)
+        } else {
             return false;
-        if (!super.equals(obj))
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Portatil other = (Portatil) obj;
-        if (Double.doubleToLongBits(peso) != Double.doubleToLongBits(other.peso))
-            return false;
-        return true;
+        }
     }
 
-    public void rendimiento () {
+    public void rendimiento() {
         System.out.println("2000 pulsos");
     }
 }
