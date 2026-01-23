@@ -9,7 +9,8 @@ public class Main {
         Sobremesa sobremesa2 = new Sobremesa(113, 1400, Tipos.MICROATX);
 
         System.out.println("Son iguales portatil: " + portatil1.equals(portatil2));
-        System.out.println("Son iguales sobremesa: " + sobremesa1.equals(sobremesa2));
+        System.out.println("Son iguales sobremesa: " +
+                sobremesa1.equals(sobremesa2));
 
         portatil1.decirEslogan();
         sobremesa1.decirEslogan();
@@ -32,6 +33,9 @@ public class Main {
         System.out.println(sobremesa1);
 
         System.out.println("Son iguales portatil: " + portatil1.equals(portatil2));
-        System.out.println("Son iguales sobremesa: " + sobremesa1.equals(sobremesa2));
+        System.out.println("Son iguales sobremesa: " +
+                sobremesa1.equals(sobremesa2));
+
+        System.out.println("\n Es: " + sobremesa1.getDescipcion());
     }
 }

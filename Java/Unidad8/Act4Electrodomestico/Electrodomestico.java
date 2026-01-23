@@ -4,13 +4,13 @@ public class Electrodomestico {
     private String tipo;
     private String marca;
     private double potencia;
-    
+
     public Electrodomestico(String tipo, String marca, double potencia) {
         setTipo(tipo);
         setMarca(marca);
         setPotencia(potencia);
     }
-    
+
     public void setTipo(String tipo) {
         if (tipo == null || tipo.isEmpty()) {
             this.tipo = "deconocido";
@@ -18,7 +18,7 @@ public class Electrodomestico {
             this.tipo = tipo;
         }
     }
-    
+
     public void setMarca(String marca) {
         if (marca == null || marca.isEmpty()) {
             this.marca = "deconocido";
@@ -26,7 +26,7 @@ public class Electrodomestico {
             this.marca = marca;
         }
     }
-    
+
     public void setPotencia(double potencia) {
         if (potencia <= 0) {
             this.potencia = 1.0;
@@ -34,26 +34,29 @@ public class Electrodomestico {
             this.potencia = potencia;
         }
     }
-    
+
     public String getTipo() {
         return tipo;
     }
+
     public String getMarca() {
         return marca;
     }
+
     public double getPotencia() {
         return potencia;
     }
+
     @Override
     public String toString() {
         return "Electrodomestico [tipo=" + tipo + ", marca=" + marca + ", potencia=" + potencia + "]";
     }
-    
-    public double getConsumo (int horas) {
+
+    public double getConsumo(int horas) {
         return this.potencia * horas;
     }
-    
-    public double getCosteConsumo (int horas, double costeHora) {
+
+    public double getCosteConsumo(int horas, double costeHora) {
         return getConsumo(horas) * costeHora;
     }
 }
