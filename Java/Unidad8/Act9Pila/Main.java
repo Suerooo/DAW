@@ -31,5 +31,9 @@ public class Main {
 
         System.out.println(x);
         System.out.println(y);
+
+        System.out.println(Pila.concatena(x, y));
     }
 }
+11111
+111111

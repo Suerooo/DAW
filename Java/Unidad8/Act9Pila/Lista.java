@@ -73,11 +73,11 @@ public class Lista {
 
     public static Lista concatena(Lista x, Lista y) {
         Lista nuevaLista = new Lista();
-        int tamanioNuevaLista = x.getTabla().length + y.getTabla().length;
 
-        for (int i = 0; i < 2; i++) {
+        nuevaLista.insertarFinal(x);
+        nuevaLista.insertarFinal(y);
 
-        }
+        return nuevaLista;
     }
 
     @Override
