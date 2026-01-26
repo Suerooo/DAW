@@ -40,7 +40,6 @@ public class Act1ParPositivoCuadrado {
             System.out.println("El cuadrado de "+num+" es "+num*num);
 
             //Cierra la variable sc
-            sc.close();
-        }
+                    }
     }
 }

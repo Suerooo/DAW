@@ -32,8 +32,7 @@ public class Act2OperadorTernario {
         System.out.println(orden);
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

@@ -22,6 +22,5 @@ public class Act11TablaDeMultiplicar {
         }
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
 }

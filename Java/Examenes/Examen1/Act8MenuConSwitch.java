@@ -36,6 +36,5 @@ public class Act8MenuConSwitch {
         }
         
         //Cierra la variable sc
-            sc.close();
-    }
+                }
 }

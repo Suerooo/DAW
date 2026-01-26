@@ -30,6 +30,5 @@ public class Main {
             hora1.incrementaSegundo();
         }
 
-        sc.close();
-    }
+            }
 }

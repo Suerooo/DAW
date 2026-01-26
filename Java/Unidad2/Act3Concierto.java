@@ -60,7 +60,6 @@ public class Act3Concierto {
         System.out.println("Dinero total recaudado: " + recaudado);
         
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

@@ -59,7 +59,6 @@ public class Act4FechaDiaSiguiente {
         System.out.println("Mañana sera " + dia + "/" + mes + "/" + año);
         
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

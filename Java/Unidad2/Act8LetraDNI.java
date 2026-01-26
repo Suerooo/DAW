@@ -110,8 +110,7 @@ public class Act8LetraDNI {
         }
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

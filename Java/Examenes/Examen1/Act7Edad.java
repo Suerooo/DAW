@@ -24,6 +24,5 @@ public class Act7Edad {
         if (edad>=65) System.out.println("Eres adulto mayor");
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
 }

@@ -39,8 +39,7 @@ public class Act4CalculadoraBasica {
         System.out.println("    Division: " + divi);
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

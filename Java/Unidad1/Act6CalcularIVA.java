@@ -35,7 +35,6 @@ public class Act6CalcularIVA {
         System.out.println("Importe: \n IVA: " + ivaPorcentaje + " euros\n Total: " + total + " euros"  );
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

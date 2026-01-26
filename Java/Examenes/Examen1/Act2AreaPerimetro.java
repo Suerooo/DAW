@@ -34,8 +34,7 @@ public class Act2AreaPerimetro {
         System.out.println("    Perímetro " + perimetro + " metros");
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

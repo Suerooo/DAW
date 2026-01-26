@@ -61,6 +61,5 @@ public class Act5DiaSemana {
         }
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
 }

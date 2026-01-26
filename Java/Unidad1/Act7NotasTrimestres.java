@@ -39,8 +39,7 @@ public class Act7NotasTrimestres {
         System.out.println("Notas: \n Boletín: " + media + "\n Expediente académico: " + mediad);
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

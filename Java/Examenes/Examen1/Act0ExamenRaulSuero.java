@@ -202,8 +202,7 @@ public class Act0ExamenRaulSuero {
             
         } while (opcion!=0);
         
-        sc.close();
-        
+                
     }
     
 }

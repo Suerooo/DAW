@@ -67,8 +67,7 @@ public class Act5PuedoSalir {
         System.out.println("Puedo salir: " + salir);
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

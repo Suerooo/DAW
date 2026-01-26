@@ -47,7 +47,6 @@ public class Act9Patas {
         System.out.println("El numero total de patas es: " + patas);
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

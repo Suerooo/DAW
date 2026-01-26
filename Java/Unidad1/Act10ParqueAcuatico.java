@@ -45,8 +45,7 @@ public class Act10ParqueAcuatico {
         System.out.println("Importe total: " + imp + " euros");
         
         //Cierra la variable sc
-        sc.close();
-
+        
     }
     
 }

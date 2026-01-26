@@ -42,7 +42,6 @@ public class Act3Frutero {
         System.out.println("Usted tiene un beneficio anual de: " + importe + " euros");
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

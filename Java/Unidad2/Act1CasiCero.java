@@ -36,7 +36,6 @@ public class Act1CasiCero {
             System.out.println("No es un numero casi-cero");
         
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

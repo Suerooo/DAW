@@ -30,7 +30,6 @@ public class Act4MayorEdad {
         System.out.println("El usuario es mayor de edad: " + mayoría);
         
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

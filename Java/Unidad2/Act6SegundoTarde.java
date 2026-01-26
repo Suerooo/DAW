@@ -59,7 +59,6 @@ public class Act6SegundoTarde {
         System.out.println("Dentro de un segundo serán las: " + hora + ":" + min + ":" + seg);
         
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }
