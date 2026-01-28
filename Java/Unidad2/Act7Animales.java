@@ -49,6 +49,5 @@ public class Act7Animales {
         }
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
 }

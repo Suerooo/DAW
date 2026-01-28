@@ -41,8 +41,7 @@ public class Act6MayorDeTres {
                 System.out.println("El numero mas grande es: " +  c);
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

@@ -49,6 +49,5 @@ public class Act9NumerosPrimos {
         }
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
 }

@@ -62,6 +62,5 @@ public class Act12SalarioNeto {
         System.out.println("    Impuestos: "+impuestos);
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
 }

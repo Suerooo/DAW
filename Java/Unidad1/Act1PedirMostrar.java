@@ -21,8 +21,7 @@ public class Act1PedirMostrar {
         System.out.println("Entonces el usuario tiene " + edad + " años y se llama " + nombre + " " + apellido);
 
         //Cierra la variable sc
-        sc.close();
-
+        
     }
     
     

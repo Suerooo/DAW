@@ -113,6 +113,5 @@ public class Act16Lavanderia {
         } while (opcion!=6);
 
         //Cierra la variable Scanner
-        sc.close();
-    }
+            }
 }

@@ -36,8 +36,7 @@ public class Act1ConversionDeGrados {
         }
 
         //Cierra la variable sc
-        sc.close();
-        
+                
     }
     
 }

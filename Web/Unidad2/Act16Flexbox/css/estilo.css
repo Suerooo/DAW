@@ -1,0 +1,16 @@
+header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+header h1 {
+  margin-left: 100px;
+}
+
+header nav ul {
+  list-style: none;
+}

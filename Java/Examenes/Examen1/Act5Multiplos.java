@@ -36,7 +36,6 @@ public class Act5Multiplos {
             System.out.println("El numero no es múltiplo ni de 10 ni de 5");
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

@@ -7,6 +7,7 @@
 	min-height: 800px;
 	margin: 0;
 	padding: 0;
+	display: flex;
 }
 
 #main article {
@@ -15,6 +16,9 @@
 	border: 1px solid #cccc33;
 	border-radius: 7pt;
 	background: #dddd88;
+	flex-grow: 3;
+	flex-basis: 60%;
+	order: 2;
 }
 
 #main nav {
@@ -23,6 +27,9 @@
 	border: 1px solid #8888bb;
 	border-radius: 7pt;
 	background: #ccccff;
+	flex-grow: 1;
+	flex-basis: 20%;
+	order: 1;
 }
 
 #main aside {
@@ -31,6 +38,9 @@
 	border: 1px solid #8888bb;
 	border-radius: 7pt;
 	background: #ccccff;
+	flex-grow: 1;
+	flex-basis: 20%;
+	order: 3;
 }
 
 header, footer {
@@ -40,4 +50,19 @@ header, footer {
 	border: 1px solid #eebb55;
 	border-radius: 7pt;
 	background: #ffeebb;
+}
+
+@media all and (max-width: 640px) {
+	#main{
+		flex-flow: column;
+	}
+	
+	#main nav, aside, header, footer {
+		min-height: 50px;
+		min-width: 50px;
+	}
+	
+	#main aside {
+		display: none;
+	}
 }

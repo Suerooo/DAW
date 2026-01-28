@@ -33,7 +33,6 @@ public class Act8AreaTriangulo {
         System.out.println("El area de tu triangulo es: " + area);
         
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }

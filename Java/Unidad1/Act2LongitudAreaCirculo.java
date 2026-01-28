@@ -27,7 +27,6 @@ public class Act2LongitudAreaCirculo {
         System.out.println("Y el area es: " + area + " metros" );
 
         //Cierra la variable sc
-        sc.close();
-    }
+            }
     
 }
