@@ -1,4 +1,4 @@
-package Examenes.Examen3.Caja;
+package Examenes.Examen3.Act1Caja;
 
 public class CajaOptima extends Caja {
 

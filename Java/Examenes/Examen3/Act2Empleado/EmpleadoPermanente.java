@@ -1,4 +1,4 @@
-package Examenes.Examen3.Empleado;
+package Examenes.Examen3.Act2Empleado;
 
 import java.util.Arrays;
 

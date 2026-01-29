@@ -1,4 +1,4 @@
-package Examenes.Examen3.Empleado;
+package Examenes.Examen3.Act2Empleado;
 
 public class EmpleadoTemporal extends Empleado {
 
@@ -43,5 +43,5 @@ public class EmpleadoTemporal extends Empleado {
         return super.equals(obj) && this.areaTrabajo == other.areaTrabajo
                 && this.duracionContrato == other.duracionContrato;
     }
-    
+
 }
