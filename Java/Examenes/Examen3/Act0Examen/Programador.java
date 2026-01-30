@@ -3,9 +3,7 @@ package Examenes.Examen3.Act0Examen;
 public class Programador extends Empleado {
     // VALORES DEFAULT
     private static final Lenguajes LENGUAJE_DEFAULT = Lenguajes.PYTHON;
-    private static final double PLUS_JAVA = 300; // los programadores que
-                                                 // dominan java tienen un plus
-                                                 // (default: 300)
+    private static final double PLUS_JAVA = 300; // los programadores que dominan java tienen un plus (default: 300)
 
     // ATRIBUTOS
     private Lenguajes lenguajeDominante;
@@ -40,7 +38,7 @@ public class Programador extends Empleado {
 
     @Override
     public String toString() {
-        return super.toString() + " \n Sueldo: " + calcularSueldo() + " \n Lenguaje Dominante: " + this.lenguajeDominante;
+        return String.format("%s %n Sueldo: %.2f$ %n Lenguaje: %s", super.toString(), calcularSueldo(), this.lenguajeDominante);
     }
 
     @Override

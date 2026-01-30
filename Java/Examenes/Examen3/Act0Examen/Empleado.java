@@ -84,7 +84,7 @@ public abstract class Empleado {
 
     @Override
     public String toString() {
-        return "\nEMPLEADO \n Nombre: " + nombre + " \n dni: " + dni + " \n edad:" + edad;
+        return String.format("EMPLEADO %n Nombre: %s %n Dni: %s %n Edad %d", nombre, dni, edad);
     }
 
     @Override
@@ -99,7 +99,9 @@ public abstract class Empleado {
             return false;
 
         Empleado other = (Empleado) obj;
-        return this.dni.equalsIgnoreCase(other.dni) && this.edad == other.edad
+
+        return this.dni.equalsIgnoreCase(other.dni)
+                && this.edad == other.edad
                 && this.nombre.equalsIgnoreCase(other.nombre)
                 && this.salarioBase == other.salarioBase;
     }

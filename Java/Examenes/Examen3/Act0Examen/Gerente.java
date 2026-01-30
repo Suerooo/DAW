@@ -29,7 +29,7 @@ public class Gerente extends Empleado {
 
     @Override
     public String toString() {
-        return super.toString() + " \n Sueldo: " + calcularSueldo() + " \n Area: " + this.area;
+        return String.format("%s %n Sueldo: %.2f$ %n Area: %s", super.toString(), calcularSueldo(), this.area);
     }
 
     @Override

@@ -1,3 +1,0 @@
-ctrl + shift + l -> Seleccionar todas las repeticiones
-ctrl + l -> Seleccionar linea
-shift + alt + a -> Comentar seleccion
