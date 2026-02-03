@@ -2,7 +2,7 @@ package Examenes.Examen3.Act0Examen;
 
 public abstract class Empleado {
     // VALORES DEFAULT
-    protected static final String MENSAJE_ERROR = "el valor que a introducido es incorrecto. Valor establecido por defecto: ";
+    protected static final String MENSAJE_ERROR = "el valor que ha introducido es incorrecto. Valor establecido por defecto: ";
     private static final String NOMBRE_DEFAULT = "desconocido";
     private static final String DNI_DEFAULT = "desconocido";
     private static final int EDAD_DEFAULT = 18;

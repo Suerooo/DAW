@@ -3,7 +3,9 @@ package Examenes.Examen3.Act0Examen;
 public class Gerente extends Empleado {
     // VALORES DEFAULT
     private static final String AREA_DEFAULT = "desconocido";
-    private static final double PORC_IMPUESTO = 5; // % de impuesto que se resta al salario gerentes (default: 5%)
+    private static final double PORC_IMPUESTO = 5; // % de impuesto que se resta
+                                                   // al salario gerentes
+                                                   // (default: 5%)
 
     // ATRIBUTOS
     private String area;
