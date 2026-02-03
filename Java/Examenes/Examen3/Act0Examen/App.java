@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
     // VALORES DEFAULT
-    private static final int CANTIDAD_EMPLEADOS = 10;
+    private static final int CANTIDAD_EMPLEADOS = 2;
 
     // ATRIBUTOS
     static Empleado[] listaEmpleados = new Empleado[CANTIDAD_EMPLEADOS];
@@ -14,20 +14,22 @@ public class App {
     public static void altaProgramador() {
         int numEmpleado = Empleado.getNumTrabajadores();
 
-        if (numEmpleado >= 10) {
+        if (numEmpleado >= CANTIDAD_EMPLEADOS) {
             System.out.println("Superaste el limite de empleados (" + CANTIDAD_EMPLEADOS + ")");
         } else {
-            listaEmpleados[numEmpleado] = new Programador(pedirNombre(), pedirDni(), pedirEdad(), pedirSalario(), pedirLenguaje());
+            listaEmpleados[numEmpleado] = new Programador(pedirNombre(), pedirDni(), pedirEdad(), pedirSalario(),
+                    pedirLenguaje());
         }
     }
 
     public static void altaGerente() {
         int numEmpleado = Empleado.getNumTrabajadores();
 
-        if (numEmpleado >= 10) {
+        if (numEmpleado >= CANTIDAD_EMPLEADOS) {
             System.out.println("Superaste el limite de empleados (" + CANTIDAD_EMPLEADOS + ")");
         } else {
-            listaEmpleados[numEmpleado] = new Gerente(pedirNombre(), pedirDni(), pedirEdad(), pedirSalario(), pedirArea());
+            listaEmpleados[numEmpleado] = new Gerente(pedirNombre(), pedirDni(), pedirEdad(), pedirSalario(),
+                    pedirArea());
         }
     }
 
@@ -142,11 +144,13 @@ public class App {
             switch (sc.nextInt()) {
                 case 1 -> {
                     altaProgramador();
-                    System.out.println("Se ha dado de alta al programador: " + listaEmpleados[Empleado.getNumTrabajadores() - 1]);
+                    System.out.println(
+                            "Se ha dado de alta al programador: " + listaEmpleados[Empleado.getNumTrabajadores() - 1]);
                 }
                 case 2 -> {
                     altaGerente();
-                    System.out.println("Se ha dado de alta al gerente: " + listaEmpleados[Empleado.getNumTrabajadores() - 1]);
+                    System.out.println(
+                            "Se ha dado de alta al gerente: " + listaEmpleados[Empleado.getNumTrabajadores() - 1]);
                 }
                 case 3 -> listarEmpleados();
                 case 4 -> {
