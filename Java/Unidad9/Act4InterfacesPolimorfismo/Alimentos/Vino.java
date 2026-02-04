@@ -1,14 +1,22 @@
-package Unidad9.Act4InterfacesPolimorfismo;
+package Unidad9.Act4InterfacesPolimorfismo.Alimentos;
 
-public class Detergente implements ConDescuento, EsLiquido {
+import Unidad9.Act4InterfacesPolimorfismo.Interfaces.ConDescuento;
+import Unidad9.Act4InterfacesPolimorfismo.Interfaces.EsLiquido;
+
+public class Vino implements ConDescuento, EsLiquido {
     private String marca;
+    private String tipoVino;
+    private int gradosAlchol;
     private double precio;
     private double descuento;
     private double volumen;
     private String tipoEnvase;
 
-    public Detergente(String marca, double precio, double descuento, double volumen, String tipoEnvase) {
+    public Vino(String marca, String tipoVino, int gradosAlchol, double precio, double descuento, double volumen,
+            String tipoEnvase) {
         setMarca(marca);
+        setTipoVino(tipoVino);
+        setGradosAlchol(gradosAlchol);
         setPrecio(precio);
         setDescuento(descuento);
         setVolumen(volumen);
@@ -38,6 +46,32 @@ public class Detergente implements ConDescuento, EsLiquido {
             this.precio = 5;
         } else {
             this.precio = precio;
+        }
+    }
+
+    public String getTipoVino() {
+        return tipoVino;
+    }
+
+    public void setTipoVino(String tipoVino) {
+        if (tipoVino == null || tipoVino.trim().isEmpty()) {
+            System.out.println("Error tipo de vino vacio");
+            this.tipoVino = "desconocido";
+        } else {
+            this.tipoVino = tipoVino;
+        }
+    }
+
+    public int getGradosAlchol() {
+        return gradosAlchol;
+    }
+
+    public void setGradosAlchol(int gradosAlchol) {
+        if (gradosAlchol < 0) {
+            System.out.println("Error grados de alchol no puede ser menor que 0");
+            this.gradosAlchol = 20;
+        } else {
+            this.gradosAlchol = gradosAlchol;
         }
     }
 
@@ -93,8 +127,8 @@ public class Detergente implements ConDescuento, EsLiquido {
 
     @Override
     public String toString() {
-        return "Marca=" + marca + ", precio=" + precio + ", descuento=" + descuento + ", volumen=" + volumen
-                + ", tipoEnvase=" + tipoEnvase;
+        return "marca=" + marca + ", tipoVino=" + tipoVino + ", gradosAlchol=" + gradosAlchol + ", precio="
+                + precio + ", descuento=" + descuento + ", volumen=" + volumen + ", tipoEnvase=" + tipoEnvase;
     }
 
 }
