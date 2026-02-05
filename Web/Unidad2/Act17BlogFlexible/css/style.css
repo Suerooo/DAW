@@ -124,6 +124,59 @@ footer {
   gap: 1em;
 }
 
+.fotos {
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.fotos img {
+	width: 160px;
+	height: auto;
+}
+
+.grayscale {
+	filter: grayscale(75%);
+}
+
+.blur {
+	filter: blur(2px);
+}
+
+.sepia {
+	filter: sepia(75%);
+}
+
+.sature {
+	filter: saturate(250%);
+}
+
+.opacity {
+	filter: opacity(50%);
+}
+
+.brightness {
+	filter: brightness(200%);
+}
+
+.contrast {
+	filter: contrast(200%);
+}
+
+.hue {
+	filter: hue-rotate(90deg);
+}
+
+.invert {
+	filter: invert(100%);
+}
+
+.shadow {
+	filter: drop-shadow(2px 2px 5px #555);
+}
+
 @media (max-width: 768px) {
   main {
     flex-direction: column;

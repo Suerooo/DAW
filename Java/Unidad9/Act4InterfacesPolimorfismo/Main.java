@@ -10,5 +10,9 @@ public class Main {
         Cereales cereales = new Cereales("Chococrispi", 1.53, TipoCereal.OTROS, LocalDate.of(2027, 2, 4));
         Vino vino = new Vino("Pesquera", "Tinto", 20, 1200, 5, 2, "Cristal");
         Detergente detergente = new Detergente("", 0, 0, 0, null);
+
+        System.out.println(cereales);
+        System.out.println(vino);
+        System.out.println(detergente);
     }
 }
