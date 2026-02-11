@@ -36,11 +36,11 @@ select coches.codcoche, coches.nombre, coches.modelo
 
 /*47. */
 select clientes.nombre, clientes.apellidos
-	from clientes inner join ventas b
-	on clientes.dni = b.dni
+	from clientes inner join ventas blanco
+	on clientes.dni = blanco.dni
     and b.color like 'blanco'
-    inner join ventas r
-    on clientes.dni = r.dni
+    inner join ventas rojo
+    on clientes.dni = rojo.dni
     and r.color like 'rojo';
     
 /*48. */
