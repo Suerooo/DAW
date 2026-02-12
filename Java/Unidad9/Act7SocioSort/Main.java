@@ -14,7 +14,13 @@ public class Main {
 
         // Arrays.sort(aux);
 
-        Comparator comparaId = new Comparator<Socio>() {
+        // Comparator comparaId = new Comparator() {
+        // public int compare(Object o1, Object o2) {
+        // return ((Socio) o1).getId() - ((Socio) o2).getId();
+        // }
+        // };w
+
+        Comparator<Socio> comparaId = new Comparator<Socio>() {
             public int compare(Socio o1, Socio o2) {
                 return o1.getId() - o2.getId();
             }
