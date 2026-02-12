@@ -1,0 +1,96 @@
+:root {
+	--fondo-principal: #0f172a;
+	--fondo-article: #1e293b;
+	--fondo-section: #334155;
+	--fondo-footer: #020617;
+	--h1: #37baf7;
+	--h2: white;
+	--p: #85A9DE;
+}	
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	background: var(--fondo-principal);
+	font-family: "Segoe UI";
+	justify-content: center;
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	flex-direction: row;
+	flex: 1 1 auto; 
+	margin: 4em 25% 10em 25%;
+}
+
+.caja-presentacion { 
+	align-content: center;
+	flex: 1 1 100%; 
+}
+
+.caja-asignatura-ancha { 
+	align-content: center;
+	flex: 2 1 500px;
+}
+.caja-asignatura-pequena { 
+	align-content: center;
+	flex: 1 1 300px; 
+}
+
+main section {
+	background: var(--fondo-section);
+	color: var(--p);
+	border: 2px solid #37baf7;
+	border-radius: 10px;
+	padding: 60px 20px;
+}
+
+main section h1, .nombre-alumno {
+	color: var(--h1);
+}
+
+.nombre-alumno {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+main article {
+	background: #1e293b;
+	border: 2px solid #313f53;
+	border-radius: 10px;
+	padding: 60px 20px;
+}
+
+main article h2 {
+	color: var(--h2);
+}
+
+main article p {
+	color: var(--p);
+}
+
+footer {
+	background: var(--fondo-footer);
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bloque-pie {
+	margin-left: 25%;
+}
+
+.grupo-validadores {
+	margin-right: 25%;
+}
