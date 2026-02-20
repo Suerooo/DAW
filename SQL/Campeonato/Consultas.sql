@@ -43,7 +43,28 @@ select *
     and equipo.nombre is not null;
     
 /*5. */
-select * 
-	from juego 
-    where cdequipo in 
+select *
+	from juego
+    where cdequipo = 
     (select cdequipo from juego where nombre = "elvenar");
+        
+/*6. */
+select juego.*, equipo.nombre, equipo.comunidad
+	from juego 
+    inner join equipo
+    on juego.cdequipo = equipo.cdequipo
+    where juego.cdequipo = (select cdequipo from juego where nombre = "elvenar");
+    
+/*7. */
+select concursante.nombre, participa.*
+	from concursante
+    inner join participa
+    on concursante.cdconcur = participa.cdconcur
+    order by cdconcur;
+    
+/*9. */
+select concursante.nombre, concursante.cdconcur, round(avg(participa.puntos), 2)
+	from concursante
+    inner join participa
+    on concursante.cdconcur = participa.cdconcur
+    group by concursante.cdconcur, concursante.nombre;
