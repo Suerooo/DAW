@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "SigmarOne";
+  src: url("fonts/sigmar_one.woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  background-image: linear-gradient(180deg, #b6deda, #15190c);
+  padding: 1rem 6rem;
+}
+
+main h1,
+h2 {
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+main h1 {
+  font-family: SigmarOne;
+  text-align: center;
+  color: #13574c;
+  word-spacing: 20px;
+  margin: 16px;
+}
+
+main p {
+  text-align: justify;
+}
+
+main .imgLeft,
+.imgRight {
+  background: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+main .imgLeft {
+  display: flex;
+  border: #e64c00 solid 8px;
+  border-radius: 4px 20px;
+  box-shadow: 4px 4px inset black;
+}
+
+main .imgRight {
+  display: flex;
+  border: #ffaa33 solid 8px;
+  box-shadow: 4px 4px black;
+}
+
+main .imgLeft .text {
+  margin: 4px 4px 4px 18px;
+}
+
+main .imgRight .text {
+  margin: 4px 18px 4px 4px;
+}
+
+main .imgLeft img {
+  background: #ffaa33;
+  width: 12rem;
+  height: auto;
+  border: #e64c00 solid 14px;
+  padding: 14px;
+}
+
+main .imgRight img {
+  background: #e64c00;
+  width: 12rem;
+  height: auto;
+  border: #ffaa33 solid 14px;
+  padding: 14px;
+}
+
+main section .text h2 {
+  margin-bottom: 20px;
+  font-family: arial;
+}
+
+main nav {
+  text-align: center;
+  font-weight: bold;
+}
+
+a {
+  color: #13574c;
+}
+
+a:visited {
+  color: hsl(20, 100%, 45%);
+}
+
+footer {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  border-top: black dashed 2px;
+}
