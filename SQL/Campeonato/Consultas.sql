@@ -62,9 +62,37 @@ select concursante.nombre, participa.*
     on concursante.cdconcur = participa.cdconcur
     order by cdconcur;
     
+/*8. */
+select c.cdconcur, c.nombre, 
+	ifnull(e.nombre, 'SIN EQUIPO') 'equipo', 
+	ifnull(j.nombre, 'SIN JUEGO') 'juego',
+    ifnull(p.puntos, 'SIN PUNTOS') 'puntos'
+	from concursante c
+    left join equipo e 
+    on c.cdequipo = e.cdequipo
+    left join juego j
+    on c.cdequipo = j.cdequipo
+    left join participa p
+    on j.cdjuego = p.cdjuego;
+    
 /*9. */
 select concursante.nombre, concursante.cdconcur, round(avg(participa.puntos), 2)
 	from concursante
     inner join participa
     on concursante.cdconcur = participa.cdconcur
     group by concursante.cdconcur, concursante.nombre;
+    
+/*10. */
+select concursante.nombre, concursante.cdconcur, 
+	round(avg(participa.puntos), 2) 'media', 
+	idolo.cdconcur, idolo.nombre
+	from concursante
+    inner join participa
+    on concursante.cdconcur = participa.cdconcur
+    left join concursante idolo
+    on concursante.cdidolo = idolo.cdconcur 
+    GROUP BY concursante.nombre, concursante.cdconcur, idolo.cdconcur, idolo.nombre 
+    order by 3 desc
+    LIMIT 5;
+
+/**/
