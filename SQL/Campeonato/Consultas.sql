@@ -89,10 +89,26 @@ select concursante.nombre, concursante.cdconcur,
 	from concursante
     inner join participa
     on concursante.cdconcur = participa.cdconcur
-    left join concursante idolo
+    inner join concursante idolo
     on concursante.cdidolo = idolo.cdconcur 
     GROUP BY concursante.nombre, concursante.cdconcur, idolo.cdconcur, idolo.nombre 
     order by 3 desc
     LIMIT 5;
 
-/**/
+/*11. */
+select j.nombre, j.megusta, j.dificultad, count(p.cdconcur) "participantes"
+	from juego j
+    inner join participa p
+    on j.cdjuego = p.cdjuego
+    and j.nombre like "%Empire%"
+    group by j.nombre;
+    
+/*12. */
+select j.cdjuego, count(p.cdconcur) as participantes
+	from juego j
+    inner join participa p
+    on j.cdjuego = p.cdjuego
+    group by j.cdjuego
+    having participantes >= 2
+    order by participantes desc;
+    
