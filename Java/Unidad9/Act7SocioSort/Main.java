@@ -18,13 +18,15 @@ public class Main {
         // public int compare(Object o1, Object o2) {
         // return ((Socio) o1).getId() - ((Socio) o2).getId();
         // }
-        // };w
+        // };
 
-        Comparator<Socio> comparaId = new Comparator<Socio>() {
-            public int compare(Socio o1, Socio o2) {
-                return o1.getId() - o2.getId();
-            }
-        };
+        // Comparator<Socio> comparaId = new Comparator<Socio>() {
+        // public int compare(Socio o1, Socio o2) {
+        // return o1.getId() - o2.getId();
+        // }
+        // };
+
+        Comparator<Socio> comparaId = (o1, o2) -> o1.getId() - o2.getId();
 
         Arrays.sort(aux, comparaId);
 
