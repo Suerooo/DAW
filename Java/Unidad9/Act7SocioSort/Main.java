@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Socio[] aux = new Socio[5];
 
-        aux[0] = new Socio(1, "Raul", "Sueo");
-        aux[1] = new Socio(2, "Antonio", "dsa");
-        aux[2] = new Socio(3, "Don", "gfd");
-        aux[3] = new Socio(4, "Boolean", "dsad");
+        aux[0] = new Socio(1, "Raul", "Sueo", 53);
+        aux[1] = new Socio(2, "Antonio", "dsa", 323);
+        aux[2] = new Socio(3, "Don", "gfd", 24);
+        aux[3] = new Socio(4, "Boolean", "dsad", 233);
 
         // Arrays.sort(aux);
 
@@ -30,6 +30,11 @@ public class Main {
 
         Arrays.sort(aux, comparaId);
 
+        Arrays.sort(aux, (o1, o2) -> o1.getId() - o2.getId());
         System.out.println(Arrays.deepToString(aux));
+
+        Arrays.sort(aux, new CompareNombreEdad());
+        System.out.println(Arrays.deepToString(aux));
+
     }
 }

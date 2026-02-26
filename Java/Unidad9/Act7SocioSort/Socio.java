@@ -4,11 +4,13 @@ public class Socio implements Comparable<Socio> {
     private int id;
     private String nombre;
     private String apellidos;
+    private int edad;
 
-    public Socio(int id, String nombre, String apellidos) {
+    public Socio(int id, String nombre, String apellidos, int edad) {
         setId(id);
         setNombre(nombre);
         setApellidos(apellidos);
+        setEdad(edad);
     }
 
     public int getId() {
@@ -77,6 +79,14 @@ public class Socio implements Comparable<Socio> {
     @Override
     public int compareTo(Socio otro) {
         return this.nombre.compareToIgnoreCase(otro.nombre);
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
 }
