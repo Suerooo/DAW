@@ -17,7 +17,6 @@ public class Llamada implements Comparable<Llamada> {
         setSaliente(saliente);
         this.inicioLlamada = LocalDateTime.now();
         setZona(zona);
-    }
 
     public final int getTarifa() {
         return switch (this.zona) {
