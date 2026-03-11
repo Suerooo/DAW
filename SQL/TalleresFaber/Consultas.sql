@@ -22,7 +22,6 @@ select e.nombre, e.categoria
     on i.CodEmpleado = e.CodEmpleado
     group by i.CodEmpleado;
     
-/*7. */
 select r.matricula, r.km, v.marca, v.modelo, v.color
 	from reparaciones r
     inner join vehiculos v
@@ -30,9 +29,22 @@ select r.matricula, r.km, v.marca, v.modelo, v.color
     order by r.km DESC
     limit 1;
     
-/*9. */
 select count(referencia)
 	from actuaciones
     where importe > (select avg(importe) from actuaciones);
     
-/*10. */
+select r.IdReparacion, nombre, nombre, r.avería, r.fechaentrada, r.fechasalida 
+	from reparaciones r
+    left join clientes c
+    on 
+    
+select r.idreparacion, r.avería, r.fechaentrada, 
+	ifnull(re.IdRecambio, "***") recambio, 
+    ifnull(re.descripcion, "no necestio recambio") descripcion
+	from recambios re
+    right join incluyen i
+    on re.IdRecambio = i.IdRecambio
+    right join reparaciones r
+    on i.IdReparacion = r.IdReparacion
+    where month(r.fechaentrada) = 1
+    and year(r.fechaentrada) = 2011;
