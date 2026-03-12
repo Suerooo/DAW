@@ -1,6 +1,7 @@
 package Examenes.Examen5.Act0Examen;
 import java.util.Arrays;
-import Contenido.*
+
+import Examenes.Examen5.Act0Examen.Contenido.*;
 
 public class Main {
     public static void main(String[] args) {

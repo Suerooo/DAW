@@ -5,10 +5,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println();
+
         String linea;
         String[] jugadores = new String[0];
-        try (FileReader file = new FileReader("Java\\Unidad10\\Act2NombreEdadAltura\\Jugadores.txt")) {
-            BufferedReader in = new BufferedReader(file);
+        try (BufferedReader in = new BufferedReader(new FileReader("Java\\Unidad10\\Act2NombreEdadAltura\\Jugadores.txt"))) {
             while ((linea = in.readLine()) != null) {
                 if (!linea.isEmpty()) {
                     jugadores = Arrays.copyOf(jugadores, jugadores.length + 1);
@@ -20,12 +21,11 @@ public class Main {
             System.out.println(e);
         }
 
-        String[] jugador;
         double mediaEdad = 0;
         double mediaAltura = 0;
         for (int i = 0; i < jugadores.length; i++) {
-            jugador = jugadores[i].split(" ");
-            System.out.println("Nombre: " + jugador[i]);
+            String[] jugador = jugadores[i].split(" ");
+            System.out.println("Nombre: " + jugador[0]);
             mediaEdad += Double.valueOf(jugador[1]);
             mediaAltura += Double.valueOf(jugador[2]);
         }

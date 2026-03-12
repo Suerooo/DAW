@@ -1,6 +1,6 @@
 package Examenes.Examen5.Act0Examen.Contenido;
 
-import Interface.Clasificable;
+import Examenes.Examen5.Act0Examen.Interface.Clasificable;
 
 public abstract class Contenido implements Clasificable, Comparable<Contenido> {
     private String titulo;
