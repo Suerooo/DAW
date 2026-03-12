@@ -1,0 +1,11 @@
+Nombre: juan
+Nombre: luis
+Nombre: pedro
+Media edad: 21.333333333333332
+Media altura: 1.7666666666666668
+
+Nombre: juan
+Nombre: luis
+Nombre: pedro
+
+Hola
