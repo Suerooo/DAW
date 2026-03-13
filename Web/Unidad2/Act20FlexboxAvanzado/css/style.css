@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url("https://www.soloqueremosviajar.com/wp-content/uploads/2020/09/LaPalma-salinas-1024x683.jpeg");
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url("https://salinasdefuencaliente.es/wp-content/uploads/2021/06/un-adios-entre-salinas_bb017138_1080x720.jpg");
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url("https://cdn.royallapalma.nl/_img/plaatsen/fuencaliente-de-la-palma/01.jpg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #b59bc7, #6fb6da);
+  padding: 40px 20px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 10rem;
+}
+
+.title h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 35rem;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card__img {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s;
+}
+
+.card__img--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.card:hover .card__img {
+  opacity: 0;
+}
+
+.card:hover .card__img--hover {
+  opacity: 0.5;
+}
+
+.card__info {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.card__category {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card__title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card__by {
+  font-size: 14px;
+  color: #666;
+}
+
+.card__author {
+  text-decoration: none;
+  color: #8b6f5a;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    gap: 20px;
+  }
+
+  .card {
+    width: 30%;
+    min-width: 0;
+  }
+
+  .title h1 {
+    font-size: 2.8rem;
+  }
+
+  .title h2 {
+    display: none;
+  }
+}
