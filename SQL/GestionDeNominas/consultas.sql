@@ -166,7 +166,8 @@ select e.nombre, timestampdiff(year, e.fnacimiento, curdate()), d.nombre
     on t.cod_emp = e.codigo
     inner join departamentos d
     on d.codigo = t.cod_dep
-    where (select count(cod_emp) from trabajan) > 1;
+    where e.codigo in 
+    (select cod_emp from trabajan group by cod_emp having count(cod_emp) > 1);
     
 /*25. */
 select e.nombre, timestampdiff(year, e.fnacimiento, curdate()), sum((j.ingreso - j.descuento))
