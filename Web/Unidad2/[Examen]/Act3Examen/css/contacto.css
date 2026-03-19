@@ -1,0 +1,66 @@
+@font-face {
+	font-family: drakoheart;
+	src: url(../font/DrakoheartLeiendRegular.ttf) format("truetype");
+}
+
+body {
+	background: #f1f5f9;
+	padding: 0;
+	margin: 0;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	font-family: drakoheart;
+	font-size: 18px;
+}
+
+.titulo {
+	font-size: 85px;
+	color: white;
+	text-shadow: 2px 2px #007C84;
+	align-self: center;
+}
+
+.correo {
+	background: white;
+	border: 4px solid #ff0000;
+	border-radius: 8px 0px;
+	box-shadow: 2px 2px #007C84 inset;
+	align-self: center;
+	width: 30rem;
+	text-align: center;
+	padding: 4px;
+}
+
+.curso {
+	border: 5px double #ff0000;
+	background: #fff3e0;
+	color: #FF0000;
+	border-radius: 0 20px 20px 0px;
+	padding: 4px 2rem;
+	align-self: flex-start;
+}
+
+.evaluacion {
+	border: 5px ridge #ff0000;
+	background: #fff3e0;
+	color: #FF0000;
+	padding: 4px 2rem;
+	align-self: flex-end;
+}
+
+@media (max-width: 800px) {
+	.correo {
+		max-width: 10rem;
+	}
+	
+	.curso {
+		margin-right: 12rem;
+	}
+	
+	.evaluacion {
+		margin-left: 16rem;
+	}
+}

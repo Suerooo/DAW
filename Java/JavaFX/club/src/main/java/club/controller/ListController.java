@@ -2,34 +2,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package club;
+package club.controller;
 
 import java.io.IOException;
+
+import club.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
  *
  * @author 49399328C
  */
-public class ThirdController {
+public class ListController {
+    @FXML
+    private Button listButtonBack;
 
     @FXML
-    private Button ThirdButtonBack;
+    private Label listLabel;
 
     @FXML
-    private ListView<String> listaClubs;
+    private Label listaClubs;
 
     @FXML
     public void initialize() {
-        listaClubs.getItems().addAll(App.getClubs());
+        listaClubs.setText(App.getClubs());
     }
 
     @FXML
     private void switchToMenu() throws IOException {
-        App.setRoot("primary");
+        App.setRoot("main");
     }
 
 }

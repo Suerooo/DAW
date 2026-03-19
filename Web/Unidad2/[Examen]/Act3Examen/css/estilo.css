@@ -1,0 +1,161 @@
+@font-face {
+	font-family: hellion;
+	src: url(../font/Hellion.ttf) format("truetype");
+}
+
+body {
+	background: #f1f5f9;
+	padding: 0;
+	max-width: 1300px;
+	box-shadow: 0 0 5px 8px rgba(0,0,0,0.1);
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.titulo {
+	color: #333;
+	font-size: 30px;
+}
+
+.primeraLetra {
+	color: #ff0000;
+}
+
+.header, .footer {
+	background: linear-gradient(360deg, #fff, #e3f2fd, #fff3e0);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.header .departamento {
+	display: flex;
+	align-items: center;
+}
+
+.header .departamento .logo {
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+}
+
+.header .navegador, 
+.footer .nombre {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: courier;
+	color: white;
+	background: #ff0000; 
+}
+
+.header .navegador .boton,
+.footer .nombre {
+	padding: 10px 2rem;
+	transition: all 1s linear;
+}
+
+.header .navegador {
+	outline: 1px solid #ff0000;
+	outline-offset: 2px;
+}
+
+.header .navegador .boton:hover {
+	background: #cc0000;
+	color: #2c3e50;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 25px;
+	box-shadow: 0 2px #333;
+	transition: all 1s linear;
+}
+
+.footer .nombre:hover {
+	background: #E74C3C;
+	color: #2c3e50;
+}
+
+.footer .nombre {
+	justify-content: center;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.articulo1 {
+	background: white;
+	font-family: courier;
+	color: #333;
+	font-size: 16px;
+	padding: 0 1rem;
+	border-top: 3px solid rgba(0,0,0,0.1);
+}
+
+.articulo1 .titulo {
+	font-weight: bold;
+	font-size: 32px;
+	margin: 0;
+	margin-top: 12px;
+}
+
+.articulo1 .texto {
+	margin-top: 0px;
+}
+
+.zona-central {
+	background: #f1f5f9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin: 20px;
+}
+
+.zona-central .titulo {
+	margin: 5px;
+	font-family: hellion;
+	font-size: 50px;
+	word-spacing: 20px;
+	letter-spacing: 10px;
+	background: white;
+	border-top: 4px solid #ff0000;
+	text-transform: uppercase;
+}
+
+.zona-central .iframe {
+	height: 500px;
+	margin: 5px;
+	background: #fff;
+	border: 2px solid #ffcccc;
+}
+
+@media (max-width: 800px) {
+	.header, .footer {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.header .departamento,
+	.header .navegador,
+	.footer .licencias,
+	.footer .nombre {
+		width: 100%;
+	}
+
+	.articulo1 {
+		display: none;
+	}
+	
+	.footer .licencias {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+	}
+}

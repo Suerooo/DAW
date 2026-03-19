@@ -1,0 +1,34 @@
+@font-face {
+	font-family: hellion;
+	src: url(../font/Hellion.ttf) format("truetype");
+}
+
+body {
+	background: #f1f5f9;
+	padding: 0;
+	display: flex;
+}
+
+.texto {
+	margin: 0 5%;
+	font-family: courier;
+	font-size: 40px;
+	text-align: justify;
+}
+
+.subrayado {
+	background: #fff3e0;
+	color: #373737;
+}
+
+.negrita {
+	font-weight: bold;
+}
+
+.rojo {
+	color: #ff0000;
+}
+
+.punteado {
+	border-bottom: 5px dashed #ff0000;
+}
