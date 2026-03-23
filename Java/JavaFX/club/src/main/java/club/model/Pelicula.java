@@ -33,7 +33,7 @@ public class Pelicula implements Serializable {
     public void setAnio(int anio) {
         int anioActual = LocalDate.now().getYear();
 
-        if (anio <= 1895 || anio >= anioActual) {
+        if (anio < 1895 || anio > anioActual) {
             throw new IllegalArgumentException(
                     String.format("'año' no puede ser menor que 1895 o mayor que %d.", anioActual));
         }

@@ -3,7 +3,6 @@ package club.controller;
 import java.io.IOException;
 
 import club.App;
-import club.model.Pelicula;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -30,7 +29,7 @@ public class RemoveController {
         try {
             removeErrorLabel.setText("");
 
-            App.removeClub(new Pelicula(removeTituloField.getText(), 1990, 20));
+            App.removeClub(removeTituloField.getText());
 
             removeErrorLabel.setText("Pelicula eliminada");
 
