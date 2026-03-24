@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import club.App;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,9 +18,6 @@ public class RemoveController {
     private Label removeLabel;
 
     @FXML
-    private Label removeErrorLabel;
-
-    @FXML
     private TextField removeTituloField;
 
     @FXML
@@ -26,21 +25,30 @@ public class RemoveController {
 
     @FXML
     private void removeClub() throws IOException {
+        Alert informacion = new Alert(AlertType.INFORMATION);
+        informacion.setTitle("Informacion");
+        informacion.setHeaderText(null);
+
+        Alert error = new Alert(AlertType.ERROR);
+        error.setTitle("Error");
+        error.setHeaderText(null);
+
         try {
-            removeErrorLabel.setText("");
-
             App.removeClub(removeTituloField.getText());
-
-            removeErrorLabel.setText("Pelicula eliminada");
 
             removeTituloField.clear();
 
+            informacion.setContentText("Pelicula eliminada!!");
+            informacion.showAndWait();
+
         } catch (NumberFormatException e) {
-            removeErrorLabel.setText(
-                    "Uno o varios campos no tiene el formato correcto \n Titulo(numero, letras, signos) | Año(numero entero) | Duracion(numero decimal)");
+            error.setHeaderText("Uno o varios campos no tiene el formato correcto");
+            error.setContentText("Titulo(numero, letras, signos) | Año(numero entero) | Duracion(numero decimal)");
+            error.showAndWait();
 
         } catch (IllegalAccessError e) {
-            removeErrorLabel.setText(e.toString());
+            error.setContentText(e.toString());
+            error.showAndWait();
         }
     }
 

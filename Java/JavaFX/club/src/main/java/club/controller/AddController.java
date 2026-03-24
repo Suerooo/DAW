@@ -5,9 +5,11 @@ import java.io.IOException;
 import club.App;
 import club.model.Pelicula;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 public class AddController {
     @FXML
@@ -15,9 +17,6 @@ public class AddController {
 
     @FXML
     private Label addLabel;
-
-    @FXML
-    private Label addErrorLabel;
 
     @FXML
     private TextField addTituloField;
@@ -38,25 +37,33 @@ public class AddController {
 
     @FXML
     private void saveClub() throws IOException {
-        try {
-            addErrorLabel.setText("");
+        Alert informacion = new Alert(AlertType.INFORMATION);
+        informacion.setTitle("Informacion");
+        informacion.setHeaderText(null);
 
-            App.addClub(
-                    new Pelicula(addTituloField.getText(), Integer.parseInt(addAnioField.getText()),
-                            Double.parseDouble(addDuracionField.getText())));
+        Alert error = new Alert(AlertType.ERROR);
+        error.setTitle("Error");
+        error.setHeaderText(null);
+
+        try {
+            App.addClub(new Pelicula(addTituloField.getText(), Integer.parseInt(addAnioField.getText()),
+                    Double.parseDouble(addDuracionField.getText())));
 
             addTituloField.clear();
             addAnioField.clear();
             addDuracionField.clear();
 
-            addErrorLabel.setText("Pelicula añadida");
+            informacion.setContentText("Tarea creada!!");
+            informacion.showAndWait();
 
         } catch (NumberFormatException e) {
-            addErrorLabel.setText(
-                    "Uno o varios campos no tiene el formato correcto \n Titulo(numero, letras, signos) | Año(numero entero) | Duracion(numero decimal)");
+            error.setHeaderText("Uno o varios campos no tiene el formato correcto");
+            error.setContentText("Titulo(numero, letras, signos) | Año(numero entero) | Duracion(numero decimal)");
+            error.showAndWait();
 
         } catch (IllegalArgumentException | IllegalAccessError e) {
-            addErrorLabel.setText(e.toString());
+            error.setContentText(e.toString());
+            error.showAndWait();
         }
     }
 
