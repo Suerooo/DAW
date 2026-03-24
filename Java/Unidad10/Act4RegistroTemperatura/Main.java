@@ -25,13 +25,12 @@ public class Main {
                     addRegistro(sc.nextDouble());
                 }
                 case 2 -> mostrarRegistros();
-                case 3 -> {
-                    guardarDatos();
-                    System.out.println("Saliendo...");
-                }
+                case 3 -> System.out.println("Saliendo...");
                 default -> System.out.println("Ese opcion no existe");
             }
         } while (opcion != 3);
+
+        guardarDatos();
     }
 
     private static void mostrarMenu() {
