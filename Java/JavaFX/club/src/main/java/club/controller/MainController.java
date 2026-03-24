@@ -41,6 +41,7 @@ public class MainController {
 
     @FXML
     private void exit() throws IOException {
+        App.guardarDatos();
         Platform.exit();
         System.exit(0);
     }

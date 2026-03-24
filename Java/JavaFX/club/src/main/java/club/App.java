@@ -22,9 +22,15 @@ public class App extends Application {
     private static Scene scene;
     private static Pelicula[] listaPeliculas = new Pelicula[0];
 
+    public static void main(String[] args) {
+        cargarDatos();
+        launch();
+        guardarDatos();
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("main"), 640, 480);
+        scene = new Scene(loadFXML("main"), 400, 300);
         stage.setScene(scene);
         stage.show();
     }
@@ -48,12 +54,12 @@ public class App extends Application {
         listaPeliculas[listaPeliculas.length - 1] = club;
     }
 
-    public static void removeClub(Pelicula club) {
+    public static void removeClub(String club) {
         Pelicula[] temp = new Pelicula[0];
         boolean encontrada = false;
 
         for (int i = 0; i < listaPeliculas.length; i++) {
-            if (listaPeliculas[i].equals(club)) {
+            if (listaPeliculas[i].getTitulo().equalsIgnoreCase(club)) {
                 encontrada = true;
             } else {
                 temp = Arrays.copyOf(temp, temp.length + 1);
@@ -72,13 +78,7 @@ public class App extends Application {
         return Arrays.deepToString(listaPeliculas);
     }
 
-    public static void main(String[] args) {
-        cargarDatos();
-        launch();
-        guardarDatos();
-    }
-
-    private static void guardarDatos() {
+    public static void guardarDatos() {
         try (ObjectOutputStream out = new ObjectOutputStream(
                 new FileOutputStream("src\\main\\java\\club\\peliculas.dat"))) {
             out.writeObject(listaPeliculas);
