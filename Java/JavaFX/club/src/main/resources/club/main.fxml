@@ -5,15 +5,40 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="206.0" prefWidth="199.0" spacing="20.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="club.controller.MainController">
-   <children>
-      <Label fx:id="mainLabelClub" prefHeight="17.0" prefWidth="29.0" text="CLUB" textAlignment="CENTER" />
-      <Button fx:id="mainAddButton" onAction="#switchToAdd" text="ADD" />
-      <Button fx:id="mainRemoveButton" onAction="#switchToRemove" text="REMOVE" />
-      <Button fx:id="mainListButton" mnemonicParsing="false" onAction="#switchToList" text="LIST" />
-      <Button fx:id="mainExitButton" mnemonicParsing="false" onAction="#exit" text="EXIT" />
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+<VBox alignment="CENTER" prefHeight="340.0" prefWidth="340.0" spacing="16.0"
+      xmlns="http://javafx.com/javafx/13"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="club.controller.MainController">
+
+    <children>
+        <Label fx:id="mainLabelClub"
+               text="CLUB"
+               textAlignment="CENTER" />
+
+        <Button fx:id="mainAddButton"
+                onAction="#switchToAdd"
+                prefWidth="180.0"
+                text="ADD" />
+
+        <Button fx:id="mainRemoveButton"
+                onAction="#switchToRemove"
+                prefWidth="180.0"
+                text="REMOVE" />
+
+        <Button fx:id="mainListButton"
+                mnemonicParsing="false"
+                onAction="#switchToList"
+                prefWidth="180.0"
+                text="LIST" />
+
+        <Button fx:id="mainExitButton"
+                mnemonicParsing="false"
+                onAction="#exit"
+                prefWidth="180.0"
+                text="EXIT" />
+    </children>
+
+    <padding>
+        <Insets top="28.0" right="28.0" bottom="28.0" left="28.0" />
+    </padding>
 </VBox>

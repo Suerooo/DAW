@@ -7,22 +7,46 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="202.0" prefWidth="181.0" spacing="20.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="club.controller.AddController">
+<VBox alignment="CENTER" prefHeight="320.0" prefWidth="340.0" spacing="18.0"
+      xmlns="http://javafx.com/javafx/13"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="club.controller.AddController">
+
     <children>
-      <BorderPane prefHeight="22.0" prefWidth="124.0">
-         <left>
-              <Button fx:id="addButtonBack" onAction="#switchToMenu" prefHeight="25.0" prefWidth="43.0" text="Back" BorderPane.alignment="CENTER" />
-         </left>
-         <center>
-              <Label fx:id="addLabel" prefHeight="17.0" prefWidth="55.0" text="ADD" BorderPane.alignment="CENTER" />
-         </center>
-      </BorderPane>
-      <TextField fx:id="addTituloField" promptText="Titulo" />
-      <TextField fx:id="addAnioField" promptText="Año" />
-      <TextField fx:id="addDuracionField" promptText="Duracion" />
-      <Button fx:id="addButtonEnviar" mnemonicParsing="false" onAction="#saveClub" text="Enviar" />
+        <BorderPane prefWidth="280.0">
+            <left>
+                <Button fx:id="addButtonBack"
+                        onAction="#switchToMenu"
+                        text="Back"
+                        BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+                <Label fx:id="addLabel"
+                       text="ADD"
+                       BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+
+        <TextField fx:id="addTituloField"
+                   maxWidth="220.0"
+                   promptText="Título" />
+
+        <TextField fx:id="addAnioField"
+                   maxWidth="220.0"
+                   promptText="Año" />
+
+        <TextField fx:id="addDuracionField"
+                   maxWidth="220.0"
+                   promptText="Duración" />
+
+        <Button fx:id="addButtonEnviar"
+                mnemonicParsing="false"
+                onAction="#saveClub"
+                prefWidth="180.0"
+                text="Enviar" />
     </children>
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="28.0" right="28.0" bottom="28.0" left="28.0" />
     </padding>
 </VBox>

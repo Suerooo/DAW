@@ -6,19 +6,36 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="202.0" prefWidth="181.0" spacing="20.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="club.controller.ListController">
-   <children>
-      <BorderPane prefHeight="22.0" prefWidth="124.0">
-         <left>
-            <Button fx:id="listButtonBack" onAction="#switchToMenu" prefHeight="25.0" prefWidth="43.0" text="Back" BorderPane.alignment="CENTER" />
-         </left>
-         <center>
-            <Label fx:id="listLabel" prefHeight="17.0" prefWidth="55.0" text="LIST" BorderPane.alignment="CENTER" />
-         </center>
-      </BorderPane>
-      <Label fx:id="listaClubs" text="No hay clubs" />
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+<VBox alignment="TOP_CENTER" prefHeight="320.0" prefWidth="340.0" spacing="18.0"
+      xmlns="http://javafx.com/javafx/13"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="club.controller.ListController">
+
+    <children>
+        <BorderPane prefWidth="280.0">
+            <left>
+                <Button fx:id="listButtonBack"
+                        onAction="#switchToMenu"
+                        text="Back"
+                        BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+                <Label fx:id="listLabel"
+                       text="LIST"
+                       BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+
+        <Label fx:id="listaClubs"
+               alignment="TOP_LEFT"
+               maxWidth="260.0"
+               prefWidth="260.0"
+               prefHeight="170.0"
+               text="No hay clubs"
+               wrapText="true" />
+    </children>
+
+    <padding>
+        <Insets top="28.0" right="28.0" bottom="28.0" left="28.0" />
+    </padding>
 </VBox>

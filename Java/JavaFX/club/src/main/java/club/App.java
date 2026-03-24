@@ -30,7 +30,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("main"), 400, 300);
+        scene = new Scene(loadFXML("main"), 260, 340);
+        scene.getStylesheets().add(getClass().getResource("/club/css/style.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
@@ -75,7 +76,11 @@ public class App extends Application {
     }
 
     public static String getClubs() {
-        return Arrays.deepToString(listaPeliculas);
+        if (listaPeliculas.length <= 0) {
+            return "Sin peliculas";
+        } else {
+            return Arrays.deepToString(listaPeliculas);
+        }
     }
 
     public static void guardarDatos() {
