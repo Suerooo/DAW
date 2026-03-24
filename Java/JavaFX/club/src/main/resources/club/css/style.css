@@ -3,7 +3,6 @@
   -fx-font-family: "Segoe UI", "Inter", Arial, sans-serif;
 }
 
-/* Contenedor principal de cada pantalla */
 .vbox {
   -fx-background-color: white;
   -fx-background-radius: 18;
@@ -16,19 +15,16 @@
   -fx-max-width: 340;
 }
 
-/* Barra superior */
 .border-pane {
   -fx-background-color: transparent;
   -fx-padding: 0 0 6 0;
 }
 
-/* Títulos generales */
 .label {
   -fx-text-fill: #334155;
   -fx-font-size: 13px;
 }
 
-/* Títulos principales */
 #mainLabelClub,
 #addLabel,
 #listLabel,
@@ -38,7 +34,6 @@
   -fx-font-weight: 700;
 }
 
-/* Botones base */
 .button {
   -fx-background-color: #1d4ed8;
   -fx-text-fill: white;
@@ -55,11 +50,6 @@
   -fx-background-color: #1e40af;
 }
 
-.button:pressed {
-  -fx-background-color: #1e3a8a;
-}
-
-/* Botones del menú principal */
 #mainAddButton,
 #mainRemoveButton,
 #mainListButton,
@@ -67,7 +57,6 @@
   -fx-pref-width: 180;
 }
 
-/* Botones secundarios de volver */
 #addButtonBack,
 #listButtonBack,
 #removeButtonBack {
@@ -88,7 +77,6 @@
   -fx-text-fill: #0f172a;
 }
 
-/* Botón enviar */
 #addButtonEnviar {
   -fx-background-color: #16a34a;
 }
@@ -97,11 +85,6 @@
   -fx-background-color: #15803d;
 }
 
-#addButtonEnviar:pressed {
-  -fx-background-color: #166534;
-}
-
-/* Botón eliminar / salir */
 #removeButton,
 #mainExitButton {
   -fx-background-color: #dc2626;
@@ -112,12 +95,6 @@
   -fx-background-color: #b91c1c;
 }
 
-#removeButton:pressed,
-#mainExitButton:pressed {
-  -fx-background-color: #991b1b;
-}
-
-/* Inputs */
 .text-field {
   -fx-background-color: #f8fafc;
   -fx-border-color: #cbd5e1;
@@ -137,7 +114,6 @@
   -fx-border-width: 2;
 }
 
-/* Caja/listado */
 #listaClubs {
   -fx-background-color: #f8fafc;
   -fx-border-color: #e2e8f0;
@@ -152,7 +128,6 @@
   -fx-min-width: 230;
 }
 
-/* Ajuste visual del título del menú */
 #mainLabelClub {
   -fx-padding: 0 0 8 0;
 }
