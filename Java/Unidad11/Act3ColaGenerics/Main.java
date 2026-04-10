@@ -6,21 +6,21 @@ public class Main {
     public static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Cola<Integer> cola = new Lista<>();
-        Integer numero = 0;
-        Integer numeroCola;
+        Cola<Integer> queue = new Lista<>();
+        Integer number = 0;
+        Integer numeroQueue;
 
         do {
             System.out.print("Introduce un número: ");
-            numero = sc.nextInt();
-            
-            if (numero != -1)
-                cola.encolar(numero);
-            
-        } while (numero != -1);
+            number = sc.nextInt();
 
-        while ((numeroCola = cola.desencolar()) != null) {
-            System.out.println(numeroCola);
+            if (number != -1)
+                queue.encolar(number);
+
+        } while (number != -1);
+
+        while ((numeroQueue = queue.desencolar()) != null) {
+            System.out.println(numeroQueue);
         }
     }
 }

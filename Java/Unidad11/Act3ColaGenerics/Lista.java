@@ -20,7 +20,7 @@ public class Lista<T> implements Pila<T>, Cola<T> {
         tabla[tabla.length - 1] = nuevo;
     }
 
-    void insertarFinal(Lista otraLista) {
+    void insertarFinal(Lista<T> otraLista) {
         int tamIni = tabla.length;
         tabla = Arrays.copyOf(tabla, tabla.length + otraLista.tabla.length);
         System.arraycopy(otraLista.tabla, 0, tabla, tamIni, otraLista.tabla.length);
@@ -71,8 +71,8 @@ public class Lista<T> implements Pila<T>, Cola<T> {
         return Arrays.copyOf(tabla, tabla.length);
     }
 
-    public static Lista concatena(Lista x, Lista y) {
-        Lista nuevaLista = new Lista();
+    public static <T> Lista<T> concatena(Lista<T> x, Lista<T> y) {
+        Lista<T> nuevaLista = new Lista<>();
 
         nuevaLista.insertarFinal(x);
         nuevaLista.insertarFinal(y);

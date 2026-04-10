@@ -1,23 +1,21 @@
 package Unidad11.Act2MetodoGenerico;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class Main {
-    public static <U> List<U> combinar(List<U> tabla1, List<U> tabla2) {
-        List<U> resultado = new ArrayList<>();
+    public static <T> T[] mixArrays(T[] array1, T[] array2) {
+        T[] result = (T[]) new Object[array1.length + array2.length];
 
-        resultado.addAll(tabla1);
-        resultado.addAll(tabla2);
-        return resultado;
+        System.arraycopy(array1, 0, result, 0, array1.length);
+        System.arraycopy(array2, 0, result, array1.length, array2.length);
+
+        return result;
     }
 
     public static void main(String[] args) {
-        List<String> tabla1 = new ArrayList<>();
-        List<String> tabla2 = new ArrayList<>();
-        tabla1.add("Hola");
-        tabla2.add("Adios");
+        Integer[] array1 = { 1, 2, 3 };
+        Integer[] array2 = { 4, 5 };
 
-        System.out.println(combinar(tabla1, tabla2));
+        System.out.println(Arrays.deepToString(mixArrays(array1, array2)));
     }
 }
