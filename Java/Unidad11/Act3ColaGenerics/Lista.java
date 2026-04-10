@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Lista<T> implements Pila<T>, Cola<T> {
     T[] tabla;
 
-    public Lista() {
-        this.tabla = (T[]) new Object[0];
+    public Lista(T[] tabla) {
+        this.tabla = tabla;
     }
 
     void insertarPrincipio(T nuevo) {
@@ -72,7 +72,7 @@ public class Lista<T> implements Pila<T>, Cola<T> {
     }
 
     public static <T> Lista<T> concatena(Lista<T> x, Lista<T> y) {
-        Lista<T> nuevaLista = new Lista<>();
+        Lista<T> nuevaLista = new Lista<>(null);
 
         nuevaLista.insertarFinal(x);
         nuevaLista.insertarFinal(y);

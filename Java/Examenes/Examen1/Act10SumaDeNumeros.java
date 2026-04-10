@@ -9,7 +9,8 @@ public class Act10SumaDeNumeros {
         negativo y muestra la suma total. */
 
         //Variables
-        int numero=0, total=0;
+        int numero=0;
+        int total=0;
 
         //While en el que pregunta números hasta que introduzca uno negativo
         while (numero>=0) {

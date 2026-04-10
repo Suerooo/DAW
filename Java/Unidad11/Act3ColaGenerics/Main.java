@@ -6,7 +6,7 @@ public class Main {
     public static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Cola<Integer> queue = new Lista<>();
+        Cola<Integer> queue = new Lista<>(new Integer[0]);
         Integer number = 0;
         Integer numeroQueue;
 

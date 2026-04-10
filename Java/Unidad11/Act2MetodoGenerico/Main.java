@@ -4,9 +4,8 @@ import java.util.Arrays;
 
 public class Main {
     public static <T> T[] mixArrays(T[] array1, T[] array2) {
-        T[] result = (T[]) new Object[array1.length + array2.length];
+        T[] result = Arrays.copyOf(array1, array1.length);
 
-        System.arraycopy(array1, 0, result, 0, array1.length);
         System.arraycopy(array2, 0, result, array1.length, array2.length);
 
         return result;

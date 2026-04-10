@@ -1,4 +1,4 @@
-package Unidad11.Act4NumerosIterator;
+package Unidad11.Act6MetodosGlobales;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,4 +27,6 @@ public class Main {
 
         System.out.println("List: " + randomNumbers + " Size: " + randomNumbers.size());
     }
+    
+    
 }
