@@ -9,24 +9,30 @@ public class Main {
     public static void main(String[] args) {
         Collection<Integer> randomNumbers = new ArrayList<>();
 
-        for (int i = 0; i < 100; i++) {
-            randomNumbers.add(ThreadLocalRandom.current().nextInt(1, 11));
-        }
+        fillRandomNumbers(randomNumbers);
 
         System.out.println("List: " + randomNumbers + " Size: " + randomNumbers.size());
 
-        Iterator<Integer> it = randomNumbers.iterator();
+        removeNum(randomNumbers, 5);
+
+        System.out.println("List: " + randomNumbers + " Size: " + randomNumbers.size());
+    }
+
+    public static void fillRandomNumbers(Collection<Integer> list) {
+        for (int i = 0; i < 100; i++) {
+            list.add(ThreadLocalRandom.current().nextInt(1, 11));
+        }
+    }
+
+    public static void removeNum(Collection<Integer> list, int num) {
+        Iterator<Integer> it = list.iterator();
 
         while (it.hasNext()) {
             Integer number = it.next();
 
-            if (number.equals(5)) {
+            if (number.equals(num)) {
                 it.remove();
             }
         }
-
-        System.out.println("List: " + randomNumbers + " Size: " + randomNumbers.size());
     }
-    
-    
 }
