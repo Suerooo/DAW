@@ -1,4 +1,4 @@
-package Unidad11.Act10LeeCadenas;
+package Unidad11.Act10UneCadenas;
 
 import java.util.ArrayList;
 import java.util.List;
