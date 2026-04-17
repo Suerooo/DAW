@@ -18,8 +18,9 @@ public class Main {
             switch (opcion) {
                 case 1 -> altaJugador(plantilla, pedirDorsal());
                 case 2 -> eliminarJugador(plantilla, pedirDorsal());
-                case 3 -> 
-
+                case 3 -> editarJugador(plantilla, pedirDorsal());
+                case 4 -> mostrar(plantilla);
+                case 5 -> mostrar(plantilla, pedirPosicion());
                 case 6 -> System.out.println("Saliendo...");
                 default -> System.out.println("Esa opcion no existe");
 
@@ -41,7 +42,9 @@ public class Main {
 
     public static void altaJugador(Map<Integer, Jugador> plantilla, Integer dorsal) {
 
-        plantilla.put(dorsal, new Jugador(pedirDNI(), pedirNombre(), pedirPosicion()));
+        if (!plantilla.containsKey(dorsal)) {
+            plantilla.put(dorsal, new Jugador(pedirDNI(), pedirNombre(), pedirPosicion()));
+        }
     }
 
     public static Jugador eliminarJugador(Map<Integer, Jugador> plantilla, Integer dorsal) {
@@ -49,11 +52,23 @@ public class Main {
         return plantilla.remove(dorsal);
     }
 
+    public static boolean editarJugador(Map<Integer, Jugador> plantilla, Integer dorsal) {
+
+        if (plantilla.containsKey(dorsal)) {
+            Jugador jugador = plantilla.get(dorsal);
+            jugador.setNombre(pedirNombre());
+            jugador.setPosicionCampo(pedirPosicion());
+        }
+
+        return plantilla.containsKey(dorsal);
+    }
+
     public static void mostrar(Map<Integer, Jugador> plantilla) {
 
         for (Map.Entry<Integer, Jugador> entry : plantilla.entrySet()) {
 
             Jugador jugador = entry.getValue();
+
             System.out.printf("Dorsal: %d - DNI: %s - Nombre: %s - Posicion Campo: %s%n",
                     entry.getKey(), jugador.getDNI(), jugador.getNombre(), jugador.getPosicionCampo());
         }
@@ -61,11 +76,17 @@ public class Main {
     }
 
     public static void mostrar(Map<Integer, Jugador> plantilla, PosicionCampo posicion) {
-        
-    }
 
-    public static boolean editarJugador(Map<Integer, Jugador> plantilla, Integer dorsal) {
+        for (Map.Entry<Integer, Jugador> entry : plantilla.entrySet()) {
 
+            Jugador jugador = entry.getValue();
+
+            if (jugador.getPosicionCampo().equals(posicion)) {
+
+                System.out.printf("Dorsal: %d - DNI: %s - Nombre: %s - Posicion Campo: %s%n",
+                        entry.getKey(), jugador.getDNI(), jugador.getNombre(), jugador.getPosicionCampo());
+            }
+        }
     }
 
     public static Integer pedirDorsal() {
