@@ -38,7 +38,6 @@ public class Socio implements Comparable<Socio>, Serializable {
 
     @Override
     public String toString() {
-        return "Socio{" + "apodo=" + apodo + ", nombre=" + nombre
-                + ", antiguedad=" + antiguedad() + "}\n";
+        return String.format("Apodo: %s - Nombre: %s - Antigüedad: %d", apodo, nombre, antiguedad());
     }
 }

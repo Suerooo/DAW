@@ -4,12 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.security.KeyStore.Entry;
-import java.util.Comparator;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeMap;
 
 public class Main {
@@ -17,6 +13,8 @@ public class Main {
     public static Map<String, Socio> socios = new TreeMap<>();
 
     public static void main(String[] args) {
+        Map<Socio, String> mapaAntiguedad = new TreeMap<>((o1, o2) -> o1.antiguedad() - o2.antiguedad());
+
         int opcion = 0;
         cargarDatos();
 
@@ -26,20 +24,32 @@ public class Main {
             System.out.println();
 
             switch (opcion) {
-                case 1 ->
-                    System.out.println(darAlta(pedirApodo(), pedirNombre(), pedirFecha()) ? "Dado de alta correctamente"
-                            : "Ese socio ya existe");
+                case 1 -> System.out.println(darAlta(pedirApodo(), pedirNombre(), pedirFecha())
+                        ? "Dado de alta correctamente"
+                        : "Ese socio ya existe");
 
-                case 2 ->
-                    System.out.println(darBaja(pedirApodo()) ? "Dado de baja correctamente" : "Ese socio no existe");
+                case 2 -> System.out.println(darBaja(pedirApodo())
+                        ? "Dado de baja correctamente"
+                        : "Ese socio no existe");
 
-                case 3 -> mostrar(socios);
-                case 4 -> mostrar(socios = new TreeMap<>(new Comparator<Map.Entry<String, Socio>>() {
-                    public int compare(Entry<String, Socio> o1, Entry<String, Socio> o2) {
-                        return o1.getKey().an;
-                    }
-                }));
+                case 3 -> System.out.println(modificar(pedirApodo(), pedirNombre(), pedirFecha())
+                        ? "Modificado correctamente"
+                        : "Ese socio no existe");
+
+                case 4 -> mostrar();
+
+                case 5 -> {
+                    mostrar(rellenarMapaInvertido(mapaAntiguedad, Integer.MAX_VALUE));
+                    mapaAntiguedad.clear();
+                }
+
+                case 6 -> {
+                    mostrar(rellenarMapaInvertido(mapaAntiguedad, pedirAnio()));
+                    mapaAntiguedad.clear();
+                }
+
                 case 7 -> System.out.println("Saliendo...");
+
                 default -> System.out.println("Esa opcion no existe");
             }
 
@@ -83,16 +93,61 @@ public class Main {
         }
     }
 
-    public static void mostrar(Map<String, Socio> mapa) {
-        Set<Map.Entry<String, Socio>> mapaSet = mapa.entrySet();
-        Iterator<Map.Entry<String, Socio>> it = mapaSet.iterator();
+    public static boolean modificar(String apodo, String nombre, String fechaAlta) {
+        if (socios.containsKey(apodo)) {
 
-        while (it.hasNext()) {
-            Map.Entry<String, Socio> e = it.next();
-            System.out.printf("Apodo: %s -> Info: %s%n", e.getKey(), e.getValue());
+            socios.put(apodo, new Socio(apodo, nombre, fechaAlta));
+            return true;
+
+        } else {
+            return false;
         }
     }
 
+    public static void mostrar() {
+        for (Map.Entry<String, Socio> entry : socios.entrySet()) {
+            System.out.printf("Apodo: %s -> Info: %s%n", entry.getKey(), entry.getValue());
+        }
+    }
+
+    public static void mostrar(Map<Socio, String> mapa) {
+        for (Map.Entry<Socio, String> entry : mapa.entrySet()) {
+            System.out.printf("Apodo: %s -> Info: %s%n", entry.getValue(), entry.getKey());
+        }
+    }
+
+    // METODOS AUXILIARES
+    public static Map<Socio, String> rellenarMapaInvertido(Map<Socio, String> mapa, Integer year) {
+        for (Map.Entry<String, Socio> entry : socios.entrySet()) {
+            if (year > entry.getValue().fechaAlta.getYear()) {
+                mapa.put(entry.getValue(), entry.getKey());
+            }
+        }
+
+        return mapa;
+    }
+
+    public static String pedirApodo() {
+        System.out.print("Introduce el apodo: ");
+        return sc.next();
+    }
+
+    public static String pedirNombre() {
+        System.out.print("Introduce el nombre: ");
+        return sc.next();
+    }
+
+    public static String pedirFecha() {
+        System.out.print("Introduce la fecha (dd/MM/yyyy): ");
+        return sc.next();
+    }
+
+    public static Integer pedirAnio() {
+        System.out.print("Introduce el año: ");
+        return sc.nextInt();
+    }
+
+    // METODOS DE PERSISTENCIA DE DATOS
     public static void guardarDatos() {
         try (ObjectOutputStream writer = new ObjectOutputStream(
                 new FileOutputStream("Java\\Unidad11\\Act14Socios\\club.dat"))) {
@@ -113,20 +168,5 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
-    }
-
-    public static String pedirApodo() {
-        System.out.print("Introduce el apodo: ");
-        return sc.next();
-    }
-
-    public static String pedirNombre() {
-        System.out.print("Introduce el nombre: ");
-        return sc.next();
-    }
-
-    public static String pedirFecha() {
-        System.out.print("Introduce la fecha (dd/MM/yyyy): ");
-        return sc.next();
     }
 }

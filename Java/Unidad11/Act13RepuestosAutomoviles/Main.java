@@ -24,13 +24,16 @@ public class Main {
             System.out.println();
 
             switch (opcion) {
-                case 1 -> System.out.println(darAlta(pedirRepuesto(), pedirStock()) ? "Dado de alta correctamente"
+                case 1 -> System.out.println(darAlta(pedirRepuesto(), pedirStock())
+                        ? "Dado de alta correctamente"
                         : "Ese repuesto ya existe no se pudo dar de alta");
 
-                case 2 -> System.out.println(darBaja(pedirRepuesto()) ? "Dado de baja correctamente"
+                case 2 -> System.out.println(darBaja(pedirRepuesto())
+                        ? "Dado de baja correctamente"
                         : "Ese repuesto no existe no se pudo dar de baja");
 
-                case 3 -> System.out.println(actualizar(pedirRepuesto(), pedirStock()) ? "Repuesto actualizado"
+                case 3 -> System.out.println(actualizar(pedirRepuesto(), pedirStock())
+                        ? "Repuesto actualizado"
                         : "Ese repuesto no existe no se puede actualizar");
 
                 case 4 -> mostrar();
