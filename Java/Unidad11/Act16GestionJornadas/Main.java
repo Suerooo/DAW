@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,9 +29,18 @@ public class Main {
                 case 1 -> System.out.println(altaTrabajador(pedirDNI()) 
                     ? "Trabajador dado de alta" 
                     : "Ese trabajador ya esta dado de alta");
+                    
+                case 2 -> System.out.println(bajaTrabajador(pedirDNI()) 
+                    ? "Trabajador dado de baja" 
+                    : "Ese trabajador no esta dado de alta");
+                    
+                case 3 -> System.out.println(altaJornada(pedirDNI()));
+                
+                case 4 -> mostrarJornadas(pedirDNI());
+                
                 default -> System.out.println("Esa opcion no existe");
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
         
         guardar();
     }
@@ -39,19 +50,65 @@ public class Main {
         System.out.println("1. Alta de trabajador");
         System.out.println("2. Baja de trabajador");
         System.out.println("3. Alta de jornada");
-        System.out.println("4. Salir");
+        System.out.println("4. Mostrar jornadas");
+        System.out.println("5. Salir");
         System.out.print("Introduce una opcion: ");
     }
     
     public static boolean altaTrabajador(String dni) {
+        return trabajadores.putIfAbsent(dni, new ArrayList<>()) == null;
+    }
+    
+    public static boolean bajaTrabajador(String dni) {
+        if (trabajadores.containsKey(dni)) {
         
-        if (!trabajadores.containsKey(dni)) {
-            
-            trabajadores.put(dni, new ArrayList<Jornada>()) ;
+            trabajadores.remove(dni);
             return true;
+        
+        } else {
+            return false;
         }
         
-        return false;
+    }
+    
+    public static boolean altaJornada(String dni) {
+        System.out.println("Introduce la fecha de jornada: ");
+        LocalDate fechaJornada = crearFecha();
+        
+        System.out.println("Introduce la hora de entrada: ");
+        LocalTime horaEntrada = crearHora();
+        
+        System.out.println("Introduce la hora de salida: ");
+        LocalTime horaSalida = crearHora();
+        
+        return trabajadores.get(dni).add(new Jornada(dni, fechaJornada, horaEntrada, horaSalida));
+    }
+    
+    public static LocalTime crearHora() {
+        System.out.print("  Hora: ");
+        Integer hora = sc.nextInt();
+        
+        System.out.print("  Minutos: ");
+        Integer minuto = sc.nextInt();
+        
+        return LocalTime.of(hora, minuto);
+    }
+    
+    public static LocalDate crearFecha() {
+        System.out.print("  Año: ");
+        Integer anio = sc.nextInt();
+        
+        System.out.print("  Mes: ");
+        Integer mes = sc.nextInt();
+        
+        System.out.print("  Dia del mes: ");
+        Integer dia = sc.nextInt();
+        
+        return LocalDate.of(anio, mes, dia);
+    }
+    
+    public static void mostrarJornadas(String dni) {
+        System.out.println(trabajadores.get(dni) == null ? "Ese trabajador no esta dado de alta" : trabajadores.get(dni));
     }
     
     public static String pedirDNI() {
