@@ -92,7 +92,7 @@ public class Jornada implements Comparable<Jornada>, Serializable {
     }
 
     public String toString() {
-        return "\nDNI: " + dniEmpleado + ", fecha: " + fechaJornada
-                + "--> minutos trabajados: " + tiempoTrabajado();
+        return "\nDNI: " + dniEmpleado + " Fecha: " + fechaJornada
+                + " --> Minutos trabajados: " + tiempoTrabajado();
     }
 }
