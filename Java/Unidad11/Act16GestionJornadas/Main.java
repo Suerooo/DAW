@@ -27,6 +27,13 @@ public class Main {
                 case 1 -> System.out.println(altaTrabajador(pedirDNI()) 
                     ? "Trabajador dado de alta" 
                     : "Ese trabajador ya esta dado de alta");
+                    
+                case 2 -> System.out.println(bajaTrabajador(pedirDNI()) 
+                    ? "Trabajador dado de baja" 
+                    : "Ese trabajador no esta dado de alta");
+                
+                case 3 -> System.out.println(trabajadores);
+                
                 default -> System.out.println("Esa opcion no existe");
             }
         } while (opcion != 4);
@@ -44,14 +51,15 @@ public class Main {
     }
     
     public static boolean altaTrabajador(String dni) {
+
+        trabajadores.putIfAbsent(dni, new ArrayList<>());
         
-        if (!trabajadores.containsKey(dni)) {
-            
-            trabajadores.put(dni, new ArrayList<Jornada>()) ;
-            return true;
-        }
+        return !(trabajadores.containsKey(dni));
+    }
+    
+    public static boolean bajaTrabajador(String dni) {
         
-        return false;
+        return trabajadores.remove(dni) != null;
     }
     
     public static String pedirDNI() {
@@ -70,11 +78,11 @@ public class Main {
     }
     
     public static void cargar() {
-        try (ObjectInputStream input = new ObjectInputStream(new FileInputStream("Java\\Unidad11\\Act16GestionJornadas\\jornada.dat"))) {
-            
-            trabajadores = (Map<String, List<Jornada>>) input.readObject();
-            
-        } catch (IOException | ClassNotFoundException e) {
+        try (ObjectInputStream read = new ObjectInputStream(new FileInputStream("Java\\Unidad11\\Act16GestionJornadas\\jornada.dat"))) {
+
+            trabajadores = (Map<String, List<Jornada>>) read.readObject();
+
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
