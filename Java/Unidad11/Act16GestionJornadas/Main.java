@@ -33,16 +33,11 @@ public class Main {
                 case 2 -> System.out.println(bajaTrabajador(pedirDNI()) 
                     ? "Trabajador dado de baja" 
                     : "Ese trabajador no esta dado de alta");
-<<<<<<< HEAD
-                
-                case 3 -> System.out.println(trabajadores);
-=======
                     
                 case 3 -> System.out.println(altaJornada(pedirDNI()));
                 
                 case 4 -> mostrarJornadas(pedirDNI());
->>>>>>> 5254a9b8ae6be269ae846175fc14c0191c810ee8
-                
+                                
                 default -> System.out.println("Esa opcion no existe");
             }
         } while (opcion != 5);
@@ -61,17 +56,6 @@ public class Main {
     }
     
     public static boolean altaTrabajador(String dni) {
-<<<<<<< HEAD
-
-        trabajadores.putIfAbsent(dni, new ArrayList<>());
-        
-        return !(trabajadores.containsKey(dni));
-    }
-    
-    public static boolean bajaTrabajador(String dni) {
-        
-        return trabajadores.remove(dni) != null;
-=======
         return trabajadores.putIfAbsent(dni, new ArrayList<>()) == null;
     }
     
@@ -125,7 +109,6 @@ public class Main {
     
     public static void mostrarJornadas(String dni) {
         System.out.println(trabajadores.get(dni) == null ? "Ese trabajador no esta dado de alta" : trabajadores.get(dni));
->>>>>>> 5254a9b8ae6be269ae846175fc14c0191c810ee8
     }
     
     public static String pedirDNI() {
